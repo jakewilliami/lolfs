@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "test title",
+        "description": "testing",
+        "details": [
+            {
+                "author": "bob",
+                "category": "test",
+                "createdAt": "today",
+                "lastModified": "today",
+                "url": "test.com",
+                "priviledges": "idk"
+            }
+        ]
+    }
+]
