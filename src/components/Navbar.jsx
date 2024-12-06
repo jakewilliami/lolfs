@@ -13,7 +13,7 @@ const Navbar = () => {
     };
     
     return (
-        <header>
+        <>
           <nav className={`navbar ${isOpen ? "menu-open" : ""}`}>
             <NavLink to="/" className="logo">
               LOLFS
@@ -52,9 +52,9 @@ const Navbar = () => {
                 </NavLink>
               </li>
             </ul>
+            {isOpen && <div className="overlay" onClick={closeMenu}></div>}
           </nav>
-          {isOpen && <div className="overlay" onClick={closeMenu}></div>}
-        </header>
+        </>
       );
 }
 
