@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
           <nav className={`navbar ${isOpen ? "menu-open" : ""}`}>
             <NavLink to="/" className="logo">
-              LOLFS
+              <img src="/public/images/logo.png"/>
             </NavLink>
             <div className="menu-icon" onClick={toggleMenu}>
               <div className={`bar bar1 ${isOpen ? "toggle" : ""}`}></div>
