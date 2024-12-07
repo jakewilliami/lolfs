@@ -108,16 +108,34 @@ const SinglePage = () => {
             {item.Artifacts.Network.map((network, index) => (
               <div key={index}>
                 <p>{network.Description}</p>
+              </div>
+            ))}
+            </div>
+          </div>
+
+          <div className='row'>
+            <h4>Domains</h4>
+            <div className='artifact-content'>
+            {item.Artifacts.Network.map((network, index) => (
+              <div key={index}>
                 <div>
-                  <strong>Domains:</strong>
                   {network.Domains.map((domain, domainIndex) => (
                     <code key={domainIndex} data-code-language="text">
                       {domain}
                     </code>
                   ))}
                 </div>
+              </div>
+            ))}
+            </div>
+          </div>
+
+          <div className='row'>
+            <h4>Ports</h4>
+            <div className='artifact-content'>
+            {item.Artifacts.Network.map((network, index) => (
+              <div key={index}>
                 <div>
-                  <strong>Ports:</strong>
                   {network.Ports.map((port, portIndex) => (
                     <code key={portIndex} data-code-language="text">
                       {port}
