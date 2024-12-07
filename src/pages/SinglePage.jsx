@@ -67,6 +67,71 @@ const SinglePage = () => {
       </section>
 
       <section className='content-section'>
+        <div className='artifacts--container'>
+        {/* disk */}
+          <div className='row'>
+            <h4>Disk</h4>
+            <div className='artifact-content'>
+              {item.Artifacts.Disk.map((artifacts, index) => (
+                <code key={index} data-code-language="text">
+                  {artifacts}
+                </code>
+              ))}
+            </div>
+          </div>
+          {/* eventlog */}
+          <div className='row'>
+            <h4>EventLog</h4>
+            <div className='artifact-content'>
+              {item.Artifacts.EventLog.map((events, index) => (
+                <code key={index} data-code-language="text">
+                  {events}
+                </code>
+              ))}
+            </div>
+          </div>
+          {/* registry */}
+          <div className='row'>
+            <h4>Registry</h4>
+            <div className='artifact-content'>
+              {item.Artifacts.Registry.map((registers, index) => (
+                <code key={index} data-code-language="text">
+                  {registers}
+                </code>
+              ))}
+            </div>
+          </div>
+          {/* network */}
+          <div className='row'>
+            <h4>Network</h4>
+            <div className='artifact-content'>
+            {item.Artifacts.Network.map((network, index) => (
+              <div key={index}>
+                <p>{network.Description}</p>
+                <div>
+                  <strong>Domains:</strong>
+                  {network.Domains.map((domain, domainIndex) => (
+                    <code key={domainIndex} data-code-language="text">
+                      {domain}
+                    </code>
+                  ))}
+                </div>
+                <div>
+                  <strong>Ports:</strong>
+                  {network.Ports.map((port, portIndex) => (
+                    <code key={portIndex} data-code-language="text">
+                      {port}
+                    </code>
+                  ))}
+                </div>
+              </div>
+            ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='content-section'>
         <div className='code-snippet--container'>
           {item.Details.InstallationPaths.map((paths, index) => (
             <code key={index} data-code-language="text">
