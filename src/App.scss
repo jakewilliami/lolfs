@@ -281,7 +281,8 @@ a {
         padding: 1rem;
         border-radius: 2vh;
         height: 30vh;
-        border: 3px solid $primary-color1;
+        background-color: rgb(21, 21, 21);
+        border: 3px solid rgba(255, 255, 255, 0.332);
         transition: all .2s ease-in-out;
 
         .row {
@@ -395,40 +396,26 @@ a {
     .supported-os-icons{
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         width: 100%;
         padding: 1rem;
         border-radius: 2vh;
         height: 10vh;
         transition: all .2s ease-in-out;
+        gap: 1vw;
+        background-color: rgb(37, 37, 37);
+        border: 2px solid rgba(255, 255, 255, 0.627);
         div{
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: .8rem;
             background-color: white;
             border-radius: 5vw;
-            width: 2vw;
-            height: 2vw;
             svg{
-                font-size: 4rem;
+                font-size: 1.5vw;
             }
         }
-    }
-    .supported-os-icons:nth-child(1),
-    .supported-os-icons:nth-child(4) {
-        background-color: #86ffed88;
-        border: 3px solid #86ffedc9;
-    }
-    .supported-os-icons:nth-child(2),
-    .supported-os-icons:nth-child(5) {
-        background-color: #fff1a17a;
-        border: 3px solid #fff1a1db;
-    }
-    .supported-os-icons:nth-child(3),
-    .supported-os-icons:nth-child(6) {
-        background-color: #ff82d382;
-        border: 3px solid #ff82d3de;
     }
 }
 

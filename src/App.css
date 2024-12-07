@@ -260,7 +260,8 @@ a {
   padding: 1rem;
   border-radius: 2vh;
   height: 30vh;
-  border: 3px solid #54ffee;
+  background-color: rgb(21, 21, 21);
+  border: 3px solid rgba(255, 255, 255, 0.332);
   transition: all 0.2s ease-in-out;
 }
 .populated-items .item .row {
@@ -364,40 +365,26 @@ a {
 .supported-os--container .supported-os-icons {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100%;
   padding: 1rem;
   border-radius: 2vh;
   height: 10vh;
   transition: all 0.2s ease-in-out;
+  gap: 1vw;
+  background-color: rgb(37, 37, 37);
+  border: 2px solid rgba(255, 255, 255, 0.627);
 }
 .supported-os--container .supported-os-icons div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: white;
   border-radius: 5vw;
-  width: 2vw;
-  height: 2vw;
 }
 .supported-os--container .supported-os-icons div svg {
-  font-size: 4rem;
-}
-.supported-os--container .supported-os-icons:nth-child(1),
-.supported-os--container .supported-os-icons:nth-child(4) {
-  background-color: rgba(134, 255, 237, 0.5333333333);
-  border: 3px solid rgba(134, 255, 237, 0.7882352941);
-}
-.supported-os--container .supported-os-icons:nth-child(2),
-.supported-os--container .supported-os-icons:nth-child(5) {
-  background-color: rgba(255, 241, 161, 0.4784313725);
-  border: 3px solid rgba(255, 241, 161, 0.8588235294);
-}
-.supported-os--container .supported-os-icons:nth-child(3),
-.supported-os--container .supported-os-icons:nth-child(6) {
-  background-color: rgba(255, 130, 211, 0.5098039216);
-  border: 3px solid rgba(255, 130, 211, 0.8705882353);
+  font-size: 1.5vw;
 }
 
 .code-snippet--container {

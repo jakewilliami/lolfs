@@ -1,12 +1,12 @@
 import React from 'react'
 
-const PrimaryButton = ({title, icon}) => {
+const PrimaryButton = ({Name, icon}) => {
   return (
     <>
         <button className="cssbuttons-io">
             <span>
                 {icon}
-                {title}
+                {Name}
             </span>
         </button>
 

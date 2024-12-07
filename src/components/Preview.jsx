@@ -42,7 +42,7 @@ const Preview = () => {
                         className={`item item--${index + 1}`}
                     >
                         <div className='row'>
-                            <h2>{item.Title}</h2>
+                            <h2>{item.Name}</h2>
                             <div className='details'>
                                 <h3 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h3>
                                 <h3 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h3>

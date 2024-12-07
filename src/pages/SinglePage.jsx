@@ -15,11 +15,11 @@ const SinglePage = () => {
   const item = testItem[id];
 
   const iconMap = {
-    FaWindows:<FaWindows/>,
-    FaLinux:<FaLinux/>,
-    FaApple:<FaApple/>,
-    DiAndroid:<DiAndroid/>,
-    SiMacos: <SiMacos/>,
+    FaWindows:<FaWindows className='os-icon'/>,
+    FaLinux:<FaLinux className='os-icon'/>,
+    FaApple:<FaApple className='os-icon'/>,
+    DiAndroid:<DiAndroid className='os-icon'/>,
+    SiMacos: <SiMacos className='os-icon'/>,
   }
 
   if (!item) {
@@ -29,7 +29,7 @@ const SinglePage = () => {
   return (
     <>
       <section className='item-header'>
-        <h1>{item.Title}</h1>
+        <h1>{item.Name}</h1>
         <p>{item.Description}</p>
       </section>
 
