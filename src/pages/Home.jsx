@@ -1,7 +1,6 @@
 import React from 'react';
 import Preview from '../components/Preview';
 import { PiBracketsCurlyBold } from "react-icons/pi";
-import testItem from '/public/data/testItem.json';
 
 const Home = () => {
   return (
@@ -15,7 +14,7 @@ const Home = () => {
             <button className="btn">
                 <PiBracketsCurlyBold  className='sparkle'/>
                 <a 
-                    href='/public/data/testItem.json' 
+                    href='/api/testItem.json' 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text"
