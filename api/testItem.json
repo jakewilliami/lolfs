@@ -3,9 +3,9 @@
     {
         "Name": "FileZilla",
         "Description": "FileZilla is a free, open-source FTP (File Transfer Protocol) client that supports FTP, FTPS, and SFTP. It is used for transferring files between a local computer and a remote server.",
-        "Author": "FileZilla",
-        "Created": "2001-01-01",
-        "LastModified": "2024-12-01",
+        "Author": "",
+        "Created": "",
+        "LastModified": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
         "categoryType": "FTP File Transfer Protocol",
         "Details": {
@@ -23,27 +23,22 @@
                 {"OS": "macOS", "icon": "SiMacos"},
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
-            "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2022-23456"],
+            "Capabilities": ["FTP", "FTPS", "SFTP"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\FileZilla\\filezilla.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FileZilla\\filezilla.exe"
+                "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\FileZilla\\filezilla.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FileZilla\\filezilla.xml",
-                "C:\\Users\\%username%\\AppData\\Local\\FileZilla\\recentservers.xml"
+                "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.xml",
+                "C:\\Users\\*\\AppData\\Local\\FileZilla\\recentservers.xml"
             ],
-            "EventLog": [
-                "FileZilla Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\FileZilla",
+                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\FileZilla Client",
                 "HKEY_CURRENT_USER\\Software\\FileZilla"
             ],
             "Network": [
@@ -51,45 +46,29 @@
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
                         "*.filezilla-project.org",
-                        "ftp.filezilla-project.org",
-                        "sftp.filezilla-project.org"
+                        "update.filezilla-project.org",
+                        "filezilla-project.org"
                     ],
-                    "Ports": [
-                        "21", "22", "990", "5000-5009"
-                    ]
+                    "Ports": ["21", "22", "990"]
                 }
             ]
         },
         "Detections": [
             {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_network_sigma.yml",
-                "Description": "Detects potential network activity of FileZilla FTP tool"
-            },
-            {
                 "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_processes_sigma.yml",
                 "Description": "Detects potential processes activity of FileZilla FTP tool"
-            },
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_registry_sigma.yml",
-                "Description": "Detects suspicious registry modifications related to FileZilla tool"
             }
         ],
         "References": [
-            "https://filezilla-project.org/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2022-23456/",
-            "https://help.filezilla-project.org/"
+            "https://docs.velociraptor.app/exchange/artifacts/pages/filezilla/"
         ],
-        "Acknowledgement": [
-            "FileZilla Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Acknowlegment": []
     },
     {
         "Name": "WinSCP",
         "Description": "WinSCP is a free and open-source FTP, SFTP, and SCP client for Windows that allows secure file transfers between a local and a remote computer.",
-        "Author": "WinSCP",
-        "Created": "2000-05-01",
+        "Author": "",
+        "Created": "",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
         "categoryType": "FTP File Transfer Protocol",
@@ -107,23 +86,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "SFTP", "SCP", "File Transfer", "Secure syncing"],
-            "Vulnerabilities": ["CVE-2020-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\WinSCP\\winscp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\WinSCP\\winscp.exe"
+                "C:\\Users\\*\\AppData\\Local\\WinSCP\\winscp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\WinSCP\\winscp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\WinSCP\\settings.xml"
+                "C:\\Users\\*\\AppData\\Local\\WinSCP\\settings.xml"
             ],
-            "EventLog": [
-                "WinSCP Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\WinSCP",
                 "HKEY_CURRENT_USER\\Software\\WinSCP"
@@ -136,26 +110,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/winscp_network_sigma.yml",
-                "Description": "Detects potential network activity of WinSCP"
-            }
-        ],
-        "References": [
-            "https://winscp.net/",
-            "https://www.cvedetails.com/cve/CVE-2020-67890/"
-        ],
-        "Acknowledgement": [
-            "WinSCP developers for the tool's creation",
-            "Security researchers for their efforts"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Cyberduck",
         "Description": "Cyberduck is a free, open-source FTP, SFTP, WebDAV, and cloud storage browser for file transfers and management. It supports various protocols and cloud services, including Amazon S3 and Google Drive.",
-        "Author": "Cyberduck",
-        "Created": "2003-03-24",
+        "Author": "",
+        "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
@@ -174,23 +137,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "SFTP", "WebDAV", "Amazon S3", "Google Drive", "Dropbox"],
-            "Vulnerabilities": ["CVE-2021-12345"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Cyberduck\\cyberduck.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Cyberduck\\cyberduck.exe"
+                "C:\\Users\\*\\AppData\\Local\\Cyberduck\\cyberduck.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\Cyberduck\\cyberduck.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Cyberduck\\cyberduck.properties"
+                "C:\\Users\\*\\AppData\\Local\\Cyberduck\\cyberduck.properties"
             ],
-            "EventLog": [
-                "Cyberduck Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Cloud Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Cyberduck",
                 "HKEY_CURRENT_USER\\Software\\Cyberduck"
@@ -201,33 +159,20 @@
                     "Domains": [
                         "*.cyberduck.io",
                         "ftp.cyberduck.io",
-                        "s3.amazonaws.com",
-                        "drive.google.com"
                     ],
-                    "Ports": ["21", "22", "443", "80"]
+                    "Ports": ["21", "22"]
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/cyberduck_network_sigma.yml",
-                "Description": "Detects potential network activity of Cyberduck FTP tool"
-            }
-        ],
-        "References": [
-            "https://cyberduck.io/",
-            "https://www.cvedetails.com/cve/CVE-2021-12345/"
-        ],
-        "Acknowledgement": [
-            "Cyberduck Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Transmit",
         "Description": "Transmit is a premium macOS-only file transfer client that supports FTP, SFTP, WebDAV, and cloud storage services. It provides a user-friendly interface and advanced file management tools.",
-        "Author": "Panic",
-        "Created": "2001-06-30",
+        "Author": "",
+        "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
@@ -245,7 +190,7 @@
                 {"OS": "macOS", "icon": "SiMacos"}
             ],
             "Capabilities": ["FTP", "SFTP", "WebDAV", "Amazon S3", "Google Drive", "Dropbox", "File Transfer"],
-            "Vulnerabilities": [],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/Applications/Transmit.app",
                 "~/Library/Application Support/Transmit"
@@ -256,46 +201,29 @@
                 "/Applications/Transmit.app",
                 "~/Library/Application Support/Transmit/transmit.settings"
             ],
-            "EventLog": [
-                "Transmit Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Cloud Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
                         "*.panic.com",
-                        "ftp.panic.com",
-                        "s3.amazonaws.com",
-                        "drive.google.com"
+                        "ftp.panic.com"
                     ],
                     "Ports": ["21", "22", "443", "80"]
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/transmit_network_sigma.yml",
-                "Description": "Detects potential network activity of Transmit FTP tool"
-            }
-        ],
-        "References": [
-            "https://panic.com/transmit/"
-        ],
-        "Acknowledgement": [
-            "Panic Inc. for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
 
         "Name": "CuteFTP",
         "Description": "CuteFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, and SFTP, and includes advanced file management features and a user-friendly interface.",
-        "Author": "CuteFTP",
-        "Created": "1996-11-01",
+        "Author": "",
+        "Created": "",
         "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
@@ -313,23 +241,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing"],
-            "Vulnerabilities": ["CVE-2020-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\CuteFTP\\cuteftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\CuteFTP\\cuteftp.exe"
+                "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\CuteFTP\\cuteftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\CuteFTP\\cuteftp.xml"
+                "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.xml"
             ],
-            "EventLog": [
-                "CuteFTP Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\CuteFTP",
                 "HKEY_CURRENT_USER\\Software\\CuteFTP"
@@ -346,30 +269,20 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/cuteftp_network_sigma.yml",
-                "Description": "Detects potential network activity of CuteFTP FTP tool"
-            }
-        ],
-        "References": [
-            "https://www.cuteftp.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-67890/"
-        ],
-        "Acknowledgement": [
-            "CuteFTP Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Core FTP",
         "Description": "Core FTP is a free and paid FTP client for transferring files between local computers and remote servers. It supports FTP, FTPS, SFTP, and includes both a free version and a Pro version with additional features like site-to-site transfers and advanced encryption.",
-        "Author": "CoreFTP",
-        "Created": "2001-07-01",
+        "Author": "",
+        "Created": "",
         "Logo": "https://cdn.icon-icons.com/icons2/183/PNG/256/Core_FTP_22544.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
         "Details": {
+                "FileZilla Client Started",
             "Website": "https://www.coreftp.com",
             "PEMetadata": {
                 "Filename": "coreftp.exe",
@@ -383,23 +296,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "Site-to-Site Transfer", "Advanced Encryption"],
-            "Vulnerabilities": ["CVE-2019-12345"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Core FTP\\coreftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Core FTP\\coreftp.exe"
+                "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\Core FTP\\coreftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Core FTP\\coreftp.xml"
+                "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.xml"
             ],
-            "EventLog": [
-                "CoreFTP Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Core FTP",
                 "HKEY_CURRENT_USER\\Software\\Core FTP"
@@ -416,26 +324,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/coreftp_network_sigma.yml",
-                "Description": "Detects potential network activity of CoreFTP FTP tool"
-            }
-        ],
-        "References": [
-            "https://www.coreftp.com/",
-            "https://www.cvedetails.com/cve/CVE-2019-12345/"
-        ],
-        "Acknowledgement": [
-            "Core FTP Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Free FTP by CoffeeCup",
         "Description": "Free FTP by CoffeeCup is a free FTP client for transferring files between a local computer and remote servers. It supports FTP and FTPS, and offers a paid Pro version with additional features like enhanced security and more advanced transfer options.",
-        "Author": "coffeecup",
-        "Created": "2004-06-01",
+        "Author": "",
+        "Created": "",
         "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
@@ -453,23 +350,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "FTPS", "File Transfer", "Directory syncing"],
-            "Vulnerabilities": ["CVE-2021-54321"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\CoffeeCup\\freeftp.exe"
+                "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\CoffeeCup\\freeftp.xml"
+                "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.xml"
             ],
-            "EventLog": [
-                "Free FTP Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\CoffeeCup\\Free FTP",
                 "HKEY_CURRENT_USER\\Software\\CoffeeCup\\Free FTP"
@@ -485,26 +377,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/freeftp_network_sigma.yml",
-                "Description": "Detects potential network activity of Free FTP by CoffeeCup"
-            }
-        ],
-        "References": [
-            "https://www.coffeecup.com/free-ftp/",
-            "https://www.cvedetails.com/cve/CVE-2021-54321/"
-        ],
-        "Acknowledgement": [
-            "CoffeeCup Software for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "SmartFTP",
         "Description": "SmartFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, SFTP, and includes advanced features like file synchronization, scheduling, and remote file editing.",
-        "Author": "SmartFTP",
-        "Created": "1999-05-01",
+        "Author": "",
+        "Created": "",
         "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
@@ -522,23 +403,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "File syncing", "Remote File Editing"],
-            "Vulnerabilities": ["CVE-2018-23456"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\SmartFTP\\smartftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\SmartFTP\\smartftp.exe"
+                "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\SmartFTP\\smartftp.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\SmartFTP\\smartftp.xml"
+                "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.xml"
             ],
-            "EventLog": [
-                "SmartFTP Client Started",
-                "File Transfer Started",
-                "File Transfer Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\SmartFTP",
                 "HKEY_CURRENT_USER\\Software\\SmartFTP"
@@ -549,32 +425,22 @@
                     "Domains": [
                         "*.smartftp.com",
                         "ftp.smartftp.com",
+                "FileZilla Client Started",
                         "sftp.smartftp.com"
                     ],
                     "Ports": ["21", "22", "990"]
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/smartftp_network_sigma.yml",
-                "Description": "Detects potential network activity of SmartFTP FTP tool"
-            }
-        ],
-        "References": [
-            "https://www.smartftp.com/",
-            "https://www.cvedetails.com/cve/CVE-2018-23456/"
-        ],
-        "Acknowledgement": [
-            "SmartFTP Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "BitTorrent",
         "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
-        "Author": "BitTorrent",
-        "Created": "2001-07-02",
+        "Author": "",
+        "Created": "",
         "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
         "LastModified": "2024-12-01",
         "categoryType": "P2P Peer-to-Peer",
@@ -594,23 +460,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["BitTorrent Protocol", "File Sharing", "Bandwidth Management", "Remote Access", "Streaming"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-56789"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\BitTorrent\\bittorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\BitTorrent\\bittorrent.exe"
+                "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\BitTorrent\\bittorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\BitTorrent\\bittorrent.xml"
+                "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.xml"
             ],
-            "EventLog": [
-                "BitTorrent Client Started",
-                "Download Started",
-                "Download Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\BitTorrent",
                 "HKEY_CURRENT_USER\\Software\\BitTorrent"
@@ -626,27 +487,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/bittorrent_network_sigma.yml",
-                "Description": "Detects potential network activity of BitTorrent client"
-            }
-        ],
-        "References": [
-            "https://www.bittorrent.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-56789/"
-        ],
-        "Acknowledgement": [
-            "BitTorrent, Inc. for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "µTorrent",
         "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
-        "Author": "µTorrent",
-        "Created": "2005-09-18",
+        "Author": "",
+        "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
         "LastModified": "2024-12-01",
         "categoryType": "P2P Peer-to-Peer",
@@ -666,26 +515,22 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["BitTorrent Protocol", "File Sharing", "Streaming", "Bandwidth Management", "Scheduling"],
-            "Vulnerabilities": ["CVE-2019-8765", "CVE-2020-34567"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\µTorrent\\utorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\µTorrent\\utorrent.exe"
+                "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\µTorrent\\utorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\µTorrent\\utorrent.xml"
+                "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.xml"
             ],
-            "EventLog": [
-                "µTorrent Client Started",
-                "Download Started",
-                "Download Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\µTorrent",
                 "HKEY_CURRENT_USER\\Software\\µTorrent"
+            "https://www.cvedetails.com/cve/CVE-2021-23456/"
             ],
             "Network": [
                 {
@@ -698,27 +543,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/utorrent_network_sigma.yml",
-                "Description": "Detects potential network activity of µTorrent client"
-            }
-        ],
-        "References": [
-            "https://www.utorrent.com/",
-            "https://www.cvedetails.com/cve/CVE-2019-8765/",
-            "https://www.cvedetails.com/cve/CVE-2020-34567/"
-        ],
-        "Acknowledgement": [
-            "µTorrent (BitTorrent, Inc.) for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "qBittorrent",
         "Description": "qBittorrent is a free, open-source BitTorrent client that offers a clean interface and a wide range of features for file sharing. It supports the BitTorrent protocol and allows for file prioritization, RSS feeds, and integrated search capabilities.",
-        "Author": "qBittorrent",
-        "Created": "2006-05-15",
+        "Author": "",
+        "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
         "LastModified": "2024-12-01",
         "categoryType": "P2P Peer-to-Peer",
@@ -738,23 +571,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["BitTorrent Protocol", "File Sharing", "Integrated Search", "RSS Feeds", "Remote Control"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\qBittorrent\\qbittorrent.exe"
+                "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\qBittorrent\\qbittorrent.xml"
+                "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.xml"
             ],
-            "EventLog": [
-                "qBittorrent Client Started",
-                "Download Started",
-                "Download Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\qBittorrent",
                 "HKEY_CURRENT_USER\\Software\\qBittorrent"
@@ -770,27 +598,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/qbittorrent_network_sigma.yml",
-                "Description": "Detects potential network activity of qBittorrent client"
-            }
-        ],
-        "References": [
-            "https://www.qbittorrent.org/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-67890/"
-        ],
-        "Acknowledgement": [
-            "qBittorrent developers for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "FrostWire",
         "Description": "FrostWire is a free, open-source BitTorrent client and cloud downloader. It allows users to share files, download torrents, and stream media directly from the app. It also integrates with the FrostWire Cloud for downloading files directly from the internet.",
-        "Author": "FrostWire",
-        "Created": "2005-04-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "P2P Peer-to-Peer",
@@ -810,23 +626,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["BitTorrent Protocol", "File Sharing", "Cloud Downloader", "Streaming", "Search"],
-            "Vulnerabilities": ["CVE-2018-98765", "CVE-2021-23456"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\FrostWire\\frostwire.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FrostWire\\frostwire.exe"
+                "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\FrostWire\\frostwire.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FrostWire\\frostwire.xml"
+                "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.xml"
             ],
-            "EventLog": [
-                "FrostWire Client Started",
-                "Download Started",
-                "Download Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\FrostWire",
                 "HKEY_CURRENT_USER\\Software\\FrostWire"
@@ -842,27 +653,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/frostwire_network_sigma.yml",
-                "Description": "Detects potential network activity of FrostWire client"
-            }
-        ],
-        "References": [
-            "https://www.frostwire.com/",
-            "https://www.cvedetails.com/cve/CVE-2018-98765/",
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
-        ],
-        "Acknowledgement": [
-            "FrostWire developers for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "eMule",
         "Description": "eMule is a free, open-source P2P (peer-to-peer) file-sharing client that is primarily used for downloading and sharing files over the eDonkey network and Kad network. It features support for various file types, powerful search capabilities, and a large user base.",
-        "Author": "eMule",
-        "Created": "2002-05-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "P2P Peer-to-Peer",
@@ -880,23 +679,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["P2P File Sharing", "eDonkey Network", "Kad Network", "File Search", "Direct Downloads"],
-            "Vulnerabilities": ["CVE-2019-12345", "CVE-2020-98765"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\eMule\\emule.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\eMule\\emule.exe"
+                "C:\\Users\\*\\AppData\\Local\\eMule\\emule.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\eMule\\emule.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\eMule\\emule.ini"
+                "C:\\Users\\*\\AppData\\Local\\eMule\\emule.ini"
             ],
-            "EventLog": [
-                "eMule Client Started",
-                "File Download Started",
-                "File Download Completed",
-                "Connection Established"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\eMule",
                 "HKEY_CURRENT_USER\\Software\\eMule"
@@ -913,27 +707,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/emule_network_sigma.yml",
-                "Description": "Detects potential network activity of eMule P2P client"
-            }
-        ],
-        "References": [
-            "https://www.emule-project.net/",
-            "https://www.cvedetails.com/cve/CVE-2019-12345/",
-            "https://www.cvedetails.com/cve/CVE-2020-98765/"
-        ],
-        "Acknowledgement": [
-            "eMule Project for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "ShareIt",
         "Description": "ShareIt is a free, cross-platform file-sharing application that allows users to transfer files, videos, music, and other types of media quickly between devices over a local network or using a Wi-Fi connection. It supports both Android and iOS devices, and it's known for its fast transfer speeds and user-friendly interface.",
-        "Author": "ShareIt",
-        "Created": "2015-01-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
@@ -953,22 +735,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\ShareIt\\ShareIt.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\ShareIt\\ShareIt.exe"
+                "C:\\Users\\*\\AppData\\Local\\ShareIt\\ShareIt.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\ShareIt\\ShareIt.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\ShareIt\\shareit.ini"
+                "C:\\Users\\*\\AppData\\Local\\ShareIt\\shareit.ini"
             ],
-            "EventLog": [
-                "ShareIt Client Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\ShareIt",
                 "HKEY_CURRENT_USER\\Software\\ShareIt"
@@ -984,27 +762,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/shareit_network_sigma.yml",
-                "Description": "Detects potential network activity of ShareIt file-sharing application"
-            }
-        ],
-        "References": [
-            "https://www.shareit.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-67890/"
-        ],
-        "Acknowledgement": [
-            "ShareIt Team for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Send Anywhere",
         "Description": "Send Anywhere is a free, cross-platform file transfer application that allows users to send files and folders securely across different devices. It provides options for both free and paid Pro versions with additional features such as higher transfer speeds, larger file sizes, and priority support.",
-        "Author": "Send Anywhere",
-        "Created": "2012-05-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
@@ -1025,22 +791,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Cross-Platform", "P2P", "Large File Support", "Cloud Storage"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\SendAnywhere\\sendanywhere.exe"
+                "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\SendAnywhere\\sendanywhere.ini"
+                "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.ini"
             ],
-            "EventLog": [
-                "Send Anywhere Client Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\SendAnywhere",
                 "HKEY_CURRENT_USER\\Software\\SendAnywhere"
@@ -1056,31 +818,20 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/sendanywhere_network_sigma.yml",
-                "Description": "Detects potential network activity of Send Anywhere application"
-            }
-        ],
-        "References": [
-            "https://send-anywhere.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-67890/"
-        ],
-        "Acknowledgement": [
-            "Send Anywhere Team for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Zapya",
         "Description": "Zapya is a free, cross-platform file transfer application that enables fast and wireless file sharing between devices. It supports Android, iOS, Windows, and MacOS, and can transfer files without the need for an internet connection by using Wi-Fi Direct. Zapya is known for its ability to share large files and multiple files simultaneously across different platforms.",
-        "Author": "Zapya",
-        "Created": "2011-08-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
         "Details": {
+            "https://www.cvedetails.com/cve/CVE-2021-23456/"
             "Website": "https://www.izapya.com",
             "PEMetadata": {
                 "Filename": "Zapya.exe",
@@ -1097,22 +848,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-23456"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Zapya\\Zapya.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Zapya\\Zapya.exe"
+                "C:\\Users\\*\\AppData\\Local\\Zapya\\Zapya.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\Zapya\\Zapya.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Zapya\\zapya.ini"
+                "C:\\Users\\*\\AppData\\Local\\Zapya\\zapya.ini"
             ],
-            "EventLog": [
-                "Zapya Client Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Zapya",
                 "HKEY_CURRENT_USER\\Software\\Zapya"
@@ -1128,27 +875,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/zapya_network_sigma.yml",
-                "Description": "Detects potential network activity of Zapya file-sharing application"
-            }
-        ],
-        "References": [
-            "https://www.izapya.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
-        ],
-        "Acknowledgement": [
-            "Zapya Team for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Feem",
         "Description": "Feem is a free and paid file transfer application that allows fast wireless file sharing between devices over a local network. It supports Android, iOS, Windows, and MacOS. Feem offers both a free version and a paid Pro version with additional features such as faster transfer speeds, larger file sizes, and ad-free experience.",
-        "Author": "Feem",
-        "Created": "2014-05-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
@@ -1169,22 +904,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing", "Ad-Free (Pro Version)"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-67890"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Feem\\Feem.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Feem\\Feem.exe"
+                "C:\\Users\\*\\AppData\\Local\\Feem\\Feem.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\Feem\\Feem.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\Feem\\feem.ini"
+                "C:\\Users\\*\\AppData\\Local\\Feem\\feem.ini"
             ],
-            "EventLog": [
-                "Feem Client Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Feem",
                 "HKEY_CURRENT_USER\\Software\\Feem"
@@ -1200,27 +931,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/feem_network_sigma.yml",
-                "Description": "Detects potential network activity of Feem file-sharing application"
-            }
-        ],
-        "References": [
-            "https://feem.io/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-67890/"
-        ],
-        "Acknowledgement": [
-            "Feem Team for the tool's development",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Nearby Share",
         "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
-        "Author": "Google",
-        "Created": "2020-08-05",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
@@ -1239,7 +958,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Cross-Platform", "Bluetooth", "Wi-Fi Direct", "Peer-to-Peer"],
-            "Vulnerabilities": ["CVE-2021-34567", "CVE-2022-45678"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
                 "/System/Applications/NearbyShare.app"
@@ -1250,11 +969,7 @@
                 "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
                 "/System/Applications/NearbyShare.app"
             ],
-            "EventLog": [
-                "Nearby Share Session Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Google\\NearbyShare",
                 "HKEY_CURRENT_USER\\Software\\Google\\NearbyShare"
@@ -1263,34 +978,21 @@
                 {
                     "Description": "Known domains for Nearby Share connections",
                     "Domains": [
-                        "*.google.com",
                         "nearbyshare.google.com"
                     ],
                     "Ports": ["443"]
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/nearbyshare_network_sigma.yml",
-                "Description": "Detects potential network activity of Nearby Share"
-            }
-        ],
-        "References": [
-            "https://support.google.com/android/answer/9470594",
-            "https://www.cvedetails.com/cve/CVE-2021-34567/",
-            "https://www.cvedetails.com/cve/CVE-2022-45678/"
-        ],
-        "Acknowledgement": [
-            "Google for the development of Nearby Share",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Resilio Sync",
         "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
-        "Author": "Resilio Inc.",
-        "Created": "2011-06-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Large File",
@@ -1312,7 +1014,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Sync", "File Transfer", "Peer-to-Peer", "Backup", "Selective Sync"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-23456"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
                 "/Applications/Resilio Sync.app"
@@ -1323,11 +1025,7 @@
                 "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
                 "/Applications/Resilio Sync.app"
             ],
-            "EventLog": [
-                "Resilio Sync Session Started",
-                "File Transfer Started",
-                "File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Resilio Sync",
                 "HKEY_CURRENT_USER\\Software\\Resilio Sync"
@@ -1343,27 +1041,15 @@
                 }
             ]
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/resiliosync_network_sigma.yml",
-                "Description": "Detects potential network activity of Resilio Sync"
-            }
-        ],
-        "References": [
-            "https://www.resilio.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
-        ],
-        "Acknowledgement": [
-            "Resilio Inc. for the development of Resilio Sync",
-            "Security researchers and Sigma rule developers"
-        ]
+        "Detections": [],
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "MASV",
         "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
-        "Author": "MASV.io",
-        "Created": "2017-01-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Large File",
@@ -1382,7 +1068,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["Large File Transfer", "Cloud-based", "Accelerated Transfer", "Secure Transfer"],
-            "Vulnerabilities": ["CVE-2020-67890", "CVE-2021-78901"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\MASV\\masv.exe",
                 "/Applications/MASV.app"
@@ -1393,10 +1079,7 @@
                 "C:\\Program Files\\MASV\\masv.exe",
                 "/Applications/MASV.app"
             ],
-            "EventLog": [
-                "MASV Transfer Started",
-                "MASV Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\MASV",
                 "HKEY_CURRENT_USER\\Software\\MASV"
@@ -1418,21 +1101,14 @@
                 "Description": "Detects potential network activity of MASV"
             }
         ],
-        "References": [
-            "https://www.masv.io/",
-            "https://www.cvedetails.com/cve/CVE-2020-67890/",
-            "https://www.cvedetails.com/cve/CVE-2021-78901/"
-        ],
-        "Acknowledgement": [
-            "MASV.io for the development of MASV",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Smash",
         "Description": "Smash is a file transfer service that allows users to send large files quickly and easily. The free version has a size limit and a 14-day expiration for uploaded files, while the paid version provides additional features like unlimited file size, file retention, and priority support. Smash offers a simple, user-friendly interface and supports multiple file transfers simultaneously.",
-        "Author": "Smash",
-        "Created": "2017-04-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Large File",
@@ -1452,7 +1128,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["Large File Transfer", "Cloud-based", "Multiple File Transfers", "File Sharing"],
-            "Vulnerabilities": ["CVE-2021-34567", "CVE-2022-45678"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Smash\\smash.exe",
                 "/Applications/Smash.app"
@@ -1463,10 +1139,7 @@
                 "C:\\Program Files\\Smash\\smash.exe",
                 "/Applications/Smash.app"
             ],
-            "EventLog": [
-                "Smash Transfer Started",
-                "Smash Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Smash",
                 "HKEY_CURRENT_USER\\Software\\Smash"
@@ -1487,21 +1160,14 @@
                 "Description": "Detects potential network activity of Smash"
             }
         ],
-        "References": [
-            "https://www.smash.io/",
-            "https://www.cvedetails.com/cve/CVE-2021-34567/",
-            "https://www.cvedetails.com/cve/CVE-2022-45678/"
-        ],
-        "Acknowledgement": [
-            "Smash for the development of the platform",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Filemail",
         "Description": "Filemail is a file transfer service designed for sending large files without the hassle of using cloud storage. The free version allows file transfers up to 50GB with size limits and has a 7-day expiration for files. The paid version offers unlimited file size, increased file retention, and additional features such as password protection, email tracking, and branded transfer pages.",
-        "Author": "Filemail",
-        "Created": "2005-03-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Large File",
@@ -1521,7 +1187,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["Large File Transfer", "Cloud-based", "File Sharing", "Password Protection"],
-            "Vulnerabilities": ["CVE-2020-67890", "CVE-2021-78901"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Filemail\\filemail.exe",
                 "/Applications/Filemail.app"
@@ -1532,10 +1198,7 @@
                 "C:\\Program Files\\Filemail\\filemail.exe",
                 "/Applications/Filemail.app"
             ],
-            "EventLog": [
-                "Filemail Transfer Started",
-                "Filemail Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\Filemail",
                 "HKEY_CURRENT_USER\\Software\\Filemail"
@@ -1556,21 +1219,14 @@
                 "Description": "Detects potential network activity of Filemail"
             }
         ],
-        "References": [
-            "https://www.filemail.com/",
-            "https://www.cvedetails.com/cve/CVE-2020-67890/",
-            "https://www.cvedetails.com/cve/CVE-2021-78901/"
-        ],
-        "Acknowledgement": [
-            "Filemail for the development of the platform",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "rsync",
         "Description": "rsync is a free, open-source file transfer and synchronization tool used to efficiently transfer and synchronize files between local and remote systems. It is commonly used for backups and mirroring and supports copying over SSH, minimizing data transfer by only copying changed parts of files.",
-        "Author": "rsync Team",
-        "Created": "1996-06-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Command-Line",
@@ -1590,7 +1246,7 @@
                 {"OS": "Windows (via Cygwin)", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "syncing", "Backup", "Compression", "Delta Transfer"],
-            "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-23456"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/rsync",
                 "/usr/local/bin/rsync"
@@ -1601,10 +1257,7 @@
                 "/usr/bin/rsync",
                 "/usr/local/bin/rsync"
             ],
-            "EventLog": [
-                "rsync Transfer Started",
-                "rsync Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1622,21 +1275,14 @@
                 "Description": "Detects potential network activity of rsync"
             }
         ],
-        "References": [
-            "https://rsync.samba.org/",
-            "https://www.cvedetails.com/cve/CVE-2020-12345/",
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
-        ],
-        "Acknowledgement": [
-            "rsync Team for the development of the tool",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "scp (Secure Copy)",
         "Description": "scp is a free, command-line utility used for securely transferring files between hosts over a network. It uses SSH (Secure Shell) to provide encrypted transfer of files, ensuring confidentiality and integrity during the transfer process.",
-        "Author": "OpenSSH Project",
-        "Created": "1995-01-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Command-Line",
@@ -1656,7 +1302,7 @@
                 {"OS": "Windows (via openSSH)", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Secure Copy", "Encryption", "SSH-based"],
-            "Vulnerabilities": ["CVE-2020-12346", "CVE-2021-23457"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/scp",
                 "/usr/local/bin/scp"
@@ -1667,10 +1313,7 @@
                 "/usr/bin/scp",
                 "/usr/local/bin/scp"
             ],
-            "EventLog": [
-                "scp Transfer Started",
-                "scp Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1688,21 +1331,14 @@
                 "Description": "Detects potential network activity of scp"
             }
         ],
-        "References": [
-            "https://www.openssh.com/scp/",
-            "https://www.cvedetails.com/cve/CVE-2020-12346/",
-            "https://www.cvedetails.com/cve/CVE-2021-23457/"
-        ],
-        "Acknowledgement": [
-            "OpenSSH Project for the development of scp",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "sftp (Secure File Transfer Protocol)",
         "Description": "sftp is a free file transfer protocol that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
-        "Author": "OpenSSH Project",
-        "Created": "1995-01-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Command-Line",
@@ -1722,7 +1358,7 @@
                 {"OS": "Windows (via openSSH)", "icon": ""}
             ],
             "Capabilities": ["File Transfer", "Secure Copy", "Encryption", "SSH-based"],
-            "Vulnerabilities": ["CVE-2020-12347", "CVE-2021-23458"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/sftp",
                 "/usr/local/bin/sftp"
@@ -1733,10 +1369,7 @@
                 "/usr/bin/sftp",
                 "/usr/local/bin/sftp"
             ],
-            "EventLog": [
-                "sftp Transfer Started",
-                "sftp Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1754,21 +1387,14 @@
                 "Description": "Detects potential network activity of sftp"
             }
         ],
-        "References": [
-            "https://www.openssh.com/sftp/",
-            "https://www.cvedetails.com/cve/CVE-2020-12347/",
-            "https://www.cvedetails.com/cve/CVE-2021-23458/"
-        ],
-        "Acknowledgement": [
-            "OpenSSH Project for the development of sftp",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "curl",
         "Description": "curl is a free, open-source command-line tool for transferring data with URLs. It supports multiple protocols such as HTTP, HTTPS, FTP, FTPS, and SFTP, and is used for downloading or uploading data from or to a server.",
-        "Author": "Daniel Stenberg",
-        "Created": "1997-03-20",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Command-Line",
@@ -1788,7 +1414,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["Data Transfer", "File Download", "File Upload", "HTTP(S) Requests", "FTP", "SFTP", "Proxy Support"],
-            "Vulnerabilities": ["CVE-2020-12348", "CVE-2021-23459"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/curl",
                 "/usr/local/bin/curl"
@@ -1799,10 +1425,7 @@
                 "/usr/bin/curl",
                 "/usr/local/bin/curl"
             ],
-            "EventLog": [
-                "curl Request Started",
-                "curl Request Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1820,21 +1443,14 @@
                 "Description": "Detects potential network activity of curl"
             }
         ],
-        "References": [
-            "https://curl.se/",
-            "https://www.cvedetails.com/cve/CVE-2020-12348/",
-            "https://www.cvedetails.com/cve/CVE-2021-23459/"
-        ],
-        "Acknowledgement": [
-            "Daniel Stenberg for the development of curl",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "wget",
         "Description": "wget is a free, open-source command-line tool for downloading files from the web. It supports HTTP, HTTPS, and FTP protocols, and can download files in the background or from FTP and HTTP servers.",
-        "Author": "The GNU Project",
-        "Created": "1996-03-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Command-Line",
@@ -1854,7 +1470,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Download", "Recursive Download", "HTTP(S) Requests", "FTP"],
-            "Vulnerabilities": ["CVE-2020-12349", "CVE-2021-23460"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/wget",
                 "/usr/local/bin/wget"
@@ -1865,10 +1481,7 @@
                 "/usr/bin/wget",
                 "/usr/local/bin/wget"
             ],
-            "EventLog": [
-                "wget Download Started",
-                "wget Download Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1887,21 +1500,14 @@
                 "Description": "Detects potential network activity of wget"
             }
         ],
-        "References": [
-            "https://www.gnu.org/software/wget/",
-            "https://www.cvedetails.com/cve/CVE-2020-12349/",
-            "https://www.cvedetails.com/cve/CVE-2021-23460/"
-        ],
-        "Acknowledgement": [
-            "The GNU Project for the development of wget",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Rclone",
         "Description": "Rclone is a free, open-source command-line program to manage files on cloud storage. It supports over 40 different cloud storage providers and can sync, copy, and move files between cloud storage services or locally.",
-        "Author": "Nick Craig-Wood",
-        "Created": "2014-02-15",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Cross-Platform",
@@ -1921,7 +1527,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["Cloud Sync", "File Transfer", "Cloud Storage Management", "Encryption"],
-            "Vulnerabilities": ["CVE-2021-12345", "CVE-2022-23460"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/rclone",
                 "/usr/local/bin/rclone"
@@ -1932,11 +1538,7 @@
                 "/usr/bin/rclone",
                 "/usr/local/bin/rclone"
             ],
-            "EventLog": [
-                "rclone Sync Started",
-                "rclone File Transfer Started",
-                "rclone File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -1956,21 +1558,14 @@
                 "Description": "Detects potential network activity of rclone"
             }
         ],
-        "References": [
-            "https://rclone.org/",
-            "https://www.cvedetails.com/cve/CVE-2021-12345/",
-            "https://www.cvedetails.com/cve/CVE-2022-23460/"
-        ],
-        "Acknowledgement": [
-            "Nick Craig-Wood for the development of rclone",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "KDE Connect",
         "Description": "KDE Connect is a free and open-source tool that allows communication between your smartphone and computer. It enables file transfers, notification syncing, and other features like controlling your desktop from your phone and vice versa.",
-        "Author": "KDE Community",
-        "Created": "2010-03-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Cross-Platform",
@@ -1991,7 +1586,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Notification Syncing", "Remote Control", "SMS Sync"],
-            "Vulnerabilities": ["CVE-2021-12346", "CVE-2022-23461"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/kdeconnect",
                 "/usr/local/bin/kdeconnect"
@@ -2002,11 +1597,7 @@
                 "/usr/bin/kdeconnect",
                 "/usr/local/bin/kdeconnect"
             ],
-            "EventLog": [
-                "KDE Connect Device Connected",
-                "KDE Connect File Transfer Started",
-                "KDE Connect File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -2025,21 +1616,14 @@
                 "Description": "Detects potential network activity of KDE Connect"
             }
         ],
-        "References": [
-            "https://kdeconnect.kde.org/",
-            "https://www.cvedetails.com/cve/CVE-2021-12346/",
-            "https://www.cvedetails.com/cve/CVE-2022-23461/"
-        ],
-        "Acknowledgement": [
-            "KDE Community for the development of KDE Connect",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "Dukto R6",
         "Description": "Dukto R6 is a free, open-source file transfer tool designed for quick and simple file sharing between devices. It supports multiple platforms, including Windows, Linux, and macOS, and allows for transferring files and folders without the need for configuration or server-side installation.",
-        "Author": "Emanuele Colombo",
-        "Created": "2011-07-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "Cross-Platform",
@@ -2059,7 +1643,7 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Transfer", "Folder Transfer", "Drag and Drop"],
-            "Vulnerabilities": ["CVE-2014-12345", "CVE-2015-23461"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "/usr/bin/dukto",
                 "/usr/local/bin/dukto"
@@ -2070,10 +1654,7 @@
                 "/usr/bin/dukto",
                 "/usr/local/bin/dukto"
             ],
-            "EventLog": [
-                "Dukto File Transfer Started",
-                "Dukto File Transfer Completed"
-            ],
+            "EventLog": [],
             "Registry": [],
             "Network": [
                 {
@@ -2091,21 +1672,14 @@
                 "Description": "Detects potential network activity of Dukto R6"
             }
         ],
-        "References": [
-            "https://www.mikrocontroller.com/dukto",
-            "https://www.cvedetails.com/cve/CVE-2014-12345/",
-            "https://www.cvedetails.com/cve/CVE-2015-23461/"
-        ],
-        "Acknowledgement": [
-            "Emanuele Colombo for the development of Dukto R6",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "FastCopy",
         "Description": "FastCopy is a free file copying and backup software for Windows, known for its high performance in transferring large files or directories. It supports copying, moving, and synchronizing files with customizable options for speed optimization.",
-        "Author": "Julius R. H. Smith",
-        "Created": "2004-06-15",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "other",
@@ -2123,22 +1697,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Copying", "File Moving", "File syncing", "Backup"],
-            "Vulnerabilities": ["CVE-2019-8765", "CVE-2020-2347"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\FastCopy\\FastCopy.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FastCopy\\FastCopy.exe"
+                "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\FastCopy\\FastCopy.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\FastCopy\\FastCopy.ini"
+                "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.ini"
             ],
-            "EventLog": [
-                "FastCopy File Copy Started",
-                "FastCopy File Copy Completed",
-                "FastCopy File Transfer Error"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\FastCopy",
                 "HKEY_CURRENT_USER\\Software\\FastCopy"
@@ -2151,21 +1721,14 @@
                 "Description": "Detects potential network activity of FastCopy tool"
             }
         ],
-        "References": [
-            "https://fastcopy.jp/en/",
-            "https://www.cvedetails.com/cve/CVE-2019-8765/",
-            "https://www.cvedetails.com/cve/CVE-2020-2347/"
-        ],
-        "Acknowledgement": [
-            "Julius R. H. Smith for developing FastCopy",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "TeraCopy",
         "Description": "TeraCopy is a file transfer utility for Windows that speeds up copying and moving files by using dynamic buffer sizes. It offers both free and paid versions, with advanced features such as error recovery, file verification, and a more efficient user interface.",
-        "Author": "Code Sector",
-        "Created": "2007-04-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "other",
@@ -2183,22 +1746,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File Copying", "File Moving", "File Verification", "Error Recovery"],
-            "Vulnerabilities": ["CVE-2021-12347", "CVE-2022-23462"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\TeraCopy\\TeraCopy.exe"
+                "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\TeraCopy\\TeraCopy.ini"
+                "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.ini"
             ],
-            "EventLog": [
-                "TeraCopy File Copy Started",
-                "TeraCopy File Copy Completed",
-                "TeraCopy Error Detected"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\TeraCopy",
                 "HKEY_CURRENT_USER\\Software\\TeraCopy"
@@ -2211,21 +1770,14 @@
                 "Description": "Detects potential network activity of TeraCopy tool"
             }
         ],
-        "References": [
-            "https://www.codesector.com/teracopy",
-            "https://www.cvedetails.com/cve/CVE-2021-12347/",
-            "https://www.cvedetails.com/cve/CVE-2022-23462/"
-        ],
-        "Acknowledgement": [
-            "Code Sector for the development of TeraCopy",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     },
     {
         "Name": "GoodSync",
         "Description": "GoodSync is a file synchronization and backup software that offers both free and paid versions. It allows users to synchronize files between local and remote storage, backup data, and perform scheduled tasks for file management. It is known for its high reliability and advanced synchronization features.",
-        "Author": "Siber Systems",
-        "Created": "2006-03-01",
+        "Author": "",
+        "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
         "categoryType": "other",
@@ -2245,23 +1797,18 @@
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
             "Capabilities": ["File syncing", "File Backup", "Cloud Sync", "Scheduling", "Data Recovery"],
-            "Vulnerabilities": ["CVE-2021-23468", "CVE-2022-34568"],
+            "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\GoodSync\\GoodSync.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\GoodSync\\GoodSync.exe"
+                "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\GoodSync\\GoodSync.exe",
-                "C:\\Users\\%username%\\AppData\\Local\\GoodSync\\GoodSync.ini"
+                "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.ini"
             ],
-            "EventLog": [
-                "GoodSync Sync Started",
-                "GoodSync Sync Completed",
-                "GoodSync Backup Started",
-                "GoodSync Backup Completed"
-            ],
+            "EventLog": [],
             "Registry": [
                 "HKEY_LOCAL_MACHINE\\SOFTWARE\\GoodSync",
                 "HKEY_CURRENT_USER\\Software\\GoodSync"
@@ -2274,14 +1821,7 @@
                 "Description": "Detects potential network activity of GoodSync tool"
             }
         ],
-        "References": [
-            "https://www.goodsync.com",
-            "https://www.cvedetails.com/cve/CVE-2021-23468/",
-            "https://www.cvedetails.com/cve/CVE-2022-34568/"
-        ],
-        "Acknowledgement": [
-            "Siber Systems for developing GoodSync",
-            "Security researchers and Sigma rule developers"
-        ]
+        "References": [],
+        "Acknowlegment": []
     }            
 ]
