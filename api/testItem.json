@@ -37,10 +37,7 @@
                 "C:\\Users\\*\\AppData\\Local\\FileZilla\\recentservers.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\FileZilla Client",
-                "HKEY_CURRENT_USER\\Software\\FileZilla"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
@@ -98,10 +95,7 @@
                 "C:\\Users\\*\\AppData\\Local\\WinSCP\\settings.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\WinSCP",
-                "HKEY_CURRENT_USER\\Software\\WinSCP"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for secure connections",
@@ -140,7 +134,7 @@
             "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\Cyberduck\\cyberduck.exe",
-                "C:\\Users\\*\\AppData\\Local\\Cyberduck\\cyberduck.exe"
+                "C:\\Users\\*\\AppData\\Roaming\\Cyberduck\\cyberduck.exe"
             ]
         },
         "Artifacts": {
@@ -149,16 +143,12 @@
                 "C:\\Users\\*\\AppData\\Local\\Cyberduck\\cyberduck.properties"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Cyberduck",
-                "HKEY_CURRENT_USER\\Software\\Cyberduck"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
                         "*.cyberduck.io",
-                        "ftp.cyberduck.io",
                     ],
                     "Ports": ["21", "22"]
                 }
@@ -208,7 +198,8 @@
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
                         "*.panic.com",
-                        "ftp.panic.com"
+                        "updates.panic.com",
+                        "panic-cdn.com"
                     ],
                     "Ports": ["21", "22", "443", "80"]
                 }
@@ -244,26 +235,25 @@
             "Vulnerabilites": [],
             "InstallationPaths": [
                 "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
                 "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.exe"
             ]
         },
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
                 "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\CuteFTP",
-                "HKEY_CURRENT_USER\\Software\\CuteFTP"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
-                        "*.cuteftp.com",
-                        "ftp.cuteftp.com",
-                        "sftp.cuteftp.com"
+                        "globalscape.com",
+                        "register.globalscape.com",
+                        "updates.globalscape.com"
                     ],
                     "Ports": ["21", "22", "990"]
                 }
@@ -282,7 +272,6 @@
         "LastModified": "2024-12-01",
         "categoryType": "FTP File Transfer Protocol",
         "Details": {
-                "FileZilla Client Started",
             "Website": "https://www.coreftp.com",
             "PEMetadata": {
                 "Filename": "coreftp.exe",
@@ -308,17 +297,13 @@
                 "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Core FTP",
-                "HKEY_CURRENT_USER\\Software\\Core FTP"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
-                        "*.coreftp.com",
-                        "ftp.coreftp.com",
-                        "sftp.coreftp.com"
+                        "coreftp.com",
+                        "updates.coreftp.com"
                     ],
                     "Ports": ["21", "22", "990"]
                 }
@@ -362,10 +347,7 @@
                 "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\CoffeeCup\\Free FTP",
-                "HKEY_CURRENT_USER\\Software\\CoffeeCup\\Free FTP"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP connections",
@@ -415,10 +397,7 @@
                 "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\SmartFTP",
-                "HKEY_CURRENT_USER\\Software\\SmartFTP"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
@@ -472,10 +451,7 @@
                 "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\BitTorrent",
-                "HKEY_CURRENT_USER\\Software\\BitTorrent"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for BitTorrent connections",
@@ -527,11 +503,7 @@
                 "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\µTorrent",
-                "HKEY_CURRENT_USER\\Software\\µTorrent"
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for µTorrent connections",
@@ -583,10 +555,7 @@
                 "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\qBittorrent",
-                "HKEY_CURRENT_USER\\Software\\qBittorrent"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for qBittorrent connections",
@@ -638,10 +607,7 @@
                 "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.xml"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\FrostWire",
-                "HKEY_CURRENT_USER\\Software\\FrostWire"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for FrostWire connections",
@@ -691,10 +657,7 @@
                 "C:\\Users\\*\\AppData\\Local\\eMule\\emule.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\eMule",
-                "HKEY_CURRENT_USER\\Software\\eMule"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for eMule connections",
@@ -747,10 +710,7 @@
                 "C:\\Users\\*\\AppData\\Local\\ShareIt\\shareit.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\ShareIt",
-                "HKEY_CURRENT_USER\\Software\\ShareIt"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for ShareIt connections",
@@ -803,10 +763,7 @@
                 "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\SendAnywhere",
-                "HKEY_CURRENT_USER\\Software\\SendAnywhere"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for Send Anywhere connections",
@@ -860,10 +817,7 @@
                 "C:\\Users\\*\\AppData\\Local\\Zapya\\zapya.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Zapya",
-                "HKEY_CURRENT_USER\\Software\\Zapya"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for Zapya connections",
@@ -916,10 +870,7 @@
                 "C:\\Users\\*\\AppData\\Local\\Feem\\feem.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Feem",
-                "HKEY_CURRENT_USER\\Software\\Feem"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known remote domains for Feem connections",
@@ -970,10 +921,7 @@
                 "/System/Applications/NearbyShare.app"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Google\\NearbyShare",
-                "HKEY_CURRENT_USER\\Software\\Google\\NearbyShare"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known domains for Nearby Share connections",
@@ -1026,10 +974,7 @@
                 "/Applications/Resilio Sync.app"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Resilio Sync",
-                "HKEY_CURRENT_USER\\Software\\Resilio Sync"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known domains for Resilio Sync connections",
@@ -1080,10 +1025,7 @@
                 "/Applications/MASV.app"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\MASV",
-                "HKEY_CURRENT_USER\\Software\\MASV"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known domains for MASV file transfer",
@@ -1140,10 +1082,7 @@
                 "/Applications/Smash.app"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Smash",
-                "HKEY_CURRENT_USER\\Software\\Smash"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known domains for Smash file transfer",
@@ -1199,10 +1138,7 @@
                 "/Applications/Filemail.app"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Filemail",
-                "HKEY_CURRENT_USER\\Software\\Filemail"
-            ],
+            "Registry": [],
             "Network": [
                 {
                     "Description": "Known domains for Filemail transfers",
@@ -1709,10 +1645,7 @@
                 "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\FastCopy",
-                "HKEY_CURRENT_USER\\Software\\FastCopy"
-            ],
+            "Registry": [],
             "Network": []
         },
         "Detections": [
@@ -1758,10 +1691,7 @@
                 "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\TeraCopy",
-                "HKEY_CURRENT_USER\\Software\\TeraCopy"
-            ],
+            "Registry": [],
             "Network": []
         },
         "Detections": [
@@ -1809,10 +1739,7 @@
                 "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.ini"
             ],
             "EventLog": [],
-            "Registry": [
-                "HKEY_LOCAL_MACHINE\\SOFTWARE\\GoodSync",
-                "HKEY_CURRENT_USER\\Software\\GoodSync"
-            ],
+            "Registry": [],
             "Network": []
         },
         "Detections": [
