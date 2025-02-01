@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import testItem from '/public/data/testItem.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import ScrollTop from './ScrollTop';
 // import PrimaryButton from './PrimaryButton';
 
 const Preview = () => {
@@ -22,6 +23,7 @@ const Preview = () => {
     const nextPage = () => {
         if (currentPage < Math.ceil(items.length / itemsPerPage)) {
             setCurrentPage((prevPage) => prevPage + 1);
+            window.scrollTo(0, 0);
         }
     };
     

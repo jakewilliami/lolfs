@@ -7,7 +7,7 @@
         "Created": "2001-01-01",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://filezilla-project.org",
             "PEMetadata": {
@@ -92,7 +92,7 @@
         "Created": "2000-05-01",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://winscp.net/",
             "PEMetadata": {
@@ -158,7 +158,7 @@
         "Created": "2003-03-24",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://cyberduck.io",
             "PEMetadata": {
@@ -230,7 +230,7 @@
         "Created": "2001-06-30",
         "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://panic.com/transmit/",
             "PEMetadata": {
@@ -298,7 +298,7 @@
         "Created": "1996-11-01",
         "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://www.cuteftp.com",
             "PEMetadata": {
@@ -368,7 +368,7 @@
         "Created": "2001-07-01",
         "Logo": "https://cdn.icon-icons.com/icons2/183/PNG/256/Core_FTP_22544.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://www.coreftp.com",
             "PEMetadata": {
@@ -438,7 +438,7 @@
         "Created": "2004-06-01",
         "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://www.coffeecup.com/free-ftp/",
             "PEMetadata": {
@@ -507,7 +507,7 @@
         "Created": "1999-05-01",
         "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP",
         "Details": {
             "Website": "https://www.smartftp.com",
             "PEMetadata": {
@@ -572,12 +572,12 @@
     },
     {
         "Name": "BitTorrent",
-        "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
+        "Description": "BitTorrent is a free and paid file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
         "Author": "BitTorrent",
         "Created": "2001-07-02",
         "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
         "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
+        "categoryType": "P2P",
         "Details": {
             "Website": "https://www.bittorrent.com",
             "PEMetadata": {
@@ -644,12 +644,12 @@
     },
     {
         "Name": "µTorrent",
-        "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
+        "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
         "Author": "µTorrent",
         "Created": "2005-09-18",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
         "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
+        "categoryType": "P2P",
         "Details": {
             "Website": "https://www.utorrent.com",
             "PEMetadata": {
@@ -721,7 +721,7 @@
         "Created": "2006-05-15",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
         "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
+        "categoryType": "P2P",
         "Details": {
             "Website": "https://www.qbittorrent.org",
             "PEMetadata": {
@@ -793,7 +793,7 @@
         "Created": "2005-04-01",
         "Logo": "",
         "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
+        "categoryType": "P2P",
         "Details": {
             "Website": "https://www.frostwire.com",
             "PEMetadata": {
@@ -865,7 +865,7 @@
         "Created": "2002-05-01",
         "Logo": "",
         "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
+        "categoryType": "P2P",
         "Details": {
             "Website": "https://www.emule-project.net",
             "PEMetadata": {
@@ -1218,7 +1218,7 @@
     },
     {
         "Name": "Nearby Share",
-        "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
+        "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and technology to enable fast and secure transfers without an internet connection.",
         "Author": "Google",
         "Created": "2020-08-05",
         "Logo": "",
@@ -1288,7 +1288,7 @@
     },
     {
         "Name": "Resilio Sync",
-        "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
+        "Description": "Resilio Sync is a file synchronization and sharing tool that uses technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
         "Author": "Resilio Inc.",
         "Created": "2011-06-01",
         "Logo": "",
@@ -1361,7 +1361,7 @@
     },
     {
         "Name": "MASV",
-        "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
+        "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerateds. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
         "Author": "MASV.io",
         "Created": "2017-01-01",
         "Logo": "",
@@ -1699,8 +1699,8 @@
         ]
     },
     {
-        "Name": "sftp (Secure File Transfer Protocol)",
-        "Description": "sftp is a free file transfer protocol that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
+        "Name": "sftp (Secure)",
+        "Description": "sftp is a free that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
         "Author": "OpenSSH Project",
         "Created": "1995-01-01",
         "Logo": "",
@@ -1711,7 +1711,7 @@
             "PEMetadata": {
                 "Filename": "sftp",
                 "OriginalFileName": "sftp",
-                "Description": "Secure file transfer protocol using SSH"
+                "Description": "Secure using SSH"
             },
             "Privileges": "User",
             "Free": "Yes",
