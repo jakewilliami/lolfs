@@ -20,14 +20,14 @@ const Footer = () => {
             Home
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             About
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/contact"

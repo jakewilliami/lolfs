@@ -33,7 +33,7 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/about"
                   onClick={closeMenu}
@@ -41,7 +41,7 @@ const Navbar = () => {
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/contact"

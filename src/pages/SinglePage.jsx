@@ -4,6 +4,7 @@ import testItem from '/public/data/testItem.json';
 // icons
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 // OS logos
 import { FaWindows, FaLinux, FaApple, FaFile, FaCopy, FaUsb, FaClone} from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
@@ -11,9 +12,21 @@ import { SiMacos } from "react-icons/si";
 import { GoFileDirectoryFill } from "react-icons/go";
 
 const SinglePage = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
+
+  // Find the current item
   const item = testItem[id];
+  if (!item) {
+    return <h2>Project not found</h2>;
+  }
+
+  const currentIndex = parseInt(id, 10);
+  const currentItem = testItem[currentIndex];
+
+  // Determine previous and next items
+  const prevItem = currentIndex > 0 ? testItem[currentIndex - 1] : null;
+  const nextItem = currentIndex < testItem.length - 1 ? testItem[currentIndex + 1] : null;
 
   const iconMap = {
     FaWindows:<FaWindows className='os-icon'/>,
@@ -38,7 +51,7 @@ const SinglePage = () => {
   return (
     <>
       <section className='item-header'>
-        <h1>{item.Name}</h1>
+      <h1>{item.Name}</h1>
         <p>{item.Description}</p>
       </section>
 
@@ -188,6 +201,35 @@ const SinglePage = () => {
             </code>
             ))}
           
+        </div>
+      </section>
+
+      <section className='content-section'>
+        <div className='single-page--navigation'>
+          {prevItem && (
+            <button 
+            className='cssbuttons-io'
+              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === prevItem.Name)}`)}
+            >
+              <span>
+              <IoIosArrowBack />
+              {prevItem.Name}
+              </span>
+            </button>
+          )}
+
+          {nextItem && (
+            <button 
+            className='cssbuttons-io'
+              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === nextItem.Name)}`)}
+            >
+              <span>
+              {nextItem.Name}
+              <IoIosArrowForward />
+              </span>
+            </button>
+            
+          )}
         </div>
       </section>
     </>
