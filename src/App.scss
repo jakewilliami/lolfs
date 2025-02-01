@@ -11,7 +11,7 @@ $primary-color2: #be69ff;
 $primary-color3: #2c6cb5;
 
 body {
-    background-color: black;
+    background-color: #0a0a0a;
 }
 
 h1 {
@@ -27,7 +27,10 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1.1vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: white;
 }
 
@@ -37,6 +40,7 @@ h4 {
 
 h5 {
     color: white;
+    font-weight: 300;
 }
 
 h6 {
@@ -50,6 +54,10 @@ p {
 
 a {
     color: white;
+}
+
+.individ-title{
+    padding-bottom: 1vw;
 }
 
 //   primary button
@@ -247,7 +255,7 @@ a {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    padding: 12vw 12vw 8vw 12vw;
+    padding: 12vw 8vw 8vw 8vw;
     gap: 2rem;
     background-image: url(../public/images/header-background.jpg);
     background-size: cover;
@@ -271,7 +279,7 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 3rem;
     width: 100%;
-    padding: 5vw 10vw;
+    padding: 5vw 8vw;
 
     .item {
         display: flex;
@@ -327,7 +335,12 @@ a {
 
 // single page
 .content-section {
-    padding: 1vw 8vw;
+    padding: 2vw 8vw;
+    .inner-header--container{
+        background-color: #1C1A1C;
+        padding: 2vw 2vw 0 2vw;
+        width: 100%;
+    }
 }
 
 .item-header {
@@ -344,6 +357,7 @@ a {
     justify-content: space-between;
     background-color: #1C1A1C;
     border-radius: 1vh;
+    gap: 1vw;
 
     img {
         height: 4vh;
@@ -376,30 +390,32 @@ a {
 .item-capabilities {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: .8vw;
 
     .item-capabilities-icons {
         color: white;
         background-color: rgba(190, 105, 255, 0.552);
-        padding: .5rem .75rem;
+        padding: .5rem;
         border-radius: .5vh;
         text-transform: capitalize;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: .8vw;
     }
 }
 
-.supported-os--container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 3rem;
+.supported-os--container, .capabilities--container{
+    display: flex;
+    // grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5vw;
     width: 100%;
-    .supported-os-icons{
+    flex-wrap: wrap;
+    .supported-os-icons, .capabilities-icons{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        width: 100%;
+        width: fit-content;
+        min-width: 14vw;
         padding: 1rem;
         border-radius: 2vh;
         height: 10vh;
@@ -407,7 +423,7 @@ a {
         gap: 1vw;
         background-color: rgb(37, 37, 37);
         border: 2px solid rgba(255, 255, 255, 0.627);
-        div{
+        div, .icon{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -418,6 +434,25 @@ a {
                 font-size: 1.5vw;
             }
         }
+        .icon{
+            border-radius: 1vw;
+        }
+
+        &:nth-child(1) .icon, &:nth-child(5) .icon {
+            background-color: #52f8df;
+          }
+      
+          &:nth-child(2) .icon, &:nth-child(6) .icon {
+            background-color: #f6c581;
+          }
+      
+          &:nth-child(3) .icon, &:nth-child(7) .icon {
+            background-color: #d954d9;
+          }
+      
+          &:nth-child(4) .icon, &:nth-child(8) .icon {
+            background-color: #68ee90;
+          }
     }
 }
 
@@ -425,24 +460,33 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     padding: 1.5rem 2rem;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
     background-color: #1C1A1C;
-    border-radius: 1vh;
+    border-radius: 0 0 1vh 1vh;
     width: 100%;
     gap: 1rem;
     .row{
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
-        width: 100%;
         gap: 1rem;
         background-color: #2c2c2c;
         border-radius: 1vh;
+        height: 100%;
         .artifact-content, div{
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            code {
+                font-family: 'Roboto Mono', Menlo, Courier, monospace;
+                font-size: inherit;
+                color: #DFE5EF;
+                display: block;
+            }
+            .ports{
+                flex-direction: row;
+            }
         }
     }
 }
@@ -462,6 +506,26 @@ a {
         font-size: inherit;
         color: #DFE5EF;
         display: block;
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111111;
+    padding: 2vw 0;
+    margin-top: 4vw;
+    gap: 1.5vw;
+    .nav-links {
+        gap: 2vw;
+        li a{
+            font-size: 1vw;
+        }
+    }
+    hr{
+        opacity: 10%;
+        width: 90%;
     }
 }
 

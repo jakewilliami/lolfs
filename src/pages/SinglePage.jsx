@@ -5,9 +5,10 @@ import testItem from '/public/data/testItem.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 // OS logos
-import { FaWindows, FaLinux, FaApple  } from "react-icons/fa";
+import { FaWindows, FaLinux, FaApple, FaFile, FaCopy, FaUsb, FaClone} from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 import { SiMacos } from "react-icons/si";
+import { GoFileDirectoryFill } from "react-icons/go";
 
 const SinglePage = () => {
   const {id} = useParams();
@@ -20,6 +21,14 @@ const SinglePage = () => {
     FaApple:<FaApple className='os-icon'/>,
     DiAndroid:<DiAndroid className='os-icon'/>,
     SiMacos: <SiMacos className='os-icon'/>,
+  }
+
+  const fileIconMap = {
+    FaFile:<FaFile className='os-icon'/>,
+    GoFileDirectoryFill:<GoFileDirectoryFill className='os-icon'/>,
+    FaCopy  :<FaCopy   className='os-icon'/>,
+    FaUsb  :<FaUsb   className='os-icon'/>,
+    FaClone :<FaClone  className='os-icon'/>
   }
 
   if (!item) {
@@ -37,7 +46,7 @@ const SinglePage = () => {
         <div className='item-details--container'>
           <img src={item.Logo}/>
           <h4>{item.Author}</h4>
-          <a href={item.Details.Website} target="_blank" rel="noopener noreferrer">Website</a>
+          <a href={item.Details.Website} target="_blank" rel="noopener noreferrer">Download</a>
           <h4>{item.categoryType}</h4>
           <h4 className='item-capabilities'>
             {item.Details.Capabilities.map((tech, index) => (
@@ -46,16 +55,17 @@ const SinglePage = () => {
               </span>
             ))}
           </h4>
-          <h4>Last edited: {item.LastModified}</h4>
+          <h5>Last edited: {item.LastModified}</h5>
           <div className='icons'>
             <HiOutlineBadgeCheck className='verification-icon'/>
-            <h3 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h3>
-            <h3 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h3>
+            <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h4>
+            <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h4>
           </div>
         </div>
       </section>
 
       <section className='content-section'>
+        <h2 className='individ-title'>Supported OS</h2>
         <div className='supported-os--container'>
           {item.Details.SupportedOS.map((os, index) => (
             <div key={index} className="supported-os-icons">
@@ -67,10 +77,13 @@ const SinglePage = () => {
       </section>
 
       <section className='content-section'>
+          <div className='inner-header--container'>
+            <h2>Artifacts</h2>
+          </div>
         <div className='artifacts--container'>
         {/* disk */}
           <div className='row'>
-            <h4>Disk</h4>
+            <h3>Disk</h3>
             <div className='artifact-content'>
               {item.Artifacts.Disk.map((artifacts, index) => (
                 <code key={index} data-code-language="text">
@@ -81,7 +94,7 @@ const SinglePage = () => {
           </div>
           {/* eventlog */}
           <div className='row'>
-            <h4>EventLog</h4>
+            <h3>EventLog</h3>
             <div className='artifact-content'>
               {item.Artifacts.EventLog.map((events, index) => (
                 <code key={index} data-code-language="text">
@@ -92,7 +105,7 @@ const SinglePage = () => {
           </div>
           {/* registry */}
           <div className='row'>
-            <h4>Registry</h4>
+            <h3>Registry</h3>
             <div className='artifact-content'>
               {item.Artifacts.Registry.map((registers, index) => (
                 <code key={index} data-code-language="text">
@@ -103,18 +116,18 @@ const SinglePage = () => {
           </div>
           {/* network */}
           <div className='row'>
-            <h4>Network</h4>
+            <h3>Network</h3>
             <div className='artifact-content'>
             {item.Artifacts.Network.map((network, index) => (
               <div key={index}>
-                <p>{network.Description}</p>
+                <code>{network.Description}</code>
               </div>
             ))}
             </div>
           </div>
 
           <div className='row'>
-            <h4>Domains</h4>
+            <h3>Domains</h3>
             <div className='artifact-content'>
             {item.Artifacts.Network.map((network, index) => (
               <div key={index}>
@@ -131,11 +144,11 @@ const SinglePage = () => {
           </div>
 
           <div className='row'>
-            <h4>Ports</h4>
+            <h3>Ports</h3>
             <div className='artifact-content'>
             {item.Artifacts.Network.map((network, index) => (
               <div key={index}>
-                <div>
+                <div className='ports'>
                   {network.Ports.map((port, portIndex) => (
                     <code key={portIndex} data-code-language="text">
                       {port}
@@ -150,6 +163,24 @@ const SinglePage = () => {
       </section>
 
       <section className='content-section'>
+        <h2 className='individ-title'>Capabilities</h2>
+        <div className='capabilities--container'>
+          {item.Details.Capabilities.map((capability, index) => {
+            const fileIcons = Object.values(fileIconMap);
+            const assignedIcon = fileIcons[index % fileIcons.length];
+
+            return (
+              <div key={index} className="capabilities-icons">
+                <div className="icon">{assignedIcon}</div>
+                <p>{capability}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className='content-section'>
+        <h2 className='individ-title'>Installation</h2>
         <div className='code-snippet--container'>
           {item.Details.InstallationPaths.map((paths, index) => (
             <code key={index} data-code-language="text">
