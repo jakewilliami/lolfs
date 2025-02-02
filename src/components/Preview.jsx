@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import testItem from '/public/data/testItem.json';
+import lolfsItem from '/api/lolfs.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ScrollTop from './ScrollTop';
@@ -12,7 +12,7 @@ const Preview = () => {
     const itemsPerPage = 10;
 
     useEffect(() => {
-        setItem(testItem);
+        setItem(lolfsItem);
     }, []);
 
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -23,7 +23,13 @@ const Preview = () => {
     const nextPage = () => {
         if (currentPage < Math.ceil(items.length / itemsPerPage)) {
             setCurrentPage((prevPage) => prevPage + 1);
-            window.scrollTo(0, 300);
+            setTimeout(() => {
+            const element = document.querySelector('.populated-items');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+
         }
     };
     
@@ -31,7 +37,12 @@ const Preview = () => {
     const prevPage = () => {
         if (currentPage > 1) {
             setCurrentPage((prevPage) => prevPage - 1);
-            window.scrollTo(0, 300);
+            setTimeout(() => {
+            const element = document.querySelector('.populated-items');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
         }
     };
 

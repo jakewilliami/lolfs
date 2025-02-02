@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
-import testItem from '/public/data/testItem.json';
+import lolfsItem from '/api/lolfs.json';
 // icons
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
@@ -16,17 +16,17 @@ const SinglePage = () => {
   const navigate = useNavigate();
 
   // Find the current item
-  const item = testItem[id];
+  const item = lolfsItem[id];
   if (!item) {
     return <h2>Project not found</h2>;
   }
 
   const currentIndex = parseInt(id, 10);
-  const currentItem = testItem[currentIndex];
+  const currentItem = lolfsItem[currentIndex];
 
   // Determine previous and next items
-  const prevItem = currentIndex > 0 ? testItem[currentIndex - 1] : null;
-  const nextItem = currentIndex < testItem.length - 1 ? testItem[currentIndex + 1] : null;
+  const prevItem = currentIndex > 0 ? lolfsItem[currentIndex - 1] : null;
+  const nextItem = currentIndex < lolfsItem.length - 1 ? lolfsItem[currentIndex + 1] : null;
 
   const iconMap = {
     FaWindows:<FaWindows className='os-icon'/>,
@@ -58,7 +58,7 @@ const SinglePage = () => {
       <section className='content-section'>
         <div className='item-details--container'>
           <img src={item.Logo}/>
-          <h4>{item.Author}</h4>
+          <h4>Author: {item.Author}</h4>
           <a href={item.Details.Website} target="_blank" rel="noopener noreferrer">Download</a>
           <h4>{item.categoryType}</h4>
           <h4 className='item-capabilities'>
@@ -193,7 +193,7 @@ const SinglePage = () => {
       </section>
 
       <section className='content-section'>
-        <h2 className='individ-title'>Installation</h2>
+        <h2 className='individ-title'>Installation Paths</h2>
         <div className='code-snippet--container'>
           {item.Details.InstallationPaths.map((paths, index) => (
             <code key={index} data-code-language="text">
@@ -209,7 +209,7 @@ const SinglePage = () => {
           {prevItem && (
             <button 
             className='cssbuttons-io'
-              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === prevItem.Name)}`)}
+              onClick={() => navigate(`/item/${lolfsItem.findIndex(i => i.Name === prevItem.Name)}`)}
             >
               <span>
               <IoIosArrowBack />
@@ -221,7 +221,7 @@ const SinglePage = () => {
           {nextItem && (
             <button 
             className='cssbuttons-io'
-              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === nextItem.Name)}`)}
+              onClick={() => navigate(`/item/${lolfsItem.findIndex(i => i.Name === nextItem.Name)}`)}
             >
               <span>
               {nextItem.Name}

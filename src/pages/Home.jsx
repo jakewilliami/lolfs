@@ -10,9 +10,11 @@ const Home = () => {
             Weclome to 
             <span> LOLFS</span>
             </h1>
-            <p>A catalog of file security tools</p>
+            <p>Detection rules for File sharing services - Inspired by <a href="https://lolrmm.io/">LOLRMM</a></p>
+            <p>Primary maintainer: <a href="https://github.com/TomJHKR">TomJHKR</a></p>
+            <p>Community driven, please open a pull request or raise an issue</p>
             <a className="btn"
-              href='/api/testItem.json' 
+              href='/api/lolfs.json' 
               target="_blank" 
               rel="noopener noreferrer" >
                 <PiBracketsCurlyBold  className='sparkle'/>
