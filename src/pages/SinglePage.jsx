@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
-import lolfsItem from '/api/lolfs.json';
+import lolfsItem from '/public/api/lolfs.json';
 // icons
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";

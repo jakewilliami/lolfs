@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import lolfsItem from '/api/lolfs.json';
+import lolfsItem from '/public/api/lolfs.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ScrollTop from './ScrollTop';
