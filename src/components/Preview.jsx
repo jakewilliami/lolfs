@@ -23,7 +23,7 @@ const Preview = () => {
     const nextPage = () => {
         if (currentPage < Math.ceil(items.length / itemsPerPage)) {
             setCurrentPage((prevPage) => prevPage + 1);
-            window.scrollTo(0, 0);
+            window.scrollTo(0, 300);
         }
     };
     
@@ -31,6 +31,7 @@ const Preview = () => {
     const prevPage = () => {
         if (currentPage > 1) {
             setCurrentPage((prevPage) => prevPage - 1);
+            window.scrollTo(0, 300);
         }
     };
 
