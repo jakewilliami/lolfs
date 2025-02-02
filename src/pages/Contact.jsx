@@ -9,10 +9,6 @@ const Contact = () => {
                 <h1>Reach out</h1>
                 <h2>Have a comment? Found a bug? drop us a message using the feedback form</h2>
                 <div className='contact-details'>
-                    <h3>Email</h3>
-                    <p><a href="mailto:lolfsonlinecatalog@gmail.com">lolfsonlinecatalog@gmail.com</a></p>
-                </div>
-                <div className='contact-details'>
                     <h3>Github</h3>
                     <p><a href='https://github.com/TomJHKR/lolfs.git' target='blank'>LOLFS Github</a></p>
                 </div>
