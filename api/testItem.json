@@ -1,9 +1,8 @@
-
 [
     {
         "Name": "FileZilla",
         "Description": "FileZilla is a free, open-source FTP (File Transfer Protocol) client that supports FTP, FTPS, and SFTP. It is used for transferring files between a local computer and a remote server.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "LastModified": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
@@ -64,7 +63,7 @@
     {
         "Name": "WinSCP",
         "Description": "WinSCP is a free and open-source FTP, SFTP, and SCP client for Windows that allows secure file transfers between a local and a remote computer.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
@@ -111,7 +110,7 @@
     {
         "Name": "Cyberduck",
         "Description": "Cyberduck is a free, open-source FTP, SFTP, WebDAV, and cloud storage browser for file transfers and management. It supports various protocols and cloud services, including Amazon S3 and Google Drive.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
         "LastModified": "2024-12-01",
@@ -161,7 +160,7 @@
     {
         "Name": "Transmit",
         "Description": "Transmit is a premium macOS-only file transfer client that supports FTP, SFTP, WebDAV, and cloud storage services. It provides a user-friendly interface and advanced file management tools.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
         "LastModified": "2024-12-01",
@@ -213,7 +212,7 @@
 
         "Name": "CuteFTP",
         "Description": "CuteFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, and SFTP, and includes advanced file management features and a user-friendly interface.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
         "LastModified": "2024-12-01",
@@ -266,7 +265,7 @@
     {
         "Name": "Core FTP",
         "Description": "Core FTP is a free and paid FTP client for transferring files between local computers and remote servers. It supports FTP, FTPS, SFTP, and includes both a free version and a Pro version with additional features like site-to-site transfers and advanced encryption.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://cdn.icon-icons.com/icons2/183/PNG/256/Core_FTP_22544.png",
         "LastModified": "2024-12-01",
@@ -316,7 +315,7 @@
     {
         "Name": "Free FTP by CoffeeCup",
         "Description": "Free FTP by CoffeeCup is a free FTP client for transferring files between a local computer and remote servers. It supports FTP and FTPS, and offers a paid Pro version with additional features like enhanced security and more advanced transfer options.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
         "LastModified": "2024-12-01",
@@ -366,7 +365,7 @@
     {
         "Name": "SmartFTP",
         "Description": "SmartFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, SFTP, and includes advanced features like file synchronization, scheduling, and remote file editing.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
         "LastModified": "2024-12-01",
@@ -418,7 +417,7 @@
     {
         "Name": "BitTorrent",
         "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
         "LastModified": "2024-12-01",
@@ -470,7 +469,7 @@
     {
         "Name": "µTorrent",
         "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
         "LastModified": "2024-12-01",
@@ -522,7 +521,7 @@
     {
         "Name": "qBittorrent",
         "Description": "qBittorrent is a free, open-source BitTorrent client that offers a clean interface and a wide range of features for file sharing. It supports the BitTorrent protocol and allows for file prioritization, RSS feeds, and integrated search capabilities.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
         "LastModified": "2024-12-01",
@@ -574,7 +573,7 @@
     {
         "Name": "FrostWire",
         "Description": "FrostWire is a free, open-source BitTorrent client and cloud downloader. It allows users to share files, download torrents, and stream media directly from the app. It also integrates with the FrostWire Cloud for downloading files directly from the internet.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -626,7 +625,7 @@
     {
         "Name": "eMule",
         "Description": "eMule is a free, open-source P2P (peer-to-peer) file-sharing client that is primarily used for downloading and sharing files over the eDonkey network and Kad network. It features support for various file types, powerful search capabilities, and a large user base.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -677,7 +676,7 @@
     {
         "Name": "ShareIt",
         "Description": "ShareIt is a free, cross-platform file-sharing application that allows users to transfer files, videos, music, and other types of media quickly between devices over a local network or using a Wi-Fi connection. It supports both Android and iOS devices, and it's known for its fast transfer speeds and user-friendly interface.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -729,7 +728,7 @@
     {
         "Name": "Send Anywhere",
         "Description": "Send Anywhere is a free, cross-platform file transfer application that allows users to send files and folders securely across different devices. It provides options for both free and paid Pro versions with additional features such as higher transfer speeds, larger file sizes, and priority support.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -782,7 +781,7 @@
     {
         "Name": "Zapya",
         "Description": "Zapya is a free, cross-platform file transfer application that enables fast and wireless file sharing between devices. It supports Android, iOS, Windows, and MacOS, and can transfer files without the need for an internet connection by using Wi-Fi Direct. Zapya is known for its ability to share large files and multiple files simultaneously across different platforms.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -836,7 +835,7 @@
     {
         "Name": "Feem",
         "Description": "Feem is a free and paid file transfer application that allows fast wireless file sharing between devices over a local network. It supports Android, iOS, Windows, and MacOS. Feem offers both a free version and a paid Pro version with additional features such as faster transfer speeds, larger file sizes, and ad-free experience.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -889,7 +888,7 @@
     {
         "Name": "Nearby Share",
         "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -939,7 +938,7 @@
     {
         "Name": "Resilio Sync",
         "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -993,7 +992,7 @@
     {
         "Name": "MASV",
         "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1049,7 +1048,7 @@
     {
         "Name": "Smash",
         "Description": "Smash is a file transfer service that allows users to send large files quickly and easily. The free version has a size limit and a 14-day expiration for uploaded files, while the paid version provides additional features like unlimited file size, file retention, and priority support. Smash offers a simple, user-friendly interface and supports multiple file transfers simultaneously.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1105,7 +1104,7 @@
     {
         "Name": "Filemail",
         "Description": "Filemail is a file transfer service designed for sending large files without the hassle of using cloud storage. The free version allows file transfers up to 50GB with size limits and has a 7-day expiration for files. The paid version offers unlimited file size, increased file retention, and additional features such as password protection, email tracking, and branded transfer pages.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1161,7 +1160,7 @@
     {
         "Name": "rsync",
         "Description": "rsync is a free, open-source file transfer and synchronization tool used to efficiently transfer and synchronize files between local and remote systems. It is commonly used for backups and mirroring and supports copying over SSH, minimizing data transfer by only copying changed parts of files.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1217,7 +1216,7 @@
     {
         "Name": "scp (Secure Copy)",
         "Description": "scp is a free, command-line utility used for securely transferring files between hosts over a network. It uses SSH (Secure Shell) to provide encrypted transfer of files, ensuring confidentiality and integrity during the transfer process.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1273,7 +1272,7 @@
     {
         "Name": "sftp (Secure File Transfer Protocol)",
         "Description": "sftp is a free file transfer protocol that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1329,7 +1328,7 @@
     {
         "Name": "curl",
         "Description": "curl is a free, open-source command-line tool for transferring data with URLs. It supports multiple protocols such as HTTP, HTTPS, FTP, FTPS, and SFTP, and is used for downloading or uploading data from or to a server.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1385,7 +1384,7 @@
     {
         "Name": "wget",
         "Description": "wget is a free, open-source command-line tool for downloading files from the web. It supports HTTP, HTTPS, and FTP protocols, and can download files in the background or from FTP and HTTP servers.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1442,7 +1441,7 @@
     {
         "Name": "Rclone",
         "Description": "Rclone is a free, open-source command-line program to manage files on cloud storage. It supports over 40 different cloud storage providers and can sync, copy, and move files between cloud storage services or locally.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1500,7 +1499,7 @@
     {
         "Name": "KDE Connect",
         "Description": "KDE Connect is a free and open-source tool that allows communication between your smartphone and computer. It enables file transfers, notification syncing, and other features like controlling your desktop from your phone and vice versa.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1558,7 +1557,7 @@
     {
         "Name": "Dukto R6",
         "Description": "Dukto R6 is a free, open-source file transfer tool designed for quick and simple file sharing between devices. It supports multiple platforms, including Windows, Linux, and macOS, and allows for transferring files and folders without the need for configuration or server-side installation.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1614,7 +1613,7 @@
     {
         "Name": "FastCopy",
         "Description": "FastCopy is a free file copying and backup software for Windows, known for its high performance in transferring large files or directories. It supports copying, moving, and synchronizing files with customizable options for speed optimization.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1660,7 +1659,7 @@
     {
         "Name": "TeraCopy",
         "Description": "TeraCopy is a file transfer utility for Windows that speeds up copying and moving files by using dynamic buffer sizes. It offers both free and paid versions, with advanced features such as error recovery, file verification, and a more efficient user interface.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
@@ -1706,7 +1705,7 @@
     {
         "Name": "GoodSync",
         "Description": "GoodSync is a file synchronization and backup software that offers both free and paid versions. It allows users to synchronize files between local and remote storage, backup data, and perform scheduled tasks for file management. It is known for its high reliability and advanced synchronization features.",
-        "Author": "",
+        "Author": "TomJHKR",
         "Created": "",
         "Logo": "",
         "LastModified": "2024-12-01",
