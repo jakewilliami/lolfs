@@ -631,6 +631,48 @@ footer{
     }
 }
 
+@media (min-width: 1720px) {
+    h2{
+        font-size: 35px;
+    }
+
+    h6 {
+        font-size: 15px;
+    }
+
+    .navbar {
+        height: 5dvw;
+    }
+
+    .logo img {
+        width: 6dvw;
+    }
+
+    .home-header p {
+        font-size: 40px;
+    }
+
+    .btn {
+        padding: 25px 60px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .sparkle {
+        font-size: 30px;
+    }
+
+    .populated-items {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .item-capabilities .item-capabilities-icons {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 900px) {
 
     .home-header, .item-header{
