@@ -147,7 +147,7 @@
                 {
                     "Description": "Known remote domains for FTP/SFTP connections",
                     "Domains": [
-                        "*.cyberduck.io",
+                        "*.cyberduck.io"
                     ],
                     "Ports": ["21", "22"]
                 }
@@ -787,7 +787,6 @@
         "LastModified": "2024-12-01",
         "categoryType": "Local and Wireless",
         "Details": {
-            "https://www.cvedetails.com/cve/CVE-2021-23456/"
             "Website": "https://www.izapya.com",
             "PEMetadata": {
                 "Filename": "Zapya.exe",

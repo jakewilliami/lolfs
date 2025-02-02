@@ -41,6 +41,7 @@ const Footer = () => {
       <hr/>
       
       <h5>© 2025 LOLFS. All Rights Reserved.</h5>
+      <h5>Website designed by <a href="https://mere-lees.vercel.app/">Mere Lees</a><br/><a href='https://github.com/Mere-Frances'>Github</a></h5>
     </footer>
   );
 }
