@@ -11,16 +11,16 @@ const Home = () => {
             <span> LOLFS</span>
             </h1>
             <p>A catalog of file security tools</p>
-            <button className="btn">
+            <a className="btn"
+              href='/api/testItem.json' 
+              target="_blank" 
+              rel="noopener noreferrer" >
                 <PiBracketsCurlyBold  className='sparkle'/>
                 <a 
-                    href='/api/testItem.json' 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
                     className="text"
                 >JSON
                 </a>
-            </button>
+            </a>
         </section>
         <Preview/>
     </>
