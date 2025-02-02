@@ -560,9 +560,11 @@ footer{
 .contact-cont{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
     height: 100%;
     width: 100%;
-    padding: 15vw 0 0 8vw;
+    padding: 15vw 0 8vw 0;
     .contact-details--cont{
         display: flex;
         flex-direction: column;
