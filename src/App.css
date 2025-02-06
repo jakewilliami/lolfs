@@ -271,34 +271,57 @@ code {
   }
 }
 .populated-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
   gap: 3rem;
   width: 100%;
   padding: 5vw 8vw;
 }
-.populated-items .item {
+.populated-items .populated-items--grid--cont {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background-color: #1C1A1C;
   width: 100%;
-  padding: 1rem;
-  border-radius: 2vh;
-  height: 30vh;
-  background-color: rgb(21, 21, 21);
-  border: 3px solid rgba(255, 255, 255, 0.332);
-  transition: all 0.2s ease-in-out;
+  padding: 1vw;
+  gap: 1vw;
 }
-.populated-items .item .row {
+.populated-items .populated-items--grid--cont .rwd-table {
+  margin: 1em 0;
+  color: #fff;
+  overflow: hidden;
+  min-width: 300px;
+}
+.populated-items .populated-items--grid--cont .rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 1vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .clickable-row {
+  cursor: pointer;
+}
+.populated-items .populated-items--grid--cont .rwd-table .row-link {
+  display: contents; /* Allows the Link to behave like a <tr> */
+  text-decoration: none;
+  color: inherit;
+}
+.populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+  text-align: left;
+  margin: 0.5em 1em;
+}
+.populated-items .populated-items--grid--cont .rwd-table th img, .populated-items .populated-items--grid--cont .rwd-table td img {
+  width: 2.5vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .item-logo {
   display: flex;
-  justify-content: space-between;
+  gap: 1vw;
+  margin: 0;
 }
-.populated-items .item .item-capabilities {
+.populated-items .populated-items--grid--cont .rwd-table .item-capabilities {
+  margin: 0;
   justify-content: flex-start;
 }
-.populated-items .item:hover {
-  transform: translateY(-1rem);
-  border: 3px solid #be69ff;
+.populated-items .populated-items--grid--cont .item:hover > .item-details--container {
+  background-color: rgba(212, 156, 255, 0.2039215686);
+  border-radius: 1vw;
 }
 
 .pagination {
@@ -316,13 +339,25 @@ code {
 .free {
   font-size: 2rem;
   display: flex;
-  color: rgb(255, 123, 0);
+  color: rgb(255, 198, 76);
 }
 
 .paid {
   font-size: 2rem;
   display: flex;
-  color: greenyellow;
+  color: rgb(54, 233, 0);
+}
+
+.verification-icon {
+  color: #4cff7f;
+}
+.verification-icon svg {
+  font-size: 2.5vw;
+}
+
+.verification-icon,
+h3 {
+  font-size: 1.7vw;
 }
 
 .content-section {
@@ -344,11 +379,12 @@ code {
 .item-details--container {
   display: flex;
   padding: 1.5rem 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: #1C1A1C;
-  border-radius: 1vh;
   gap: 1vw;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 .item-details--container img {
   height: 4vh;
@@ -366,11 +402,18 @@ code {
   font-size: 1.7vw;
 }
 .item-details--container a {
+  width: 10%;
   color: white;
   background-color: #2c6cb5;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.item-details--container .item-titles {
+  width: 15%;
+}
+.item-details--container .item-titles-det {
+  width: 20%;
 }
 
 .item-capabilities {
@@ -378,6 +421,7 @@ code {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.8vw;
+  width: 100%;
 }
 .item-capabilities .item-capabilities-icons {
   color: white;

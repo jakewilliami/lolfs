@@ -7,7 +7,7 @@
         "Created": "2001-01-01",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://filezilla-project.org",
             "PEMetadata": {
@@ -92,7 +92,7 @@
         "Created": "2000-05-01",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://winscp.net/",
             "PEMetadata": {
@@ -158,7 +158,7 @@
         "Created": "2003-03-24",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://cyberduck.io",
             "PEMetadata": {
@@ -230,7 +230,7 @@
         "Created": "2001-06-30",
         "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://panic.com/transmit/",
             "PEMetadata": {
@@ -298,7 +298,7 @@
         "Created": "1996-11-01",
         "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.cuteftp.com",
             "PEMetadata": {
@@ -368,7 +368,7 @@
         "Created": "2001-07-01",
         "Logo": "https://cdn.icon-icons.com/icons2/183/PNG/256/Core_FTP_22544.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.coreftp.com",
             "PEMetadata": {
@@ -438,7 +438,7 @@
         "Created": "2004-06-01",
         "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.coffeecup.com/free-ftp/",
             "PEMetadata": {
@@ -507,7 +507,7 @@
         "Created": "1999-05-01",
         "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.smartftp.com",
             "PEMetadata": {
@@ -593,7 +593,7 @@
                 {"OS": "macOS", "icon": "SiMacos"},
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Bandwidth Management", "Remote Access", "Streaming"],
+            "Capabilities": ["BT Protocol", "File Sharing", "BW Mgmt", "Remote Access", "Streaming"],
             "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-56789"],
             "InstallationPaths": [
                 "C:\\Program Files\\BitTorrent\\bittorrent.exe",
@@ -665,7 +665,7 @@
                 {"OS": "macOS", "icon": "SiMacos"},
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Streaming", "Bandwidth Management", "Scheduling"],
+            "Capabilities": ["BT Protocol", "File Sharing", "Streaming", "BW Mgmt", "Scheduling"],
             "Vulnerabilities": ["CVE-2019-8765", "CVE-2020-34567"],
             "InstallationPaths": [
                 "C:\\Program Files\\µTorrent\\utorrent.exe",
@@ -737,7 +737,7 @@
                 {"OS": "macOS", "icon": "SiMacos"},
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Integrated Search", "RSS Feeds", "Remote Control"],
+            "Capabilities": ["BT Protocol", "File Sharing", "Integrated Search", "RSS Feeds", "Remote Control"],
             "Vulnerabilities": ["CVE-2020-12345", "CVE-2021-67890"],
             "InstallationPaths": [
                 "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
@@ -809,7 +809,7 @@
                 {"OS": "macOS", "icon": "SiMacos"},
                 {"OS": "Windows", "icon": "FaWindows"}
             ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Cloud Downloader", "Streaming", "Search"],
+            "Capabilities": ["BT Protocol", "File Sharing", "Cloud Downloader", "Streaming", "Search"],
             "Vulnerabilities": ["CVE-2018-98765", "CVE-2021-23456"],
             "InstallationPaths": [
                 "C:\\Program Files\\FrostWire\\frostwire.exe",
