@@ -292,7 +292,6 @@ code{
 
 .populated-items {
     display: flex;
-    gap: 3rem;
     width: 100%;
     padding: 5vw 8vw;
     
@@ -301,14 +300,15 @@ code{
         flex-direction: column;
         background-color: #1C1A1C;
         width: 100%;
-        padding: 1vw;
-        gap: 1vw;
+        padding: 1vw 2vw;
+        align-items: center;
 
         .rwd-table {
             margin: 1em 0;
             color: #fff;
             overflow: hidden;
-            min-width: 300px;
+            width: 100%;
+            border-spacing: 0;
             
             tr {
               border-top: 1px solid #ddd;
@@ -317,6 +317,8 @@ code{
             }
             .clickable-row {
                 cursor: pointer;
+                padding: 0 1vw;
+                transition: all .1s ease-in-out;
             }
             
             .row-link {
@@ -327,7 +329,9 @@ code{
 
             th, td {
                 text-align: left;
-                margin: .5em 1em;
+                margin: .5em 0;
+                vertical-align: middle;
+                padding: .5vw 0;
                 img{
                     width: 2.5vw;
                 }
@@ -335,12 +339,43 @@ code{
 
             .item-logo{
                 display: flex;
-                gap: 1vw;margin: 0;
+                gap: 1.5vw;
+                align-items: center;
+                max-width: 20vw;
+                margin-left: 1vw;
             }
 
             .item-capabilities {
                 margin: 0;
                 justify-content: flex-start;
+            }
+            
+            .table-name-title{
+                width: 22vw;
+            }
+
+            .table-type-title{
+                width: 18vw;
+            }
+
+            .table-icons-title{
+                width: 3vw;
+            }
+
+            .table-item--date{
+                opacity: 50%;
+                font-weight: 200;
+            }
+
+            .OS-icons{
+                display: flex;
+                .item-capabilities-icons{
+                    display: flex;
+                    gap: 1vw;
+                    div svg{
+                        font-size: 2vw;
+                    }
+                }
             }
             // td {
             //     display: block; 
@@ -361,8 +396,9 @@ code{
             //     }
             //   }
         }
-        .item:hover>.item-details--container{
-            background-color: #d49cff34;
+        .clickable-row:hover{
+            background-color: #d4d4d434;
+            border: 5px solid $primary-color1;
             border-radius: 1vw;
         }
     }
@@ -392,10 +428,15 @@ code{
     color: rgb(54, 233, 0);
 }
 
+.cost-icon{
+    text-align-last: center;
+}
+
 .verification-icon {
     color: #4cff7f;
+    text-align-last: center;
     svg {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
 }
 

@@ -272,7 +272,6 @@ code {
 }
 .populated-items {
   display: flex;
-  gap: 3rem;
   width: 100%;
   padding: 5vw 8vw;
 }
@@ -281,14 +280,15 @@ code {
   flex-direction: column;
   background-color: #1C1A1C;
   width: 100%;
-  padding: 1vw;
-  gap: 1vw;
+  padding: 1vw 2vw;
+  align-items: center;
 }
 .populated-items .populated-items--grid--cont .rwd-table {
   margin: 1em 0;
   color: #fff;
   overflow: hidden;
-  min-width: 300px;
+  width: 100%;
+  border-spacing: 0;
 }
 .populated-items .populated-items--grid--cont .rwd-table tr {
   border-top: 1px solid #ddd;
@@ -297,6 +297,8 @@ code {
 }
 .populated-items .populated-items--grid--cont .rwd-table .clickable-row {
   cursor: pointer;
+  padding: 0 1vw;
+  transition: all 0.1s ease-in-out;
 }
 .populated-items .populated-items--grid--cont .rwd-table .row-link {
   display: contents; /* Allows the Link to behave like a <tr> */
@@ -305,22 +307,50 @@ code {
 }
 .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
   text-align: left;
-  margin: 0.5em 1em;
+  margin: 0.5em 0;
+  vertical-align: middle;
+  padding: 0.5vw 0;
 }
 .populated-items .populated-items--grid--cont .rwd-table th img, .populated-items .populated-items--grid--cont .rwd-table td img {
   width: 2.5vw;
 }
 .populated-items .populated-items--grid--cont .rwd-table .item-logo {
   display: flex;
-  gap: 1vw;
-  margin: 0;
+  gap: 1.5vw;
+  align-items: center;
+  max-width: 20vw;
+  margin-left: 1vw;
 }
 .populated-items .populated-items--grid--cont .rwd-table .item-capabilities {
   margin: 0;
   justify-content: flex-start;
 }
-.populated-items .populated-items--grid--cont .item:hover > .item-details--container {
-  background-color: rgba(212, 156, 255, 0.2039215686);
+.populated-items .populated-items--grid--cont .rwd-table .table-name-title {
+  width: 22vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .table-type-title {
+  width: 18vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .table-icons-title {
+  width: 3vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .table-item--date {
+  opacity: 50%;
+  font-weight: 200;
+}
+.populated-items .populated-items--grid--cont .rwd-table .OS-icons {
+  display: flex;
+}
+.populated-items .populated-items--grid--cont .rwd-table .OS-icons .item-capabilities-icons {
+  display: flex;
+  gap: 1vw;
+}
+.populated-items .populated-items--grid--cont .rwd-table .OS-icons .item-capabilities-icons div svg {
+  font-size: 2vw;
+}
+.populated-items .populated-items--grid--cont .clickable-row:hover {
+  background-color: rgba(212, 212, 212, 0.2039215686);
+  border: 5px solid #54ffee;
   border-radius: 1vw;
 }
 
@@ -348,11 +378,18 @@ code {
   color: rgb(54, 233, 0);
 }
 
+.cost-icon {
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+
 .verification-icon {
   color: #4cff7f;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 .verification-icon svg {
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .verification-icon,

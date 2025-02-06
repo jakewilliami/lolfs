@@ -4,6 +4,11 @@ import testItem from '/public/data/testItem.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
+// OS logos
+import { FaWindows, FaLinux, FaApple, FaFile, FaCopy, FaUsb, FaClone} from "react-icons/fa";
+import { DiAndroid } from "react-icons/di";
+import { SiMacos } from "react-icons/si";
+import { GoFileDirectoryFill } from "react-icons/go";
 
 // import ScrollTop from './ScrollTop';
 // import PrimaryButton from './PrimaryButton';
@@ -37,18 +42,26 @@ const Preview = () => {
         }
     };
 
+      const iconMap = {
+        FaWindows:<FaWindows className='os-icon'/>,
+        FaLinux:<FaLinux className='os-icon'/>,
+        FaApple:<FaApple className='os-icon'/>,
+        DiAndroid:<DiAndroid className='os-icon'/>,
+        SiMacos: <SiMacos className='os-icon'/>,
+      }
+
     return (
         <>
             <section className='populated-items'>
                 <div className='populated-items--grid--cont'>
                     <table className='rwd-table'>
                         <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            {/* <th>Capabilities</th> */}
+                            <th className='table-name-title'>Name</th>
+                            <th className='table-type-title'>Type</th>
                             <th>Last Updated</th>
-                            <th>Verified</th>
-                            <th>Cost</th>
+                            <th>Supported OS</th>
+                            <th className='cost-icon'>Verified</th>
+                            <th className='table-icons-title'>Cost</th>
                         </tr>
 
                         {currentItems.map((item, index) => (
@@ -59,9 +72,19 @@ const Preview = () => {
                                     <h4>{item.Name}</h4>
                                 </td>
                                 <td data-th="Genre">{item.categoryType}</td>
-                                <td data-th="Gross">{item.LastModified}</td>
+                                <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
+                                
+                                {/* OS ICONS */}
+                                <td data-th="Gross" className='OS-icons'>
+                                    <span key={index} className="item-capabilities-icons">
+                                        {item.Details.SupportedOS.slice(0, 5).map((os, index) => (
+                                            <div>{iconMap[os.icon]}</div>
+                                        ))}
+                                    </span>
+                                </td>
+
                                 <td data-th="Gross" className='verification-icon'><HiOutlineBadgeCheck className='verification-icon'/></td>
-                                <td data-th="Gross">
+                                <td data-th="Gross" className='cost-icon'>
                                     <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h4>
                                     <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h4>
                                 </td>
