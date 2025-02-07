@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import testItem from '/public/data/testItem.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -18,6 +18,8 @@ const Preview = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
 
+      const navigate = useNavigate();
+
     useEffect(() => {
         setItem(testItem);
     }, []);
@@ -33,7 +35,6 @@ const Preview = () => {
             window.scrollTo(0, 300);
         }
     };
-    
 
     const prevPage = () => {
         if (currentPage > 1) {
@@ -55,42 +56,38 @@ const Preview = () => {
             <section className='populated-items'>
                 <div className='populated-items--grid--cont'>
                     <table className='rwd-table'>
-                        <tr>
+                        <tr className='table-main-titles'>
                             <th className='table-name-title'>Name</th>
                             <th className='table-type-title'>Type</th>
                             <th>Last Updated</th>
                             <th>Supported OS</th>
-                            <th className='cost-icon'>Verified</th>
-                            <th className='table-icons-title'>Cost</th>
+                            <th className='table-icons-title'>Free</th>
                         </tr>
 
                         {currentItems.map((item, index) => (
-                        <tr key={index} className="clickable-row">
-                            <Link to={`/item/${index}`} className="row-link">
-                                <td data-th="Movie Title" className='item-logo'>
+                        <tr key={index} className="clickable-row" onClick={() => navigate(`/item/${index}`)}>
+                            <td data-th="Movie Title">
+                                <div className='item-logo'>
                                     <img src={item.Logo}/>
                                     <h4>{item.Name}</h4>
-                                </td>
-                                <td data-th="Genre">{item.categoryType}</td>
-                                <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
-                                
-                                {/* OS ICONS */}
-                                <td data-th="Gross" className='OS-icons'>
-                                    <span key={index} className="item-capabilities-icons">
-                                        {item.Details.SupportedOS.slice(0, 5).map((os, index) => (
-                                            <div>{iconMap[os.icon]}</div>
-                                        ))}
-                                    </span>
-                                </td>
+                                </div>
+                            </td>
+                            <td data-th="Genre">{item.categoryType}</td>
+                            <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
+                            <td data-th="Gross" className='OS-icons'>
+                                <span className="item-capabilities-icons">
+                                    {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
+                                        <div key={i}>{iconMap[os.icon]}</div>
+                                    ))}
+                                </span>
+                            </td>
 
-                                <td data-th="Gross" className='verification-icon'><HiOutlineBadgeCheck className='verification-icon'/></td>
-                                <td data-th="Gross" className='cost-icon'>
-                                    <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h4>
-                                    <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h4>
-                                </td>
-                            </Link>
+                            <td data-th="Gross" className='cost-icon'>
+                                <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
+                                <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
+                            </td>
                         </tr>
-                        ))}
+                    ))}
                     </table>
                 </div>
             </section>
