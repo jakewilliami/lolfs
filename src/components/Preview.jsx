@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import testItem from '/public/data/testItem.json';
+import lolfsItem from '/public/api/lolfs.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
@@ -21,7 +21,7 @@ const Preview = () => {
       const navigate = useNavigate();
 
     useEffect(() => {
-        setItem(testItem);
+        setItem(lolfsItem);
     }, []);
 
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -32,14 +32,25 @@ const Preview = () => {
     const nextPage = () => {
         if (currentPage < Math.ceil(items.length / itemsPerPage)) {
             setCurrentPage((prevPage) => prevPage + 1);
-            window.scrollTo(0, 300);
+            setTimeout(() => {
+            const element = document.querySelector('.populated-items');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+
         }
     };
 
     const prevPage = () => {
         if (currentPage > 1) {
             setCurrentPage((prevPage) => prevPage - 1);
-            window.scrollTo(0, 300);
+            setTimeout(() => {
+            const element = document.querySelector('.populated-items');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
         }
     };
 

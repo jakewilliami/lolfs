@@ -44,7 +44,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href='/api/testItem.json' 
+                  href='/api/lolfs.json' 
                   target="_blank" 
                   rel="noopener noreferrer"
 

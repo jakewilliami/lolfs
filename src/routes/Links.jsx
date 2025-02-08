@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import Home from '../pages/Home';
 import SinglePage from '../pages/SinglePage';
 import Contact from '../pages/Contact';
-import testItem from '/public/data/testItem.json';
+import lolfsItem from '/public/api/lolfs.json';
 
 const Links = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
-import testItem from '/public/data/testItem.json';
+import lolfsItem from '/public/api/lolfs.json';
 // icons
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
@@ -16,17 +16,17 @@ const SinglePage = () => {
   const navigate = useNavigate();
 
   // Find the current item
-  const item = testItem[id];
+  const item = lolfsItem[id];
   if (!item) {
     return <h2>Project not found</h2>;
   }
 
   const currentIndex = parseInt(id, 10);
-  const currentItem = testItem[currentIndex];
+  const currentItem = lolfsItem[currentIndex];
 
   // Determine previous and next items
-  const prevItem = currentIndex > 0 ? testItem[currentIndex - 1] : null;
-  const nextItem = currentIndex < testItem.length - 1 ? testItem[currentIndex + 1] : null;
+  const prevItem = currentIndex > 0 ? lolfsItem[currentIndex - 1] : null;
+  const nextItem = currentIndex < lolfsItem.length - 1 ? lolfsItem[currentIndex + 1] : null;
 
   const iconMap = {
     FaWindows:<FaWindows className='os-icon'/>,
@@ -239,7 +239,7 @@ const SinglePage = () => {
           {prevItem && (
             <button 
             className='cssbuttons-io'
-              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === prevItem.Name)}`)}
+              onClick={() => navigate(`/item/${lolfsItem.findIndex(i => i.Name === prevItem.Name)}`)}
             >
               <span>
               <IoIosArrowBack />
@@ -251,7 +251,7 @@ const SinglePage = () => {
           {nextItem && (
             <button 
             className='cssbuttons-io'
-              onClick={() => navigate(`/item/${testItem.findIndex(i => i.Name === nextItem.Name)}`)}
+              onClick={() => navigate(`/item/${lolfsItem.findIndex(i => i.Name === nextItem.Name)}`)}
             >
               <span>
               {nextItem.Name}

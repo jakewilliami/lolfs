@@ -11,9 +11,12 @@ const Home = () => {
             <div className='home-header-title--cont'>
               <a href='https://github.com/TomJHKR/lolfs.git' rel="noopener noreferrer" target='_blank'><FaGithub />Github Repo</a>
               <h1>Welcome to LOLFS</h1>
+            <p>Detection rules for File sharing services - Inspired by <a2 href="https://lolrmm.io/">LOLRMM</a2></p>
+            <p>Primary maintainer: <a1 href="https://github.com/TomJHKR">TomJHKR</a1></p>
+            <p>Community driven, please open a pull request or raise an issue</p>
             </div>
             <a className="btn"
-              href='/api/testItem.json' 
+              href='/api/lolfs.json' 
               target="_blank" 
               rel="noopener noreferrer" >
                 <PiBracketsCurlyBold  className='sparkle'/>
