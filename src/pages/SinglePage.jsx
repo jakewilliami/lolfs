@@ -53,41 +53,88 @@ const SinglePage = () => {
       <section className='item-header'>
       <h1>{item.Name}</h1>
         <p>{item.Description}</p>
+          <a className="btn"
+            href={item.Details.Website}
+            target="_blank" 
+            rel="noopener noreferrer" >
+            {/* <PiBracketsCurlyBold  className='sparkle'/> */}
+            <p 
+                className="text"
+            >Visit {item.Name}
+            </p>
+          </a>
       </section>
 
-      <section className='content-section'>
-        <div className='item-details--container'>
-          <img src={item.Logo}/>
-          <h4>Author: {item.Author}</h4>
-          <a href={item.Details.Website} target="_blank" rel="noopener noreferrer">Download</a>
-          <h4>{item.categoryType}</h4>
-          <h4 className='item-capabilities'>
-            {item.Details.Capabilities.map((tech, index) => (
-              <span key={index} className="item-capabilities-icons">
-                {tech}
-              </span>
-            ))}
-          </h4>
-          <h5>Last edited: {item.LastModified}</h5>
-          <div className='icons'>
-            <HiOutlineBadgeCheck className='verification-icon'/>
-            <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h4>
-            <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h4>
-          </div>
+      <section className='populated-items'>
+        <div className='populated-items--grid--cont'>
+          <table className='rwd-table'>
+            <tr className='table-main-titles'>
+              <th className='table-name-title'>Name</th>
+              <th className='website-link--title'>Website</th>
+              <th className='table-type-title'>Type</th>
+              <th>Last Updated</th>
+              <th>Supported OS</th>
+              <th className='table-icons-title'>Free</th>
+            </tr>
+            <tr className="clickable-row non-clickable">
+              <td data-th="Movie Title">
+                <div className='item-logo'>
+                  <img src={item.Logo}/>
+                  <h4>{item.Name}</h4>
+                </div>
+              </td>
+              <td data-th="Genre"><a href={item.Details.Website}>Website &rarr;</a></td>
+              <td data-th="Genre">{item.categoryType}</td>
+              <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
+              <td data-th="Gross" className='OS-icons'>
+                <span className="item-capabilities-icons">
+                  {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
+                    <div key={i}>{iconMap[os.icon]}</div>
+                  ))}
+                </span>
+              </td>
+              <td data-th="Gross" className='cost-icon'>
+                <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
+                <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
+              </td>
+            </tr>
+          </table>
         </div>
       </section>
 
       <section className='content-section'>
-        <h2 className='individ-title'>Supported OS</h2>
+        <h2 className='individ-title'>Capabilities</h2>
         <div className='supported-os--container'>
-          {item.Details.SupportedOS.map((os, index) => (
-            <div key={index} className="supported-os-icons">
-              <div>{iconMap[os.icon]}</div>
-              <p>{os.OS}</p>
-            </div>
-          ))}
+          {item.Details.Capabilities.map((capability, index) => {
+            const fileIcons = Object.values(fileIconMap);
+            const assignedIcon = fileIcons[index % fileIcons.length];
+
+            return (
+              <div key={index} className="supported-os-icons">
+                <div>{assignedIcon}</div>
+                <p>{capability}</p>
+              </div>
+            )
+          })}
         </div>
       </section>
+
+      {/* <section className='content-section'>
+        <h2 className='individ-title'>Capabilities</h2>
+        <div className='capabilities--container'>
+          {item.Details.Capabilities.map((capability, index) => {
+            const fileIcons = Object.values(fileIconMap);
+            const assignedIcon = fileIcons[index % fileIcons.length];
+
+            return (
+              <div key={index} className="capabilities-icons">
+                <div className="icon">{assignedIcon}</div>
+                <p>{capability}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section> */}
 
       <section className='content-section'>
           <div className='inner-header--container'>
@@ -176,24 +223,7 @@ const SinglePage = () => {
       </section>
 
       <section className='content-section'>
-        <h2 className='individ-title'>Capabilities</h2>
-        <div className='capabilities--container'>
-          {item.Details.Capabilities.map((capability, index) => {
-            const fileIcons = Object.values(fileIconMap);
-            const assignedIcon = fileIcons[index % fileIcons.length];
-
-            return (
-              <div key={index} className="capabilities-icons">
-                <div className="icon">{assignedIcon}</div>
-                <p>{capability}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className='content-section'>
-        <h2 className='individ-title'>Installation Paths</h2>
+        <h2 className='individ-title'>Installation</h2>
         <div className='code-snippet--container'>
           {item.Details.InstallationPaths.map((paths, index) => (
             <code key={index} data-code-language="text">

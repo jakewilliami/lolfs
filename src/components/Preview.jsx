@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import lolfsItem from '/public/api/lolfs.json';
 import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import ScrollTop from './ScrollTop';
+import { HiOutlineBadgeCheck } from "react-icons/hi";
+// OS logos
+import { FaWindows, FaLinux, FaApple, FaFile, FaCopy, FaUsb, FaClone} from "react-icons/fa";
+import { DiAndroid } from "react-icons/di";
+import { SiMacos } from "react-icons/si";
+import { GoFileDirectoryFill } from "react-icons/go";
+
+// import ScrollTop from './ScrollTop';
 // import PrimaryButton from './PrimaryButton';
 
 const Preview = () => {
     const [items, setItem] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
+
+      const navigate = useNavigate();
 
     useEffect(() => {
         setItem(lolfsItem);
@@ -32,7 +41,6 @@ const Preview = () => {
 
         }
     };
-    
 
     const prevPage = () => {
         if (currentPage > 1) {
@@ -46,38 +54,53 @@ const Preview = () => {
         }
     };
 
+      const iconMap = {
+        FaWindows:<FaWindows className='os-icon'/>,
+        FaLinux:<FaLinux className='os-icon'/>,
+        FaApple:<FaApple className='os-icon'/>,
+        DiAndroid:<DiAndroid className='os-icon'/>,
+        SiMacos: <SiMacos className='os-icon'/>,
+      }
+
     return (
         <>
             <section className='populated-items'>
-                {currentItems.map((item, index) => (
-                    <Link
-                        key={index}
-                        to={`/item/${index}`}
-                        className={`item item--${index + 1}`}
-                    >
-                        <div className='row'>
-                            <h2>{item.Name}</h2>
-                            <div className='details'>
-                                <h3 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><MdMoneyOff /></h3>
-                                <h3 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney /></h3>
-                            </div>
-                        </div>
-                        <div className='row item-capabilities'>
-                            {item.Details.Capabilities.slice(0, 5).map((tech, index) => (
-                            <span key={index} className="item-capabilities-icons">
-                                {tech}
-                            </span>
-                            ))}
-                            {item.Details.Capabilities.length > 5 && (
-                                <span className="item-capabilities-icons more">...</span>
-                            )}
-                        </div>
-                        <div className='row'>
-                            <h6>{item.Author}</h6>
-                            <h6>{item.LastModified}</h6>
-                        </div>
-                    </Link>
-                ))}
+                <div className='populated-items--grid--cont'>
+                    <table className='rwd-table'>
+                        <tr className='table-main-titles'>
+                            <th className='table-name-title'>Name</th>
+                            <th className='table-type-title'>Type</th>
+                            <th>Last Updated</th>
+                            <th>Supported OS</th>
+                            <th className='table-icons-title'>Free</th>
+                        </tr>
+
+                        {currentItems.map((item, index) => (
+                        <tr key={index} className="clickable-row" onClick={() => navigate(`/item/${index}`)}>
+                            <td data-th="Movie Title">
+                                <div className='item-logo'>
+                                    <img src={item.Logo}/>
+                                    <h4>{item.Name}</h4>
+                                </div>
+                            </td>
+                            <td data-th="Genre">{item.categoryType}</td>
+                            <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
+                            <td data-th="Gross" className='OS-icons'>
+                                <span className="item-capabilities-icons">
+                                    {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
+                                        <div key={i}>{iconMap[os.icon]}</div>
+                                    ))}
+                                </span>
+                            </td>
+
+                            <td data-th="Gross" className='cost-icon'>
+                                <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
+                                <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
+                            </td>
+                        </tr>
+                    ))}
+                    </table>
+                </div>
             </section>
 
             <div className="pagination">

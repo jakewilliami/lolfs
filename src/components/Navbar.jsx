@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
           <nav className={`navbar ${isOpen ? "menu-open" : ""}`}>
             <NavLink to="/" className="logo">
-              <img src="/images/logo.png"/>
+              <img src="/images/fs-logo.PNG"/>
             </NavLink>
             <div className="menu-icon" onClick={toggleMenu}>
               <div className={`bar bar1 ${isOpen ? "toggle" : ""}`}></div>
@@ -33,15 +33,6 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/about"
-                  onClick={closeMenu}
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                >
-                  About
-                </NavLink>
-              </li> */}
               <li>
                 <NavLink
                   to="/contact"
@@ -50,6 +41,18 @@ const Navbar = () => {
                 >
                   Contact
                 </NavLink>
+              </li>
+              <li>
+                <a
+                  href='/api/lolfs.json' 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+
+                  onClick={closeMenu}
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  JSON
+                </a>
               </li>
             </ul>
             {isOpen && <div className="overlay" onClick={closeMenu}></div>}
