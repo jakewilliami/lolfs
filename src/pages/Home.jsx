@@ -9,11 +9,11 @@ const Home = () => {
         <section className='home-header'>
           <div className='home-header--det-cont'>
             <div className='home-header-title--cont'>
-              <a href='https://github.com/TomJHKR/lolfs.git' rel="noopener noreferrer" target='_blank'><FaGithub />Github Repo</a>
+              <a className='header-btn' href='https://github.com/TomJHKR/lolfs.git' rel="noopener noreferrer" target='_blank'><FaGithub />Github Repo</a>
               <h1>Welcome to LOLFS</h1>
-            <p>Detection rules for File sharing services - Inspired by <a2 href="https://lolrmm.io/">LOLRMM</a2></p>
-            <p>Primary maintainer: <a1 href="https://github.com/TomJHKR">TomJHKR</a1></p>
-            <p>Community driven, please open a pull request or raise an issue</p>
+              <p>Detection rules for File sharing services - Inspired by <a className='header-text--link' rel="noopener noreferrer" target='_blank' href="https://lolrmm.io/">LOLRMM</a></p>
+              <p>Community driven, please open a pull request or raise an issue</p>
+              <p>Primary maintainer: <a className='header-text--link' rel="noopener noreferrer" target='_blank' href="https://github.com/TomJHKR">TomJHKR</a></p>
             </div>
             <a className="btn"
               href='/api/lolfs.json' 
@@ -37,7 +37,7 @@ const Home = () => {
             {/* filters */}
             <div className='item-filter--cont'>
 
-            <h3>Filter</h3>
+            {/* <h4>Filter</h4>
 
             <div className="checkbox-wrapper-46">
               <input type="checkbox" id="cbx-46" className="inp-cbx" />
@@ -47,7 +47,7 @@ const Home = () => {
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
                 ><span>Checkbox</span>
               </label>
-            </div>
+            </div> */}
 
             </div>
           </div>

@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 400;
     letter-spacing: 2px;
     color: white;
@@ -36,6 +36,9 @@ h3 {
 }
 
 h4 {
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 300;
     color: white;
 }
 
@@ -50,7 +53,7 @@ h6 {
 
 p {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1vw;
 }
 
 a {
@@ -128,13 +131,13 @@ code {
     border: none;
     height: fit-content;
     width: fit-content;
-    padding: 2% 3%;
+    padding: 1vw 1.7vw;
     border-radius: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    background: #1C1A1C;
+    background: #292729;
     cursor: pointer;
     transition: all 450ms ease-in-out;
 }
@@ -281,7 +284,7 @@ code {
             flex-direction: column;
             gap: 1vw;
 
-            a {
+            .header-btn {
                 display: flex;
                 gap: 5px;
                 text-decoration: underline;
@@ -289,6 +292,9 @@ code {
                 padding: .5vw 1vw;
                 border-radius: 2vw;
                 width: fit-content;
+            }
+            .header-text--link{
+                border-bottom: 1px solid $primary-color2;
             }
         }
     }
@@ -496,6 +502,7 @@ code {
                 transition: all 0.1s ease-in-out;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.13);
                 border-top: 1px solid rgba(255, 255, 255, 0.13);
+                font-size: 1.5vw;
             }
 
             .row-link {
@@ -508,11 +515,22 @@ code {
                 text-align: left;
                 margin: .5em 0;
                 vertical-align: middle;
-                padding: .5vw 0;
+                padding: .7vw 0;
 
                 img {
-                    width: 2.5vw;
+                    width: 2vw;
                 }
+            }
+
+            .toggle-btn{
+                display: none;
+            }
+
+            .table-text{
+                font-size: 1.3vw;
+                letter-spacing: 1px;
+                font-weight: 600;
+                padding-bottom: 1.5vw;
             }
 
             .item-logo {
@@ -539,7 +557,7 @@ code {
                 width: 3vw;
             }
 
-            .table-item--date {
+            .table-item--date p {
                 color: rgba(255, 255, 255, 0.452);
                 font-weight: 200;
             }
@@ -550,7 +568,7 @@ code {
                     gap: 1vw;
 
                     div svg {
-                        font-size: 2vw;
+                        font-size: 1.5vw;
                     }
                 }
             }
@@ -632,7 +650,7 @@ h3 {
 .item-header {
     display: flex;
     flex-direction: column;
-    padding: 8vw 8vw 5vw 8vw;
+    padding: 8vw 8vw 1vw 8vw;
     gap: 2rem;
 }
 
@@ -925,9 +943,9 @@ footer {
         font-size: 40px;
     }
 
-    .btn {
-        padding: 25px 60px;
-    }
+    // .btn {
+    //     padding: 25px 60px;
+    // }
 
     .text {
         font-size: 30px;
@@ -1085,14 +1103,6 @@ footer {
         }
     }
 
-    .home-header {
-        padding: 18vw 5vw 5vw;
-        align-items: center;
-        /* Centers content for smaller screens */
-        text-align: center;
-        min-height: 45vh;
-    }
-
     .content-section {
         padding: 5vw 8vw;
     }
@@ -1125,6 +1135,10 @@ footer {
         svg {
             font-size: 3.5vw;
         }
+    }
+
+    .populated-items .populated-items--grid--cont .rwd-table .OS-icons .item-capabilities-icons div svg {
+        font-size: 2.5vw;
     }
 
     .item-details--container {
@@ -1220,6 +1234,14 @@ footer {
 
 @media (max-width: 500px) {
 
+    p{
+        font-size: 2.5vw;
+    }
+
+    h4{
+        font-size: 3vw;
+    }
+
     .navbar {
         height: 14dvw;
         padding: 1rem 2rem;
@@ -1230,21 +1252,29 @@ footer {
     }
 
     .home-header {
-        padding: 20vw 4vw 4vw;
+        padding: 20vw 8vw 4vw;
         min-height: 45vh;
-        gap: 4dvw;
+        gap: 5dvw;
+        .home-header--det-cont {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 7vw;
+            .home-header-title--cont{
+                gap: 2vw;
+            }
+        }
     }
 
     .home-header h1 {
-        font-size: 2.75rem;
+        font-size: 7vw;
     }
 
     .home-header p {
-        font-size: 1rem;
+        font-size: 2.2vw;
     }
 
     .btn {
-        padding: 3% 4%;
+        padding: 2vw 4vw;
     }
 
     .supported-os--container .supported-os-icons div svg {
@@ -1289,5 +1319,44 @@ footer {
 
     .item-details--container> :nth-child(7) {
         grid-area: 4 / 3 / 5 / 5;
+    }
+
+    .populated-items .populated-items--grid--cont {
+        padding: 1vw 4vw;
+    }
+
+    .populated-items .populated-items--grid--cont .rwd-table th img, .populated-items .populated-items--grid--cont .rwd-table td img {
+        width: 4vw;
+    }
+
+    .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+        padding: 3vw 0;
+    }
+
+    .table-name--title{
+        width: 50%;
+    }
+
+    .table-type{
+        font-size: 3vw;
+    }
+
+    .mobile-date{
+        font-size: 3vw;
+    }
+
+    .mobile-os--icons svg{
+        font-size: 4vw;
+    }
+
+    .mobile-hidden {
+          display: none;
+      }
+
+      .populated-items .populated-items--grid--cont .rwd-table .toggle-btn {
+        display: table-cell;
+        button{
+            float: right;
+        }
     }
 }

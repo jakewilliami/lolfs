@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <NavLink to="/" className="logo">
-        <img src="/images/logo.png" alt="LOLFS logo"/>
+        <img src="/images/fs-logo.PNG" alt="LOLFS logo"/>
       </NavLink>
 
       <h5>LOLFS is an online catalog of security tools.</h5>
@@ -20,14 +20,6 @@ const Footer = () => {
             Home
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            About
-          </NavLink>
-        </li> */}
         <li>
           <NavLink
             to="/contact"
@@ -35,6 +27,17 @@ const Footer = () => {
           >
             Contact
           </NavLink>
+        </li>
+
+        <li>
+          <a
+            href='/api/lolfs.json' 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            JSON
+          </a>
         </li>
       </ul>
 
