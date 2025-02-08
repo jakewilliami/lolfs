@@ -508,7 +508,7 @@ code {
                 text-align: left;
                 margin: .5em 0;
                 vertical-align: middle;
-                padding: 2vw 0;
+                padding: .5vw 0;
 
                 img {
                     width: 2.5vw;
@@ -948,6 +948,10 @@ footer {
 
 @media (max-width: 900px) {
 
+    p{
+        font-size: 1.5vw;
+    }
+
     .home-header,
     .item-header {
         padding-top: 18vw;
@@ -1053,6 +1057,10 @@ footer {
         grid-area: 3 / 3 / 4 / 5;
         width: 100%;
         justify-content: flex-end;
+    }
+
+    .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+        padding: 1vw 0;
     }
 }
 

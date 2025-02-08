@@ -83,7 +83,7 @@ const Preview = () => {
                                     <h4>{item.Name}</h4>
                                 </div>
                             </td>
-                            <td data-th="Genre">{item.categoryType}</td>
+                            <td data-th="Genre"><p>{item.categoryType}</p></td>
                             <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
                             <td data-th="Gross" className='OS-icons'>
                                 <span className="item-capabilities-icons">

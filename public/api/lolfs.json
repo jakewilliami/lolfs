@@ -6,7 +6,7 @@
         "Created": "",
         "LastModified": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://filezilla-project.org",
             "PEMetadata": {
@@ -67,7 +67,7 @@
         "Created": "",
         "LastModified": "2024-12-01",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://winscp.net/",
             "PEMetadata": {
@@ -114,7 +114,7 @@
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://cyberduck.io",
             "PEMetadata": {
@@ -164,7 +164,7 @@
         "Created": "",
         "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://panic.com/transmit/",
             "PEMetadata": {
@@ -216,7 +216,7 @@
         "Created": "",
         "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.cuteftp.com",
             "PEMetadata": {
@@ -269,7 +269,7 @@
         "Created": "",
         "Logo": "https://cdn.icon-icons.com/icons2/183/PNG/256/Core_FTP_22544.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.coreftp.com",
             "PEMetadata": {
@@ -319,7 +319,7 @@
         "Created": "",
         "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.coffeecup.com/free-ftp/",
             "PEMetadata": {
@@ -369,7 +369,7 @@
         "Created": "",
         "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
         "LastModified": "2024-12-01",
-        "categoryType": "FTP File Transfer Protocol",
+        "categoryType": "FTP (File Transfer)",
         "Details": {
             "Website": "https://www.smartftp.com",
             "PEMetadata": {

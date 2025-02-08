@@ -458,7 +458,7 @@ code {
   text-align: left;
   margin: 0.5em 0;
   vertical-align: middle;
-  padding: 2vw 0;
+  padding: 0.5vw 0;
 }
 .populated-items .populated-items--grid--cont .rwd-table th img,
 .populated-items .populated-items--grid--cont .rwd-table td img {
@@ -841,6 +841,9 @@ footer hr {
   }
 }
 @media (max-width: 900px) {
+  p {
+    font-size: 1.5vw;
+  }
   .home-header,
   .item-header {
     padding-top: 18vw;
@@ -930,6 +933,9 @@ footer hr {
     grid-area: 3/3/4/5;
     width: 100%;
     justify-content: flex-end;
+  }
+  .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+    padding: 1vw 0;
   }
 }
 @media (max-width: 768px) {
