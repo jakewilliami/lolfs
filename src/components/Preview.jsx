@@ -14,20 +14,12 @@ import { SiMacos } from "react-icons/si";
 const Preview = () => {
     const [items, setItem] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [expandedRows, setExpandedRows] = useState({});
     const itemsPerPage = 20;
     const navigate = useNavigate();
 
     useEffect(() => {
         setItem(lolfsItem);
     }, []);
-
-    const toggleRow = (index) => {
-        setExpandedRows(prev => ({
-            ...prev,
-            [index]: !prev[index]
-        }));
-    };
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -79,7 +71,6 @@ const Preview = () => {
                             <th className='mobile-hidden'>Last Updated</th>
                             <th className='mobile-hidden'>Supported OS</th>
                             <th className='table-icons-title'>Free</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,10 +85,10 @@ const Preview = () => {
                                     </td>
 
                                     <td className='table-type'><p>{item.categoryType}</p></td>
-                                    <td className='mobile-hidden table-item--date'><p>{item.LastModified}</p></td>
+                                    <td className='table-item--date mobile-hidden'><p>{item.LastModified}</p></td>
                                     
                                     {/* OS ICONS */}
-                                    <td className='mobile-hidden OS-icons '>
+                                    <td className='OS-icons mobile-hidden'>
                                         <span className="item-capabilities-icons">
                                             {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
                                                 <div key={i}>{iconMap[os.icon]}</div>
@@ -110,28 +101,7 @@ const Preview = () => {
                                         <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
                                         <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
                                     </td>
-
-                                    <td className='toggle-btn'>
-                                        <button onClick={() => toggleRow(index)}>
-                                            {expandedRows[index] ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                                        </button>
-                                    </td>
                                 </tr>
-
-                                {expandedRows[index] && (
-                                    <>
-                                    <tr className='expanded-row table-main-titles'>
-                                        <th>Last Updated</th>
-                                        <th>Supported OS</th>
-                                    </tr>
-                                    <td className='mobile-date'>{item.LastModified}</td>
-                                    <td className='mobile-os--icons'>
-                                        {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
-                                            <span key={i}>{iconMap[os.icon]}</span>
-                                        ))}
-                                    </td>
-                                    </>
-                                )}
                             </>
                         ))}
                     </tbody>

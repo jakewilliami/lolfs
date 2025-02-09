@@ -1,25 +1,28 @@
-import React from 'react'; 
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import lolfsItem from '/public/api/lolfs.json';
 // icons
-import { MdMoneyOff, MdAttachMoney } from "react-icons/md";
+import {  MdAttachMoney } from "react-icons/md";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 // OS logos
 import { FaWindows, FaLinux, FaApple, FaFile, FaCopy, FaUsb, FaClone} from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 import { SiMacos } from "react-icons/si";
-import { GoFileDirectoryFill } from "react-icons/go";
 
 const SinglePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [expandedRows, setExpandedRows] = useState({});
+  const [items, setItem] = useState([]);
 
   // Find the current item
   const item = lolfsItem[id];
   if (!item) {
     return <h2>Project not found</h2>;
   }
+
 
   const currentIndex = parseInt(id, 10);
   const currentItem = lolfsItem[currentIndex];
@@ -36,14 +39,6 @@ const SinglePage = () => {
     SiMacos: <SiMacos className='os-icon'/>,
   }
 
-  const fileIconMap = {
-    FaFile:<FaFile className='os-icon'/>,
-    GoFileDirectoryFill:<GoFileDirectoryFill className='os-icon'/>,
-    FaCopy  :<FaCopy   className='os-icon'/>,
-    FaUsb  :<FaUsb   className='os-icon'/>,
-    FaClone :<FaClone  className='os-icon'/>
-  }
-
   if (!item) {
     return <h2>Project not found</h2>;
 }
@@ -57,7 +52,6 @@ const SinglePage = () => {
             href={item.Details.Website}
             target="_blank" 
             rel="noopener noreferrer" >
-            {/* <PiBracketsCurlyBold  className='sparkle'/> */}
             <p 
                 className="text"
             >Visit {item.Name}
@@ -68,36 +62,46 @@ const SinglePage = () => {
       <section className='populated-items'>
         <div className='populated-items--grid--cont'>
           <table className='rwd-table'>
-            <tr className='table-main-titles'>
-              <th className='table-name-title'>Name</th>
-              <th className='website-link--title'>Website</th>
-              <th className='table-type-title'>Type</th>
-              <th>Last Updated</th>
-              <th>Supported OS</th>
-              <th className='table-icons-title'>Free</th>
-            </tr>
-            <tr className="clickable-row non-clickable">
-              <td data-th="Movie Title">
-                <div className='item-logo'>
-                  <img src={item.Logo}/>
-                  <h4>{item.Name}</h4>
-                </div>
-              </td>
-              <td data-th="Genre"><a href={item.Details.Website}>Website &rarr;</a></td>
-              <td data-th="Genre">{item.categoryType}</td>
-              <td data-th="Gross" className='table-item--date'>{item.LastModified}</td>
-              <td data-th="Gross" className='OS-icons'>
-                <span className="item-capabilities-icons">
-                  {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
-                    <div key={i}>{iconMap[os.icon]}</div>
-                  ))}
-                </span>
-              </td>
-              <td data-th="Gross" className='cost-icon'>
-                <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
-                <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
-              </td>
-            </tr>
+            <thead>
+              <tr className='table-main-titles'>
+                <th className='table-name--title'>Name</th>
+                <th className='table-type-title'>Type</th>
+                <th className=''>Last Updated</th>
+                <th className=''>Supported OS</th>
+                <th className='table-icons-title'>Free</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <>
+                <tr className="clickable-row">
+                  <td data-th="Movie Title">
+                    <div className='item-logo'>
+                      <img src={item.Logo} alt={item.Name} />
+                      <h4>{item.Name}</h4>
+                    </div>
+                  </td>
+
+                  <td className='table-type'><p>{item.categoryType}</p></td>
+                  <td className='table-item--date'><p>{item.LastModified}</p></td>
+
+                  {/* OS ICONS */}
+                  <td className='OS-icons '>
+                    <span className="item-capabilities-icons">
+                        {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
+                        <div key={i}>{iconMap[os.icon]}</div>
+                      ))}
+                    </span>
+                  </td>
+
+                  {/* COST */}
+                  <td data-th="Gross" className='cost-icon'>
+                    <h4 className={`${item.Details.Free === 'Yes' ? 'free' : 'hidden'}`}><HiOutlineBadgeCheck /></h4>
+                    <h4 className={`${item.Details.Free === 'No' ? 'paid' : 'hidden'}`}><MdAttachMoney/></h4>
+                  </td>
+                </tr>
+              </>
+            </tbody>
           </table>
         </div>
       </section>
@@ -106,35 +110,14 @@ const SinglePage = () => {
         <h2 className='individ-title'>Capabilities</h2>
         <div className='supported-os--container'>
           {item.Details.Capabilities.map((capability, index) => {
-            const fileIcons = Object.values(fileIconMap);
-            const assignedIcon = fileIcons[index % fileIcons.length];
-
             return (
               <div key={index} className="supported-os-icons">
-                <div>{assignedIcon}</div>
                 <p>{capability}</p>
               </div>
             )
           })}
         </div>
       </section>
-
-      {/* <section className='content-section'>
-        <h2 className='individ-title'>Capabilities</h2>
-        <div className='capabilities--container'>
-          {item.Details.Capabilities.map((capability, index) => {
-            const fileIcons = Object.values(fileIconMap);
-            const assignedIcon = fileIcons[index % fileIcons.length];
-
-            return (
-              <div key={index} className="capabilities-icons">
-                <div className="icon">{assignedIcon}</div>
-                <p>{capability}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section> */}
 
       <section className='content-section'>
           <div className='inner-header--container'>

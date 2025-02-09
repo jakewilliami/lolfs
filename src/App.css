@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ h6 {
 
 p {
   color: white;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 a {
@@ -248,7 +248,7 @@ code {
 .home-header {
   display: flex;
   flex-direction: column;
-  padding: 10vw 8vw 0 8vw;
+  padding: 10vw 8vw 0;
   gap: 2rem;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -413,8 +413,7 @@ code {
 
 @media (max-width: 1024px) {
   .home-header {
-    padding: 15vw 6vw 6vw;
-    min-height: 50vh;
+    padding-top: 15vw;
   }
 }
 .populated-items {
@@ -439,6 +438,9 @@ code {
 }
 .populated-items .populated-items--grid--cont .rwd-table .table-main-titles {
   text-transform: uppercase;
+}
+.populated-items .populated-items--grid--cont .rwd-table .table-main-titles th {
+  font-size: 1.8vw;
 }
 .populated-items .populated-items--grid--cont .rwd-table tr {
   border-top: 1px solid #ddd;
@@ -749,6 +751,9 @@ footer hr {
   opacity: 10%;
   width: 90%;
 }
+footer h5 {
+  text-align: center;
+}
 
 .contact-cont {
   display: flex;
@@ -857,10 +862,6 @@ footer hr {
   p {
     font-size: 1.5vw;
   }
-  .home-header,
-  .item-header {
-    padding-top: 18vw;
-  }
   .menu-icon {
     display: flex;
   }
@@ -958,6 +959,9 @@ footer hr {
   h2 {
     font-size: 4dvw;
   }
+  h4 {
+    font-size: 1.5vw;
+  }
   .navbar {
     height: 10dvw;
     padding: 1rem 3rem;
@@ -968,11 +972,14 @@ footer hr {
   .content-section {
     padding: 5vw 8vw;
   }
+  .btn {
+    padding: 1.5vw 2.2vw;
+  }
   .btn svg {
-    font-size: 20px;
+    font-size: 2vw;
   }
   .text {
-    font-size: 20px;
+    font-size: 2vw;
   }
   .populated-items .item {
     min-height: 25dvw;
@@ -994,6 +1001,9 @@ footer hr {
   }
   .populated-items .populated-items--grid--cont .rwd-table .OS-icons .item-capabilities-icons div svg {
     font-size: 2.5vw;
+  }
+  .populated-items .populated-items--grid--cont .rwd-table td {
+    padding: 2vw 0;
   }
   .item-details--container {
     display: grid;
@@ -1065,7 +1075,7 @@ footer hr {
 }
 @media (max-width: 500px) {
   p {
-    font-size: 2.5vw;
+    font-size: 2.8vw;
   }
   h4 {
     font-size: 3vw;
@@ -1079,7 +1089,8 @@ footer hr {
   }
   .home-header {
     padding: 20vw 8vw 4vw;
-    min-height: 45vh;
+    height: -moz-fit-content;
+    height: fit-content;
     gap: 5dvw;
   }
   .home-header .home-header--det-cont {
@@ -1094,10 +1105,21 @@ footer hr {
     font-size: 7vw;
   }
   .home-header p {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
+  }
+  .home-header .home-header--det-cont .home-header-title--cont .header-btn {
+    padding: 1.5vw 2.5vw;
+    border-radius: 4vw;
+    font-size: 2.5vw;
   }
   .btn {
     padding: 2vw 4vw;
+  }
+  .btn svg {
+    font-size: 3.5vw;
+  }
+  .btn .text {
+    font-size: 3vw;
   }
   .supported-os--container .supported-os-icons div svg {
     font-size: 3vw;
@@ -1158,10 +1180,44 @@ footer hr {
   .mobile-hidden {
     display: none;
   }
-  .populated-items .populated-items--grid--cont .rwd-table .toggle-btn {
-    display: table-cell;
+  .populated-items .populated-items--grid--cont .rwd-table .table-main-titles th {
+    font-size: 3.5vw;
   }
-  .populated-items .populated-items--grid--cont .rwd-table .toggle-btn button {
-    float: right;
+  .home-header .home-header--item--filter--cont .input-group {
+    width: 100%;
+  }
+  .home-header .home-header--item--filter--cont .input {
+    max-width: 70%;
+    width: 70%;
+    border-radius: 5vw 0 0 5vw;
+    font-size: 3.5vw;
+    height: 10vw;
+    min-height: 10vw;
+  }
+  .home-header .home-header--item--filter--cont .button--submit {
+    width: 30%;
+    border-radius: 0 5vw 5vw 0;
+    font-size: 3.5vw;
+    height: 10vw;
+    min-height: 10vw;
+  }
+  .paid, .free {
+    font-size: 5vw;
+  }
+  .pagination {
+    gap: 5vw;
+    padding: 5vw 0;
+  }
+  .cssbuttons-io span {
+    gap: 1rem;
+    padding: 2vw 3.5vw;
+    font-size: 4vw;
+  }
+  footer {
+    padding: 6vw 0;
+    gap: 4vw;
+  }
+  footer .logo img {
+    width: 15vw;
   }
 }/*# sourceMappingURL=App.css.map */
