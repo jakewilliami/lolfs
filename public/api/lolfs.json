@@ -90,8 +90,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\WinSCP\\winscp.exe",
-                "C:\\Users\\*\\AppData\\Local\\WinSCP\\settings.xml"
+                "C:\\Program Files\\WinSCP\\winscp.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -138,8 +137,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\Cyberduck\\cyberduck.exe",
-                "C:\\Users\\*\\AppData\\Local\\Cyberduck\\cyberduck.properties"
+                "C:\\Program Files\\Cyberduck\\cyberduck.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -187,8 +185,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "/Applications/Transmit.app",
-                "~/Library/Application Support/Transmit/transmit.settings"
+                "/Applications/Transmit.app"
             ],
             "EventLog": [],
             "Registry": [],
@@ -241,8 +238,7 @@
         "Artifacts": {
             "Disk": [
                 "C:\\Program Files\\CuteFTP\\cuteftp.exe",
-                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.xml"
+                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -292,8 +288,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\Core FTP\\coreftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.xml"
+                "C:\\Program Files\\Core FTP\\coreftp.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -342,8 +337,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.xml"
+                "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -392,8 +386,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\SmartFTP\\smartftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.xml"
+                "C:\\Program Files\\SmartFTP\\smartftp.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -446,8 +439,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\BitTorrent\\bittorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.xml"
+                "C:\\Program Files\\BitTorrent\\bittorrent.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -498,8 +490,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\µTorrent\\utorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.xml"
+                "C:\\Program Files\\µTorrent\\utorrent.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -550,8 +541,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.xml"
+                "C:\\Program Files\\qBittorrent\\qbittorrent.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -602,8 +592,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\FrostWire\\frostwire.exe",
-                "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.xml"
+                "C:\\Program Files\\FrostWire\\frostwire.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -652,8 +641,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\eMule\\emule.exe",
-                "C:\\Users\\*\\AppData\\Local\\eMule\\emule.ini"
+                "C:\\Program Files\\eMule\\emule.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -705,8 +693,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\ShareIt\\ShareIt.exe",
-                "C:\\Users\\*\\AppData\\Local\\ShareIt\\shareit.ini"
+                "C:\\Program Files\\ShareIt\\ShareIt.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -758,8 +745,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
-                "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.ini"
+                "C:\\Program Files\\SendAnywhere\\sendanywhere.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -811,8 +797,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\Zapya\\Zapya.exe",
-                "C:\\Users\\*\\AppData\\Local\\Zapya\\zapya.ini"
+                "C:\\Program Files\\Zapya\\Zapya.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -864,8 +849,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\Feem\\Feem.exe",
-                "C:\\Users\\*\\AppData\\Local\\Feem\\feem.ini"
+                "C:\\Program Files\\Feem\\Feem.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -1639,8 +1623,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\FastCopy\\FastCopy.exe",
-                "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.ini"
+                "C:\\Program Files\\FastCopy\\FastCopy.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -1685,8 +1668,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
-                "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.ini"
+                "C:\\Program Files\\TeraCopy\\TeraCopy.exe"
             ],
             "EventLog": [],
             "Registry": [],
@@ -1733,8 +1715,7 @@
         },
         "Artifacts": {
             "Disk": [
-                "C:\\Program Files\\GoodSync\\GoodSync.exe",
-                "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.ini"
+                "C:\\Program Files\\GoodSync\\GoodSync.exe"
             ],
             "EventLog": [],
             "Registry": [],
