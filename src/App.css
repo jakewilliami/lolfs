@@ -61,7 +61,7 @@ code {
 }
 
 .individ-title {
-  padding-bottom: 1vw;
+  padding-bottom: 3vw;
 }
 
 .cssbuttons-io {
@@ -575,8 +575,8 @@ h3 {
 .item-header {
   display: flex;
   flex-direction: column;
-  padding: 8vw 8vw 1vw 8vw;
-  gap: 2rem;
+  padding: 10vw 8vw 1vw 8vw;
+  gap: 2vw;
 }
 
 .item-details--container {
@@ -677,7 +677,7 @@ h3 {
 .artifacts--container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  padding: 1.5rem 2rem;
+  padding: 1.5vw 2vw;
   align-items: stretch;
   justify-content: space-between;
   background-color: #1C1A1C;
@@ -688,7 +688,7 @@ h3 {
 .artifacts--container .row {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 2vw;
   gap: 1rem;
   background-color: #2c2c2c;
   border-radius: 1vh;
@@ -967,7 +967,8 @@ footer h5 {
     width: 100%;
     justify-content: flex-end;
   }
-  .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+  .populated-items .populated-items--grid--cont .rwd-table th,
+  .populated-items .populated-items--grid--cont .rwd-table td {
     padding: 1vw 0;
   }
 }
@@ -1016,6 +1017,9 @@ footer h5 {
     height: fit-content;
     gap: 3dvw;
   }
+  .item-header {
+    padding-top: 15vw;
+  }
   .item-capabilities .item-capabilities-icons {
     font-size: 15px;
   }
@@ -1063,12 +1067,19 @@ footer h5 {
   .artifacts--container {
     display: flex;
     flex-direction: column;
+    padding: 4vw;
+  }
+  .artifacts--container .row {
+    padding: 4vw;
+  }
+  .content-section .inner-header--container {
+    padding: 4vw 4vw 0;
   }
   .contact-cont {
     flex-direction: column;
   }
   .contact-cont .contact-details--cont {
-    width: 100%;
+    width: 90%;
   }
   .contact-cont form {
     width: 100%;
@@ -1139,6 +1150,7 @@ footer h5 {
     flex-direction: column;
     align-items: flex-start;
     gap: 7vw;
+    padding: 1vw 0 4vw 0;
   }
   .home-header .home-header--det-cont .home-header-title--cont {
     gap: 2vw;
@@ -1153,6 +1165,7 @@ footer h5 {
     padding: 1.5vw 2.5vw;
     border-radius: 4vw;
     font-size: 2.5vw;
+    margin-bottom: 2vw;
   }
   .btn {
     padding: 2vw 4vw;
@@ -1162,6 +1175,10 @@ footer h5 {
   }
   .btn .text {
     font-size: 3vw;
+  }
+  .supported-os--container .supported-os-icons {
+    padding: 1.5vw 2vw;
+    border: 0.5vw solid rgba(255, 255, 255, 0.627);
   }
   .supported-os--container .supported-os-icons div svg {
     font-size: 3vw;
@@ -1201,10 +1218,12 @@ footer h5 {
   .populated-items .populated-items--grid--cont {
     padding: 1vw 4vw;
   }
-  .populated-items .populated-items--grid--cont .rwd-table th img, .populated-items .populated-items--grid--cont .rwd-table td img {
+  .populated-items .populated-items--grid--cont .rwd-table th img,
+  .populated-items .populated-items--grid--cont .rwd-table td img {
     width: 4vw;
   }
-  .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+  .populated-items .populated-items--grid--cont .rwd-table th,
+  .populated-items .populated-items--grid--cont .rwd-table td {
     padding: 3vw 0;
   }
   .table-name--title {
@@ -1243,7 +1262,8 @@ footer h5 {
     height: 10vw;
     min-height: 10vw;
   }
-  .paid, .free {
+  .paid,
+  .free {
     font-size: 5vw;
   }
   .pagination {
@@ -1264,6 +1284,9 @@ footer h5 {
   }
 }
 @media (max-width: 320px) {
+  footer h5 {
+    font-size: 3vw;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -1284,5 +1307,29 @@ footer h5 {
   }
   .menu-open {
     justify-content: center;
+  }
+  .item-header {
+    padding-top: 25vw;
+  }
+  .artifacts--container {
+    display: flex;
+    flex-direction: column;
+    padding: 6vw;
+  }
+  .artifacts--container .row {
+    padding: 6vw;
+  }
+  .artifacts--container .row .artifact-content code {
+    font-size: 3vw;
+  }
+  .content-section .inner-header--container {
+    padding: 6vw 6vw 0;
+  }
+  .code-snippet--container {
+    padding: 2vw;
+  }
+  .code-snippet--container code {
+    padding: 4vw;
+    font-size: 3vw;
   }
 }/*# sourceMappingURL=App.css.map */

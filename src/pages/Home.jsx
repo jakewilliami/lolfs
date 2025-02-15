@@ -28,11 +28,15 @@ const Home = () => {
           </div>
 
           <div className='home-header--item--filter--cont'>
+            
             {/* search bar */}
-            <div className="input-group">
+            {/* <div className="input-group">
                 <input type="email" className="input" maxLength={50} id="Email" name="Email" placeholder="Start searching..." autoComplete="off"/>
                 <input className="button--submit" value="Search" type="submit"/>
-            </div>
+            </div> */}
+
+
+
 
             {/* filters */}
             <div className='item-filter--cont'>

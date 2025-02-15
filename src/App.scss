@@ -65,7 +65,7 @@ code {
 }
 
 .individ-title {
-    padding-bottom: 1vw;
+    padding-bottom: 3vw;
 }
 
 //   primary button
@@ -228,6 +228,7 @@ code {
 
 .menu-open {
     justify-content: center;
+
     .logo {
         display: none;
     }
@@ -305,7 +306,8 @@ code {
                 border-radius: 2vw;
                 width: fit-content;
             }
-            .header-text--link{
+
+            .header-text--link {
                 border-bottom: 1px solid $primary-color2;
             }
         }
@@ -495,7 +497,8 @@ code {
 
             .table-main-titles {
                 text-transform: uppercase;
-                th{
+
+                th {
                     font-size: 1.8vw;
                 }
             }
@@ -536,11 +539,11 @@ code {
                 }
             }
 
-            .toggle-btn{
+            .toggle-btn {
                 display: none;
             }
 
-            .table-text{
+            .table-text {
                 font-size: 1.3vw;
                 letter-spacing: 1px;
                 font-weight: 600;
@@ -664,8 +667,8 @@ h3 {
 .item-header {
     display: flex;
     flex-direction: column;
-    padding: 8vw 8vw 1vw 8vw;
-    gap: 2rem;
+    padding: 10vw 8vw 1vw 8vw;
+    gap: 2vw;
 }
 
 .item-details--container {
@@ -760,7 +763,7 @@ h3 {
 .artifacts--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    padding: 1.5rem 2rem;
+    padding: 1.5vw 2vw;
     align-items: stretch;
     justify-content: space-between;
     background-color: #1C1A1C;
@@ -771,7 +774,7 @@ h3 {
     .row {
         display: flex;
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 2vw;
         gap: 1rem;
         background-color: #2c2c2c;
         border-radius: 1vh;
@@ -849,7 +852,7 @@ footer {
         width: 90%;
     }
 
-    h5{
+    h5 {
         text-align: center;
     }
 }
@@ -984,7 +987,7 @@ footer {
 
 @media (max-width: 900px) {
 
-    p{
+    p {
         font-size: 1.5vw;
     }
 
@@ -1000,10 +1003,12 @@ footer {
         .menu-icon {
             height: 3.2rem;
             width: 3.2rem;
+
             .toggle.bar1 {
                 transform: rotate(45deg) translate(29px, 26px);
             }
-            .bar{
+
+            .bar {
                 height: 5px;
             }
         }
@@ -1103,7 +1108,8 @@ footer {
         justify-content: flex-end;
     }
 
-    .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+    .populated-items .populated-items--grid--cont .rwd-table th,
+    .populated-items .populated-items--grid--cont .rwd-table td {
         padding: 1vw 0;
     }
 }
@@ -1118,7 +1124,7 @@ footer {
         font-size: 4dvw;
     }
 
-    h4{
+    h4 {
         font-size: 1.5vw;
     }
 
@@ -1137,10 +1143,12 @@ footer {
         .menu-icon {
             height: 2rem;
             width: 2rem;
+
             .toggle.bar1 {
                 transform: rotate(45deg) translate(14px, 13px);
             }
-            .bar{
+
+            .bar {
                 height: 4px;
             }
         }
@@ -1150,7 +1158,7 @@ footer {
         padding: 5vw 8vw;
     }
 
-    .btn{
+    .btn {
         padding: 1.5vw 2.2vw;
     }
 
@@ -1166,6 +1174,10 @@ footer {
         min-height: 25dvw;
         height: fit-content;
         gap: 3dvw;
+    }
+
+    .item-header{
+        padding-top: 15vw;
     }
 
     .item-capabilities .item-capabilities-icons {
@@ -1229,6 +1241,14 @@ footer {
     .artifacts--container {
         display: flex;
         flex-direction: column;
+        padding: 4vw;
+        .row{
+            padding: 4vw;
+        }
+    }
+
+    .content-section .inner-header--container {
+        padding: 4vw 4vw 0;
     }
 
 
@@ -1237,7 +1257,7 @@ footer {
         flex-direction: column;
 
         .contact-details--cont {
-            width: 100%;
+            width: 90%;
         }
 
         form {
@@ -1275,6 +1295,8 @@ footer {
         }
     }
 
+
+
     // footer
     footer {
         padding: 4vw 0;
@@ -1285,11 +1307,11 @@ footer {
 
 @media (max-width: 500px) {
 
-    p{
+    p {
         font-size: 2.8vw;
     }
 
-    h4{
+    h4 {
         font-size: 3vw;
     }
 
@@ -1300,10 +1322,12 @@ footer {
         .logo img {
             width: 15dvw;
         }
-        .menu-icon{
+
+        .menu-icon {
             height: 1.5rem;
             width: 2rem;
-            .bar{
+
+            .bar {
                 height: .15rem;
             }
         }
@@ -1314,7 +1338,8 @@ footer {
             .toggle.bar1 {
                 transform: rotate(45deg) translate(9px, 8px);
             }
-            .bar{
+
+            .bar {
                 height: .2rem;
             }
         }
@@ -1324,11 +1349,14 @@ footer {
         padding: 20vw 8vw 4vw;
         height: fit-content;
         gap: 5dvw;
+
         .home-header--det-cont {
             flex-direction: column;
             align-items: flex-start;
             gap: 7vw;
-            .home-header-title--cont{
+            padding: 1vw 0 4vw 0;
+
+            .home-header-title--cont {
                 gap: 2vw;
             }
         }
@@ -1346,22 +1374,27 @@ footer {
         padding: 1.5vw 2.5vw;
         border-radius: 4vw;
         font-size: 2.5vw;
+        margin-bottom: 2vw;
     }
 
     .btn {
         padding: 2vw 4vw;
     }
 
-    .btn svg{
+    .btn svg {
         font-size: 3.5vw;
     }
 
-    .btn .text{
+    .btn .text {
         font-size: 3vw;
     }
 
-    .supported-os--container .supported-os-icons div svg {
-        font-size: 3vw;
+    .supported-os--container .supported-os-icons{
+        padding: 1.5vw 2vw;
+        border: .5vw solid rgba(255, 255, 255, 0.627);
+        div svg {
+            font-size: 3vw;
+        }
     }
 
     .item-details--container {
@@ -1408,32 +1441,34 @@ footer {
         padding: 1vw 4vw;
     }
 
-    .populated-items .populated-items--grid--cont .rwd-table th img, .populated-items .populated-items--grid--cont .rwd-table td img {
+    .populated-items .populated-items--grid--cont .rwd-table th img,
+    .populated-items .populated-items--grid--cont .rwd-table td img {
         width: 4vw;
     }
 
-    .populated-items .populated-items--grid--cont .rwd-table th, .populated-items .populated-items--grid--cont .rwd-table td {
+    .populated-items .populated-items--grid--cont .rwd-table th,
+    .populated-items .populated-items--grid--cont .rwd-table td {
         padding: 3vw 0;
     }
 
-    .table-name--title{
+    .table-name--title {
         width: 50%;
     }
 
-    .table-type{
+    .table-type {
         font-size: 3vw;
     }
 
-    .mobile-date{
+    .mobile-date {
         font-size: 3vw;
     }
 
-    .mobile-os--icons svg{
+    .mobile-os--icons svg {
         font-size: 4vw;
     }
 
     .mobile-hidden {
-          display: none;
+        display: none;
     }
 
     .populated-items .populated-items--grid--cont .rwd-table .table-main-titles th {
@@ -1447,7 +1482,7 @@ footer {
     .home-header .home-header--item--filter--cont .input {
         max-width: 70%;
         width: 70%;
-        border-radius:  5vw 0 0 5vw;
+        border-radius: 5vw 0 0 5vw;
         font-size: 3.5vw;
         height: 10vw;
         min-height: 10vw;
@@ -1461,7 +1496,8 @@ footer {
         min-height: 10vw;
     }
 
-    .paid, .free{
+    .paid,
+    .free {
         font-size: 5vw;
     }
 
@@ -1479,27 +1515,37 @@ footer {
     footer {
         padding: 6vw 0;
         gap: 4vw;
-        .logo img{
+
+        .logo img {
             width: 15vw;
         }
     }
 }
 
 @media (max-width: 320px) {
-    .navbar{
+
+    footer h5{
+        font-size: 3vw;
+    }
+
+    .navbar {
         display: flex;
         justify-content: space-between;
         height: 20dvw;
-        .logo img{
+
+        .logo img {
             width: 20dvw;
         }
-        .menu-icon{
+
+        .menu-icon {
             height: 7vw;
             width: 9vw;
-            .bar{
+
+            .bar {
                 height: .8vw;
             }
         }
+
         .menu-icon .bar.toggle.bar1 {
             transform: rotate(45deg) translate(7px, 6px);
         }
@@ -1508,4 +1554,33 @@ footer {
     .menu-open {
         justify-content: center;
     }
+
+    .item-header{
+        padding-top: 25vw;
+    }
+
+    .artifacts--container {
+        display: flex;
+        flex-direction: column;
+        padding: 6vw;
+        .row{
+            padding: 6vw;
+            .artifact-content code{
+                font-size: 3vw;
+            }
+        }
+    }
+
+    .content-section .inner-header--container {
+        padding: 6vw 6vw 0;
+    }
+
+    .code-snippet--container {
+        padding: 2vw;
+        code{
+            padding: 4vw;
+            font-size: 3vw;
+        }
+    }
+
 }

@@ -66,12 +66,12 @@ const SinglePage = () => {
               <tr className='table-main-titles'>
                 <th className='table-name--title'>Name</th>
                 <th className='table-type-title'>Type</th>
-                <th className=''>Last Updated</th>
-                <th className=''>Supported OS</th>
+                <th className='mobile-hidden'>Last Updated</th>
+                <th className='mobile-hidden'>Supported OS</th>
                 <th className='table-icons-title'>Free</th>
-                <th></th>
               </tr>
             </thead>
+
             <tbody>
               <>
                 <tr className="clickable-row">
@@ -83,12 +83,12 @@ const SinglePage = () => {
                   </td>
 
                   <td className='table-type'><p>{item.categoryType}</p></td>
-                  <td className='table-item--date'><p>{item.LastModified}</p></td>
-
+                  <td className='table-item--date mobile-hidden'><p>{item.LastModified}</p></td>
+                  
                   {/* OS ICONS */}
-                  <td className='OS-icons '>
+                  <td className='OS-icons mobile-hidden'>
                     <span className="item-capabilities-icons">
-                        {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
+                      {item.Details.SupportedOS.slice(0, 5).map((os, i) => (
                         <div key={i}>{iconMap[os.icon]}</div>
                       ))}
                     </span>
