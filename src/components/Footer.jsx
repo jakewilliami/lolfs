@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     
   return (
     <footer>
       <NavLink to="/" className="logo">
-        <img src="/images/logo.png" alt="LOLFS logo"/>
+        <img src="/images/fs-logo.PNG" alt="LOLFS logo"/>
       </NavLink>
 
       <h5>LOLFS is an online catalog of security tools.</h5>
@@ -20,14 +21,6 @@ const Footer = () => {
             Home
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            About
-          </NavLink>
-        </li> */}
         <li>
           <NavLink
             to="/contact"
@@ -36,12 +29,24 @@ const Footer = () => {
             Contact
           </NavLink>
         </li>
+
+        <li>
+          <a
+            href='/api/lolfs.json' 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            JSON
+          </a>
+        </li>
       </ul>
 
       <hr/>
       
       <h5>© 2025 LOLFS. All Rights Reserved.</h5>
-      <h5>Website designed by <a href="https://mere-lees.vercel.app/">Mere Lees</a><br/><a href='https://github.com/Mere-Frances'>Github</a></h5>
+      <h5>Website designed by <a className="header-text--link" href="https://mere-lees.vercel.app/">Mere Lees</a><br/></h5>
+      <a className='header-btn' href='https://github.com/Mere-Frances' rel="noopener noreferrer" target='_blank'><FaGithub />Github</a>
     </footer>
   );
 }
