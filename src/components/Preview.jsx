@@ -76,7 +76,7 @@ const Preview = () => {
                     <tbody>
                         {items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((item, index) => (
                             <>
-                                <tr key={index} className="clickable-row" onClick={() => navigate(`/item/${index}`)}>
+                                <tr key={indexOfFirstItem + index} className="clickable-row" onClick={() => navigate(`/item/${indexOfFirstItem + index}`)}>
                                     <td data-th="Movie Title">
                                         <div className='item-logo'>
                                             <img src={item.Logo} alt={item.Name} />

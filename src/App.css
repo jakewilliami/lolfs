@@ -49,7 +49,7 @@ h6 {
 
 p {
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 
 a {
@@ -275,19 +275,6 @@ code {
   flex-direction: column;
   gap: 1vw;
 }
-.home-header .home-header--det-cont .home-header-title--cont .header-btn {
-  display: flex;
-  gap: 5px;
-  text-decoration: underline;
-  background-color: #be69ff;
-  padding: 0.5vw 1vw;
-  border-radius: 2vw;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.home-header .home-header--det-cont .home-header-title--cont .header-text--link {
-  border-bottom: 1px solid #be69ff;
-}
 .home-header .home-header--item--filter--cont {
   display: flex;
   justify-content: space-between;
@@ -420,6 +407,21 @@ code {
   -webkit-text-fill-color: transparent;
 }
 
+.header-text--link {
+  border-bottom: 1px solid #be69ff;
+}
+
+.header-btn {
+  display: flex;
+  gap: 5px;
+  text-decoration: underline;
+  background-color: #be69ff;
+  padding: 0.5vw 1vw;
+  border-radius: 2vw;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media (max-width: 1024px) {
   .home-header {
     padding-top: 15vw;
@@ -476,7 +478,7 @@ code {
   text-align: left;
   margin: 0.5em 0;
   vertical-align: middle;
-  padding: 0.7vw 0;
+  padding: 0.9vw 0;
 }
 .populated-items .populated-items--grid--cont .rwd-table th img,
 .populated-items .populated-items--grid--cont .rwd-table td img {
@@ -845,6 +847,9 @@ footer h5 {
   h6 {
     font-size: 15px;
   }
+  p {
+    font-size: 1.5vw;
+  }
   .navbar {
     height: 5dvw;
   }
@@ -852,7 +857,7 @@ footer h5 {
     width: 6dvw;
   }
   .home-header p {
-    font-size: 40px;
+    font-size: 2vw;
   }
   .text {
     font-size: 30px;

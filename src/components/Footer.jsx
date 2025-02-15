@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     
@@ -44,7 +45,8 @@ const Footer = () => {
       <hr/>
       
       <h5>© 2025 LOLFS. All Rights Reserved.</h5>
-      <h5>Website designed by <a href="https://mere-lees.vercel.app/">Mere Lees</a><br/><a href='https://github.com/Mere-Frances'>Github</a></h5>
+      <h5>Website designed by <a className="header-text--link" href="https://mere-lees.vercel.app/">Mere Lees</a><br/></h5>
+      <a className='header-btn' href='https://github.com/Mere-Frances' rel="noopener noreferrer" target='_blank'><FaGithub />Github</a>
     </footer>
   );
 }

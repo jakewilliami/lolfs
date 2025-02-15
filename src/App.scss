@@ -53,7 +53,7 @@ h6 {
 
 p {
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
 a {
@@ -296,20 +296,6 @@ code {
             display: flex;
             flex-direction: column;
             gap: 1vw;
-
-            .header-btn {
-                display: flex;
-                gap: 5px;
-                text-decoration: underline;
-                background-color: $primary-color2;
-                padding: .5vw 1vw;
-                border-radius: 2vw;
-                width: fit-content;
-            }
-
-            .header-text--link {
-                border-bottom: 1px solid $primary-color2;
-            }
         }
     }
 
@@ -469,6 +455,20 @@ code {
     }
 }
 
+.header-text--link {
+    border-bottom: 1px solid $primary-color2;
+}
+
+.header-btn {
+    display: flex;
+    gap: 5px;
+    text-decoration: underline;
+    background-color: $primary-color2;
+    padding: .5vw 1vw;
+    border-radius: 2vw;
+    width: fit-content;
+}
+
 @media (max-width: 1024px) {
     .home-header {
         padding-top: 15vw;
@@ -532,7 +532,7 @@ code {
                 text-align: left;
                 margin: .5em 0;
                 vertical-align: middle;
-                padding: .7vw 0;
+                padding: .9vw 0;
 
                 img {
                     width: 2vw;
@@ -952,6 +952,10 @@ footer {
         font-size: 15px;
     }
 
+    p{
+        font-size: 1.5vw;
+    }
+
     .navbar {
         height: 5dvw;
     }
@@ -961,12 +965,8 @@ footer {
     }
 
     .home-header p {
-        font-size: 40px;
+        font-size: 2vw;
     }
-
-    // .btn {
-    //     padding: 25px 60px;
-    // }
 
     .text {
         font-size: 30px;
