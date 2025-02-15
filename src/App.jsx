@@ -1,5 +1,6 @@
 import './App.scss';
 import { HashRouter } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
 
 // components
 import Links from './routes/Links';
@@ -15,6 +16,7 @@ const App = () => {
       <Navbar/>
       <Links/>
       <Footer/>
+      <Analytics/>
     </HashRouter>
   )
 }
