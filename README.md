@@ -29,4 +29,4 @@ This project is for educational and security research purposes only. The authors
 Contributions should be made using the `lolfs.json` file, following the current format. Please ensure that new entries maintain consistency with the existing structure. Submit a pull request with your changes.
 
 ## 📄 License
-MIT License - see `LICENSE` for details.
+This project is licensed under the [MIT License](LICENSE).
