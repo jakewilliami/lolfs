@@ -178,6 +178,7 @@ code {
 }
 
 .logo {
+  display: flex;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -194,8 +195,6 @@ code {
   width: 25px;
   transition: transform 0.3s ease;
   z-index: 1001;
-  position: absolute;
-  left: 90%;
 }
 .menu-icon .bar {
   width: 100%;
@@ -211,6 +210,16 @@ code {
 }
 .menu-icon .bar.toggle.bar3 {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-open {
+  justify-content: center;
+}
+.menu-open .logo {
+  display: none;
+}
+.menu-open .menu-icon .bar {
+  justify-content: center;
 }
 
 .nav-links {
@@ -868,6 +877,16 @@ footer h5 {
   .menu-icon .bar {
     background-color: white;
   }
+  .menu-open .menu-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+  .menu-open .menu-icon .toggle.bar1 {
+    transform: rotate(45deg) translate(29px, 26px);
+  }
+  .menu-open .menu-icon .bar {
+    height: 5px;
+  }
   .sparkle {
     font-size: 2.5vw;
   }
@@ -968,6 +987,16 @@ footer h5 {
   }
   .navbar .logo img {
     width: 12dvw;
+  }
+  .menu-open .menu-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .menu-open .menu-icon .toggle.bar1 {
+    transform: rotate(45deg) translate(14px, 13px);
+  }
+  .menu-open .menu-icon .bar {
+    height: 4px;
   }
   .content-section {
     padding: 5vw 8vw;
@@ -1086,6 +1115,19 @@ footer h5 {
   }
   .navbar .logo img {
     width: 15dvw;
+  }
+  .navbar .menu-icon {
+    height: 1.5rem;
+    width: 2rem;
+  }
+  .navbar .menu-icon .bar {
+    height: 0.15rem;
+  }
+  .menu-open .menu-icon .toggle.bar1 {
+    transform: rotate(45deg) translate(9px, 8px);
+  }
+  .menu-open .menu-icon .bar {
+    height: 0.2rem;
   }
   .home-header {
     padding: 20vw 8vw 4vw;
@@ -1219,5 +1261,28 @@ footer h5 {
   }
   footer .logo img {
     width: 15vw;
+  }
+}
+@media (max-width: 320px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 20dvw;
+  }
+  .navbar .logo img {
+    width: 20dvw;
+  }
+  .navbar .menu-icon {
+    height: 7vw;
+    width: 9vw;
+  }
+  .navbar .menu-icon .bar {
+    height: 0.8vw;
+  }
+  .navbar .menu-icon .bar.toggle.bar1 {
+    transform: rotate(45deg) translate(7px, 6px);
+  }
+  .menu-open {
+    justify-content: center;
   }
 }/*# sourceMappingURL=App.css.map */

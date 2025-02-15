@@ -185,6 +185,7 @@ code {
 }
 
 .logo {
+    display: flex;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -202,8 +203,6 @@ code {
     width: 25px;
     transition: transform 0.3s ease;
     z-index: 1001;
-    position: absolute;
-    left: 90%;
 
     .bar {
         width: 100%;
@@ -223,6 +222,19 @@ code {
             &.bar3 {
                 transform: rotate(-45deg) translate(6px, -6px);
             }
+        }
+    }
+}
+
+.menu-open {
+    justify-content: center;
+    .logo {
+        display: none;
+    }
+
+    .menu-icon {
+        .bar {
+            justify-content: center;
         }
     }
 }
@@ -984,6 +996,19 @@ footer {
         }
     }
 
+    .menu-open {
+        .menu-icon {
+            height: 3.2rem;
+            width: 3.2rem;
+            .toggle.bar1 {
+                transform: rotate(45deg) translate(29px, 26px);
+            }
+            .bar{
+                height: 5px;
+            }
+        }
+    }
+
     .sparkle {
         font-size: 2.5vw;
     }
@@ -1104,6 +1129,19 @@ footer {
         .logo {
             img {
                 width: 12dvw;
+            }
+        }
+    }
+
+    .menu-open {
+        .menu-icon {
+            height: 2rem;
+            width: 2rem;
+            .toggle.bar1 {
+                transform: rotate(45deg) translate(14px, 13px);
+            }
+            .bar{
+                height: 4px;
             }
         }
     }
@@ -1261,6 +1299,24 @@ footer {
 
         .logo img {
             width: 15dvw;
+        }
+        .menu-icon{
+            height: 1.5rem;
+            width: 2rem;
+            .bar{
+                height: .15rem;
+            }
+        }
+    }
+
+    .menu-open {
+        .menu-icon {
+            .toggle.bar1 {
+                transform: rotate(45deg) translate(9px, 8px);
+            }
+            .bar{
+                height: .2rem;
+            }
         }
     }
 
@@ -1426,5 +1482,30 @@ footer {
         .logo img{
             width: 15vw;
         }
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 20dvw;
+        .logo img{
+            width: 20dvw;
+        }
+        .menu-icon{
+            height: 7vw;
+            width: 9vw;
+            .bar{
+                height: .8vw;
+            }
+        }
+        .menu-icon .bar.toggle.bar1 {
+            transform: rotate(45deg) translate(7px, 6px);
+        }
+    }
+
+    .menu-open {
+        justify-content: center;
     }
 }
