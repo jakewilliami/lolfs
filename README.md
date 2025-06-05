@@ -2,7 +2,7 @@
 
 `lolfs` is a collection of **Living Off The Land (LOTL) file-sharing techniques**, tools used to transfer files. Inspired by projects like [LOLRMM](https://LOLRMM.io) and [LOLBAS](https://lolbas-project.github.io), `lolfs` provides a categorised reference of methods attackers and defenders can use to move files stealthily within an environment.
 
-NOTE: As this is a project I work on in my spare time, the information could be incorrect and/or missing. I welcome you to contribute to make this into a better detection list.
+**NOTE:** As this is a project I work on in my spare time, the information could be incorrect and/or missing. I welcome you to contribute to make this into a better detection list.
 
 ## 🔥 Features
 - `lolfs` catalogs file-sharing tools.
@@ -33,6 +33,10 @@ This project is for educational and security research purposes only. The authors
 
 ## 🤝 Contributing
 Contributions should be made by adding or editing entries in the `json` folder, following the current format. Please ensure that new entries maintain consistency with the existing structure. Submit a pull request with your changes.
+
+## 🙌 Shoutouts
+- Thanks to the team at [Living Off The Land RMM](https://github.com/LOLRMM) for the main inspiration
+- Thanks to [Meredith Lees](https://github.com/Mere-Frances) for a big contribution to the front end
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
