@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 
-json_dir = Path("../json")
+json_dir = Path("json")
 
 combined = []
 
