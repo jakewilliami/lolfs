@@ -14,5 +14,5 @@ for file_path in sorted(json_dir.glob("*.json")):
 with open('../public/api/lolfs.json', "w", encoding="utf-8") as f:
     json.dump(combined, f, indent=2, ensure_ascii=False)
 
-print(f"Combined {len(combined)} files into {output_file}")
+print(f"Combined {len(combined)} files into lolfs.json")
 
