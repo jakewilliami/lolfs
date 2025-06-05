@@ -1,0 +1,56 @@
+{
+    "Name": "rsync",
+    "Description": "rsync is a free, open-source file transfer and synchronization tool used to efficiently transfer and synchronize files between local and remote systems. It is commonly used for backups and mirroring and supports copying over SSH, minimizing data transfer by only copying changed parts of files.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/rsync-icon-512x250-48munkj7.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+        "Website": "https://rsync.samba.org",
+        "PEMetadata": {
+            "Filename": "rsync",
+            "OriginalFileName": "rsync",
+            "Description": "File synchronization tool"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows (via Cygwin)", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "syncing", "Backup", "Compression", "Delta Transfer"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/rsync",
+            "/usr/local/bin/rsync"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/rsync",
+            "/usr/local/bin/rsync"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for rsync synchronization",
+                "Domains": [
+                    "*.rsync.net"
+                ],
+                "Ports": ["22"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rsync_network_sigma.yml",
+            "Description": "Detects potential network activity of rsync"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

@@ -1,0 +1,51 @@
+{
+    "Name": "BitTorrent",
+    "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+        "Website": "https://www.bittorrent.com",
+        "PEMetadata": {
+            "Filename": "bittorrent.exe",
+            "OriginalFileName": "BitTorrent.exe",
+            "Description": "Peer-to-peer file sharing client"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["BitTorrent Protocol", "File Sharing", "Bandwidth Management", "Remote Access", "Streaming"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\BitTorrent\\bittorrent.exe",
+            "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\BitTorrent\\bittorrent.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for BitTorrent connections",
+                "Domains": [
+                    "*.bittorrent.com",
+                    "www.bittorrent.com"
+                ],
+                "Ports": ["6881-6889", "6969"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

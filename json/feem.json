@@ -1,0 +1,52 @@
+{
+    "Name": "Feem",
+    "Description": "Feem is a free and paid file transfer application that allows fast wireless file sharing between devices over a local network. It supports Android, iOS, Windows, and MacOS. Feem offers both a free version and a paid Pro version with additional features such as faster transfer speeds, larger file sizes, and ad-free experience.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://feem.io/feem.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+        "Website": "https://feem.io",
+        "PEMetadata": {
+            "Filename": "Feem.exe",
+            "OriginalFileName": "Feem.exe",
+            "Description": "Cross-platform file transfer application"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "iOS", "icon": "FaApple"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing", "Ad-Free (Pro Version)"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Feem\\Feem.exe",
+            "C:\\Users\\*\\AppData\\Local\\Feem\\Feem.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Feem\\Feem.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for Feem connections",
+                "Domains": [
+                    "*.feem.io",
+                    "feem.io"
+                ],
+                "Ports": ["5000"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

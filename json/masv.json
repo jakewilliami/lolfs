@@ -1,0 +1,56 @@
+{
+    "Name": "MASV",
+    "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://massive.io/wp-content/uploads/2021/03/MASV-logo-stacked-allblack.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+        "Website": "https://www.masv.io",
+        "PEMetadata": {
+            "Filename": "MASV",
+            "OriginalFileName": "MASV",
+            "Description": "Large file transfer platform"
+        },
+        "Privileges": "User",
+        "Free": "No",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["Large File Transfer", "Cloud-based", "Accelerated Transfer", "Secure Transfer"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\MASV\\masv.exe",
+            "/Applications/MASV.app"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\MASV\\masv.exe",
+            "/Applications/MASV.app"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known domains for MASV file transfer",
+                "Domains": [
+                    "*.masv.io",
+                    "api.masv.io"
+                ],
+                "Ports": ["443"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/masv_network_sigma.yml",
+            "Description": "Detects potential network activity of MASV"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

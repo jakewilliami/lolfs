@@ -1,0 +1,51 @@
+{
+    "Name": "FrostWire",
+    "Description": "FrostWire is a free, open-source BitTorrent client and cloud downloader. It allows users to share files, download torrents, and stream media directly from the app. It also integrates with the FrostWire Cloud for downloading files directly from the internet.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static.frostwire.com/vink/images/logos/brand_identity/FW_logo_graphic_color.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+        "Website": "https://www.frostwire.com",
+        "PEMetadata": {
+            "Filename": "frostwire.exe",
+            "OriginalFileName": "FrostWire.exe",
+            "Description": "BitTorrent client with cloud downloader"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["BitTorrent Protocol", "File Sharing", "Cloud Downloader", "Streaming", "Search"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\FrostWire\\frostwire.exe",
+            "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\FrostWire\\frostwire.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FrostWire connections",
+                "Domains": [
+                    "*.frostwire.com",
+                    "www.frostwire.com"
+                ],
+                "Ports": ["6881-6889", "6969"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

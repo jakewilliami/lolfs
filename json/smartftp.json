@@ -1,0 +1,51 @@
+{
+    "Name": "SmartFTP",
+    "Description": "SmartFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, SFTP, and includes advanced features like file synchronization, scheduling, and remote file editing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
+    "LastModified": "2024-11-06",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://www.smartftp.com",
+        "PEMetadata": {
+            "Filename": "smartftp.exe",
+            "OriginalFileName": "SmartFTP.exe",
+            "Description": "FTP client for file transfer"
+        },
+        "Privileges": "User",
+        "Free": "No",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "File syncing", "Remote File Editing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\SmartFTP\\smartftp.exe",
+            "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\SmartFTP\\smartftp.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FTP/SFTP connections",
+                "Domains": [
+                    "*.smartftp.com",
+                    "ftp.smartftp.com",
+            "FileZilla Client Started",
+                    "sftp.smartftp.com"
+                ],
+                "Ports": ["21", "22", "990"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

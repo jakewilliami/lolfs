@@ -1,0 +1,57 @@
+{
+    "Name": "wget",
+    "Description": "wget is a free, open-source command-line tool for downloading files from the web. It supports HTTP, HTTPS, and FTP protocols, and can download files in the background or from FTP and HTTP servers.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://codefling.com/uploads/monthly_2023_11/wget-cover.webp.25b57862196b8031d051a126313a71a3.webp",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+        "Website": "https://www.gnu.org/software/wget/",
+        "PEMetadata": {
+            "Filename": "wget",
+            "OriginalFileName": "wget",
+            "Description": "Command-line tool for downloading files from the web"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Download", "Recursive Download", "HTTP(S) Requests", "FTP"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/wget",
+            "/usr/local/bin/wget"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/wget",
+            "/usr/local/bin/wget"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for wget downloads",
+                "Domains": [
+                    "*.gnu.org",
+                    "*.wget.org"
+                ],
+                "Ports": ["80", "443"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/wget_network_sigma.yml",
+            "Description": "Detects potential network activity of wget"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

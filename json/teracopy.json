@@ -1,0 +1,45 @@
+{
+    "Name": "TeraCopy",
+    "Description": "TeraCopy is a file transfer utility for Windows that speeds up copying and moving files by using dynamic buffer sizes. It offers both free and paid versions, with advanced features such as error recovery, file verification, and a more efficient user interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBeYnpjc8Fv8jGP3a87EPS6boqPUD3u_TtBbK4kJ6UsidJw7cepoUyMna0oxYgT..UrOmms610Fzyg0l4aQEo1RQ-&format=source",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+        "Website": "https://www.codesector.com/teracopy",
+        "PEMetadata": {
+            "Filename": "TeraCopy.exe",
+            "OriginalFileName": "TeraCopy.exe",
+            "Description": "Efficient file copying and moving utility"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Copying", "File Moving", "File Verification", "Error Recovery"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
+            "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\TeraCopy\\TeraCopy.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": []
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/teracopy_network_sigma.yml",
+            "Description": "Detects potential network activity of TeraCopy tool"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

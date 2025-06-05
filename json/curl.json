@@ -1,0 +1,56 @@
+{
+    "Name": "curl",
+    "Description": "curl is a free, open-source command-line tool for transferring data with URLs. It supports multiple protocols such as HTTP, HTTPS, FTP, FTPS, and SFTP, and is used for downloading or uploading data from or to a server.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.logo.wine/a/logo/CURL/CURL-Logo.wine.svg",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+        "Website": "https://curl.se/",
+        "PEMetadata": {
+            "Filename": "curl",
+            "OriginalFileName": "curl",
+            "Description": "Data transfer tool with URL support"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["Data Transfer", "File Download", "File Upload", "HTTP(S) Requests", "FTP", "SFTP", "Proxy Support"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/curl",
+            "/usr/local/bin/curl"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/curl",
+            "/usr/local/bin/curl"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for curl transfers",
+                "Domains": [
+                    "*.curl.se"
+                ],
+                "Ports": ["80", "443", "21", "22"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/curl_network_sigma.yml",
+            "Description": "Detects potential network activity of curl"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

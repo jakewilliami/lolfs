@@ -1,0 +1,52 @@
+{
+    "Name": "Zapya",
+    "Description": "Zapya is a free, cross-platform file transfer application that enables fast and wireless file sharing between devices. It supports Android, iOS, Windows, and MacOS, and can transfer files without the need for an internet connection by using Wi-Fi Direct. Zapya is known for its ability to share large files and multiple files simultaneously across different platforms.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://play-lh.googleusercontent.com/QJUhAltUn9oswVFd36-kJi7c0GGN_wLM89EubY1o6w7vh_l_G0EOQQScRa_Te9_8KX9v",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+        "Website": "https://www.izapya.com",
+        "PEMetadata": {
+            "Filename": "Zapya.exe",
+            "OriginalFileName": "Zapya.exe",
+            "Description": "File-sharing app for cross-platform transfers"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "iOS", "icon": "FaApple"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Zapya\\Zapya.exe",
+            "C:\\Users\\*\\AppData\\Local\\Zapya\\Zapya.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Zapya\\Zapya.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for Zapya connections",
+                "Domains": [
+                    "*.izapya.com",
+                    "zapya.com"
+                ],
+                "Ports": ["8800"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

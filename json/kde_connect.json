@@ -1,0 +1,58 @@
+{
+    "Name": "KDE Connect",
+    "Description": "KDE Connect is a free and open-source tool that allows communication between your smartphone and computer. It enables file transfers, notification syncing, and other features like controlling your desktop from your phone and vice versa.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://kde.org/stuff/clipart/logo/kde-logo-blue-transparent-3000x3000.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Cross-Platform",
+    "Details": {
+        "Website": "https://kdeconnect.kde.org/",
+        "PEMetadata": {
+            "Filename": "kdeconnect",
+            "OriginalFileName": "kdeconnect",
+            "Description": "Cross-platform communication tool for smartphone and desktop"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Notification Syncing", "Remote Control", "SMS Sync"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/kdeconnect",
+            "/usr/local/bin/kdeconnect"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/kdeconnect",
+            "/usr/local/bin/kdeconnect"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for KDE Connect",
+                "Domains": [
+                    "*.kde.org",
+                    "*.kdeconnect.org"
+                ],
+                "Ports": ["1716"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/kdeconnect_network_sigma.yml",
+            "Description": "Detects potential network activity of KDE Connect"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

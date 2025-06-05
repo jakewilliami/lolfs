@@ -1,0 +1,51 @@
+{
+    "Name": "µTorrent",
+    "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+        "Website": "https://www.utorrent.com",
+        "PEMetadata": {
+            "Filename": "utorrent.exe",
+            "OriginalFileName": "uTorrent.exe",
+            "Description": "BitTorrent client for file sharing"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["BitTorrent Protocol", "File Sharing", "Streaming", "Bandwidth Management", "Scheduling"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\µTorrent\\utorrent.exe",
+            "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\µTorrent\\utorrent.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for µTorrent connections",
+                "Domains": [
+                    "*.utorrent.com",
+                    "www.utorrent.com"
+                ],
+                "Ports": ["6881-6889", "6969"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

@@ -1,0 +1,51 @@
+{
+    "Name": "qBittorrent",
+    "Description": "qBittorrent is a free, open-source BitTorrent client that offers a clean interface and a wide range of features for file sharing. It supports the BitTorrent protocol and allows for file prioritization, RSS feeds, and integrated search capabilities.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+        "Website": "https://www.qbittorrent.org",
+        "PEMetadata": {
+            "Filename": "qbittorrent.exe",
+            "OriginalFileName": "qBittorrent.exe",
+            "Description": "Open-source BitTorrent client"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["BitTorrent Protocol", "File Sharing", "Integrated Search", "RSS Feeds", "Remote Control"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
+            "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\qBittorrent\\qbittorrent.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for qBittorrent connections",
+                "Domains": [
+                    "*.qbittorrent.org",
+                    "www.qbittorrent.org"
+                ],
+                "Ports": ["6881-6889", "6969"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

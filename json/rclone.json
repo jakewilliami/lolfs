@@ -1,0 +1,58 @@
+{
+    "Name": "Rclone",
+    "Description": "Rclone is a free, open-source command-line program to manage files on cloud storage. It supports over 40 different cloud storage providers and can sync, copy, and move files between cloud storage services or locally.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://forum.rclone.org/uploads/default/original/2X/3/328f860878d4acb13d550a2b12505d181f181713.png",
+    "LastModified": "2025-01-12",
+    "categoryType": "Cross-Platform",
+    "Details": {
+        "Website": "https://rclone.org/",
+        "PEMetadata": {
+            "Filename": "rclone",
+            "OriginalFileName": "rclone",
+            "Description": "Cloud storage manager for file synchronization and transfer"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["Cloud Sync", "File Transfer", "Cloud Storage Management", "Encryption"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/rclone",
+            "/usr/local/bin/rclone"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/rclone",
+            "/usr/local/bin/rclone"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for Rclone cloud storage services",
+                "Domains": [
+                    "*.rclone.org",
+                    "*.googleusercontent.com",
+                    "*.dropbox.com"
+                ],
+                "Ports": ["443"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rclone_network_sigma.yml",
+            "Description": "Detects potential network activity of rclone"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

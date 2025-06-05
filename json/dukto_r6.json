@@ -1,0 +1,56 @@
+{
+    "Name": "Dukto R6",
+    "Description": "Dukto R6 is a free, open-source file transfer tool designed for quick and simple file sharing between devices. It supports multiple platforms, including Windows, Linux, and macOS, and allows for transferring files and folders without the need for configuration or server-side installation.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/dukto-icon-512x512-w8j1aghu.png",
+    "LastModified": "2016-03-06",
+    "categoryType": "Cross-Platform",
+    "Details": {
+        "Website": "https://www.mikrocontroller.com/dukto",
+        "PEMetadata": {
+            "Filename": "dukto",
+            "OriginalFileName": "dukto",
+            "Description": "Cross-platform file transfer tool"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Folder Transfer", "Drag and Drop"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/dukto",
+            "/usr/local/bin/dukto"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/dukto",
+            "/usr/local/bin/dukto"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for Dukto R6 file transfers",
+                "Domains": [
+                    "*.mikrocontroller.com"
+                ],
+                "Ports": ["32000"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/dukto_network_sigma.yml",
+            "Description": "Detects potential network activity of Dukto R6"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

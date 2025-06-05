@@ -1,0 +1,62 @@
+{
+    "Name": "FileZilla",
+    "Description": "FileZilla is a free, open-source FTP (File Transfer Protocol) client that supports FTP, FTPS, and SFTP. It is used for transferring files between a local computer and a remote server.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "LastModified": "2025-05-05",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://filezilla-project.org",
+        "PEMetadata": {
+            "Filename": "filezilla.exe",
+            "OriginalFileName": "FileZilla.exe",
+            "Description": "FTP client for file transfer"
+        },
+        "Privileges": "Admin",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "FTPS", "SFTP"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\FileZilla\\filezilla.exe",
+            "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\FileZilla\\filezilla.exe",
+            "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.xml",
+            "C:\\Users\\*\\AppData\\Local\\FileZilla\\recentservers.xml"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FTP/SFTP connections",
+                "Domains": [
+                    "*.filezilla-project.org",
+                    "update.filezilla-project.org",
+                    "filezilla-project.org"
+                ],
+                "Ports": ["21", "22", "990"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_processes_sigma.yml",
+            "Description": "Detects potential processes activity of FileZilla FTP tool"
+        }
+    ],
+    "References": [
+        "https://docs.velociraptor.app/exchange/artifacts/pages/filezilla/"
+    ],
+    "Acknowlegment": []
+}
+

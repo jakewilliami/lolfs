@@ -1,0 +1,45 @@
+{
+    "Name": "FastCopy",
+    "Description": "FastCopy is a free file copying and backup software for Windows, known for its high performance in transferring large files or directories. It supports copying, moving, and synchronizing files with customizable options for speed optimization.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.dwncdn.net/images/t_app-icon-l/p/c03e2850-01a6-4282-9eaa-43f2dcde9be1/4145358788/2248_4-10905019-imgingest-6201296948009397872.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+        "Website": "https://fastcopy.jp/en/",
+        "PEMetadata": {
+            "Filename": "FastCopy.exe",
+            "OriginalFileName": "FastCopy.exe",
+            "Description": "High-performance file copying and backup tool"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Copying", "File Moving", "File syncing", "Backup"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\FastCopy\\FastCopy.exe",
+            "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\FastCopy\\FastCopy.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": []
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/fastcopy_network_sigma.yml",
+            "Description": "Detects potential network activity of FastCopy tool"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

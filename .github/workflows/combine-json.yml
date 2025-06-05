@@ -1,0 +1,30 @@
+name: Combine JSON files
+
+on:
+  push:
+    paths:
+      - 'json/*.json'
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Combine JSON files
+        run: |
+          python scripts/combine_json.py
+
+      - name: Commit and push combined.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/api/lolfs.json
+          git commit -m "Auto-generate combined.json" || echo "No changes to commit"
+          git push
+

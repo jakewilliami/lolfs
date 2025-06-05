@@ -1,0 +1,54 @@
+{
+    "Name": "Resilio Sync",
+    "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static.macupdate.com/products/60788/s/resilio-sync-logo.png?v=1595338928",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+        "Website": "https://www.resilio.com",
+        "PEMetadata": {
+            "Filename": "ResilioSync",
+            "OriginalFileName": "ResilioSync",
+            "Description": "File synchronization tool"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "iOS", "icon": "FaApple"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Sync", "File Transfer", "Peer-to-Peer", "Backup", "Selective Sync"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
+            "/Applications/Resilio Sync.app"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
+            "/Applications/Resilio Sync.app"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known domains for Resilio Sync connections",
+                "Domains": [
+                    "*.resilio.com",
+                    "sync.resilio.com"
+                ],
+                "Ports": ["443"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

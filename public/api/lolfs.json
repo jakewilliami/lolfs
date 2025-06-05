@@ -1,1733 +1,2259 @@
 [
-    {
-        "Name": "FileZilla",
-        "Description": "FileZilla is a free, open-source FTP (File Transfer Protocol) client that supports FTP, FTPS, and SFTP. It is used for transferring files between a local computer and a remote server.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "LastModified": "2024-11-04",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://filezilla-project.org",
-            "PEMetadata": {
-                "Filename": "filezilla.exe",
-                "OriginalFileName": "FileZilla.exe",
-                "Description": "FTP client for file transfer"
-            },
-            "Privileges": "Admin",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "FTPS", "SFTP"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\FileZilla\\filezilla.exe",
-                "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.exe"
-            ]
+  {
+    "Name": "BitTorrent",
+    "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://www.bittorrent.com",
+      "PEMetadata": {
+        "Filename": "bittorrent.exe",
+        "OriginalFileName": "BitTorrent.exe",
+        "Description": "Peer-to-peer file sharing client"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\FileZilla\\filezilla.exe",
-                "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.xml",
-                "C:\\Users\\*\\AppData\\Local\\FileZilla\\recentservers.xml"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "*.filezilla-project.org",
-                        "update.filezilla-project.org",
-                        "filezilla-project.org"
-                    ],
-                    "Ports": ["21", "22", "990"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_processes_sigma.yml",
-                "Description": "Detects potential processes activity of FileZilla FTP tool"
-            }
-        ],
-        "References": [
-            "https://docs.velociraptor.app/exchange/artifacts/pages/filezilla/"
-        ],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "BitTorrent Protocol",
+        "File Sharing",
+        "Bandwidth Management",
+        "Remote Access",
+        "Streaming"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\BitTorrent\\bittorrent.exe",
+        "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.exe"
+      ]
     },
-    {
-        "Name": "WinSCP",
-        "Description": "WinSCP is a free and open-source FTP, SFTP, and SCP client for Windows that allows secure file transfers between a local and a remote computer.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "LastModified": "2025-02-15",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://winscp.net/",
-            "PEMetadata": {
-                "Filename": "winscp.exe",
-                "OriginalFileName": "WinSCP.exe",
-                "Description": "Secure file transfer client"
-            },
-            "Privileges": "Admin",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "SFTP", "SCP", "File Transfer", "Secure syncing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\WinSCP\\winscp.exe",
-                "C:\\Users\\*\\AppData\\Local\\WinSCP\\winscp.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\WinSCP\\winscp.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for secure connections",
-                    "Domains": ["*.winscp.net"],
-                    "Ports": ["21", "22"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\BitTorrent\\bittorrent.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for BitTorrent connections",
+          "Domains": [
+            "*.bittorrent.com",
+            "www.bittorrent.com"
+          ],
+          "Ports": [
+            "6881-6889",
+            "6969"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "Cyberduck",
-        "Description": "Cyberduck is a free, open-source FTP, SFTP, WebDAV, and cloud storage browser for file transfers and management. It supports various protocols and cloud services, including Amazon S3 and Google Drive.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
-        "LastModified": "2025-02-15",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://cyberduck.io",
-            "PEMetadata": {
-                "Filename": "cyberduck.exe",
-                "OriginalFileName": "Cyberduck.exe",
-                "Description": "FTP, SFTP, and cloud storage client"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "SFTP", "WebDAV", "Amazon S3", "Google Drive", "Dropbox"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Cyberduck\\cyberduck.exe",
-                "C:\\Users\\*\\AppData\\Roaming\\Cyberduck\\cyberduck.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Cyberduck\\cyberduck.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "*.cyberduck.io"
-                    ],
-                    "Ports": ["21", "22"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Core FTP",
+    "Description": "Core FTP is a free and paid FTP client for transferring files between local computers and remote servers. It supports FTP, FTPS, SFTP, and includes both a free version and a Pro version with additional features like site-to-site transfers and advanced encryption.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://icons.veryicon.com/png/Application/Sleek%20XP%20Software/Core%20FTP.png",
+    "LastModified": "2020-09-28",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://www.coreftp.com",
+      "PEMetadata": {
+        "Filename": "coreftp.exe",
+        "OriginalFileName": "CoreFTP.exe",
+        "Description": "FTP client for file transfer"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "FTPS",
+        "SFTP",
+        "File Transfer",
+        "Directory syncing",
+        "Site-to-Site Transfer",
+        "Advanced Encryption"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Core FTP\\coreftp.exe",
+        "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.exe"
+      ]
     },
-    {
-        "Name": "Transmit",
-        "Description": "Transmit is a premium macOS-only file transfer client that supports FTP, SFTP, WebDAV, and cloud storage services. It provides a user-friendly interface and advanced file management tools.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
-        "LastModified": "2025-02-15",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://panic.com/transmit/",
-            "PEMetadata": {
-                "Filename": "transmit.app",
-                "OriginalFileName": "Transmit.app",
-                "Description": "Advanced file transfer client for macOS"
-            },
-            "Privileges": "User",
-            "Free": "No",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"}
-            ],
-            "Capabilities": ["FTP", "SFTP", "WebDAV", "Amazon S3", "Google Drive", "Dropbox", "File Transfer"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/Applications/Transmit.app",
-                "~/Library/Application Support/Transmit"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/Applications/Transmit.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "*.panic.com",
-                        "updates.panic.com",
-                        "panic-cdn.com"
-                    ],
-                    "Ports": ["21", "22", "443", "80"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Core FTP\\coreftp.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "coreftp.com",
+            "updates.coreftp.com"
+          ],
+          "Ports": [
+            "21",
+            "22",
+            "990"
+          ]
+        }
+      ]
     },
-    {
-
-        "Name": "CuteFTP",
-        "Description": "CuteFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, and SFTP, and includes advanced file management features and a user-friendly interface.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
-        "LastModified": "2025-02-15",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://www.cuteftp.com",
-            "PEMetadata": {
-                "Filename": "cuteftp.exe",
-                "OriginalFileName": "CuteFTP.exe",
-                "Description": "FTP client for file transfer"
-            },
-            "Privileges": "User",
-            "Free": "No",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\CuteFTP\\cuteftp.exe",
-                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.exe"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "curl",
+    "Description": "curl is a free, open-source command-line tool for transferring data with URLs. It supports multiple protocols such as HTTP, HTTPS, FTP, FTPS, and SFTP, and is used for downloading or uploading data from or to a server.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.logo.wine/a/logo/CURL/CURL-Logo.wine.svg",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+      "Website": "https://curl.se/",
+      "PEMetadata": {
+        "Filename": "curl",
+        "OriginalFileName": "curl",
+        "Description": "Data transfer tool with URL support"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\CuteFTP\\cuteftp.exe",
-                "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "globalscape.com",
-                        "register.globalscape.com",
-                        "updates.globalscape.com"
-                    ],
-                    "Ports": ["21", "22", "990"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "Data Transfer",
+        "File Download",
+        "File Upload",
+        "HTTP(S) Requests",
+        "FTP",
+        "SFTP",
+        "Proxy Support"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/curl",
+        "/usr/local/bin/curl"
+      ]
     },
-    {
-        "Name": "Core FTP",
-        "Description": "Core FTP is a free and paid FTP client for transferring files between local computers and remote servers. It supports FTP, FTPS, SFTP, and includes both a free version and a Pro version with additional features like site-to-site transfers and advanced encryption.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://icons.veryicon.com/png/Application/Sleek%20XP%20Software/Core%20FTP.png",
-        "LastModified": "2020-09-28",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://www.coreftp.com",
-            "PEMetadata": {
-                "Filename": "coreftp.exe",
-                "OriginalFileName": "CoreFTP.exe",
-                "Description": "FTP client for file transfer"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "Site-to-Site Transfer", "Advanced Encryption"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Core FTP\\coreftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Core FTP\\coreftp.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "coreftp.com",
-                        "updates.coreftp.com"
-                    ],
-                    "Ports": ["21", "22", "990"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/curl",
+        "/usr/local/bin/curl"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for curl transfers",
+          "Domains": [
+            "*.curl.se"
+          ],
+          "Ports": [
+            "80",
+            "443",
+            "21",
+            "22"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "Free FTP by CoffeeCup",
-        "Description": "Free FTP by CoffeeCup is a free FTP client for transferring files between a local computer and remote servers. It supports FTP and FTPS, and offers a paid Pro version with additional features like enhanced security and more advanced transfer options.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://www.coffeecup.com/free-ftp/",
-            "PEMetadata": {
-                "Filename": "freeftp.exe",
-                "OriginalFileName": "FreeFTP.exe",
-                "Description": "FTP client for file transfer"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "FTPS", "File Transfer", "Directory syncing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP connections",
-                    "Domains": [
-                        "*.coffeecup.com",
-                        "ftp.coffeecup.com"
-                    ],
-                    "Ports": ["21"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/curl_network_sigma.yml",
+        "Description": "Detects potential network activity of curl"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "CuteFTP",
+    "Description": "CuteFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, and SFTP, and includes advanced file management features and a user-friendly interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
+    "LastModified": "2025-02-15",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://www.cuteftp.com",
+      "PEMetadata": {
+        "Filename": "cuteftp.exe",
+        "OriginalFileName": "CuteFTP.exe",
+        "Description": "FTP client for file transfer"
+      },
+      "Privileges": "User",
+      "Free": "No",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "FTPS",
+        "SFTP",
+        "File Transfer",
+        "Directory syncing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+        "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
+        "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.exe"
+      ]
     },
-    {
-        "Name": "SmartFTP",
-        "Description": "SmartFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, SFTP, and includes advanced features like file synchronization, scheduling, and remote file editing.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
-        "LastModified": "2024-11-06",
-        "categoryType": "FTP (File Transfer)",
-        "Details": {
-            "Website": "https://www.smartftp.com",
-            "PEMetadata": {
-                "Filename": "smartftp.exe",
-                "OriginalFileName": "SmartFTP.exe",
-                "Description": "FTP client for file transfer"
-            },
-            "Privileges": "User",
-            "Free": "No",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "File syncing", "Remote File Editing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\SmartFTP\\smartftp.exe",
-                "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\SmartFTP\\smartftp.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FTP/SFTP connections",
-                    "Domains": [
-                        "*.smartftp.com",
-                        "ftp.smartftp.com",
-                "FileZilla Client Started",
-                        "sftp.smartftp.com"
-                    ],
-                    "Ports": ["21", "22", "990"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+        "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "globalscape.com",
+            "register.globalscape.com",
+            "updates.globalscape.com"
+          ],
+          "Ports": [
+            "21",
+            "22",
+            "990"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "BitTorrent",
-        "Description": "BitTorrent is a free and paid peer-to-peer file sharing protocol and client software. It allows users to share and download files using the BitTorrent protocol, with features like bandwidth management, file prioritization, and remote access available in the paid version.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://static-00.iconduck.com/assets.00/bittorrent-icon-2048x2045-k41cm7m9.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
-        "Details": {
-            "Website": "https://www.bittorrent.com",
-            "PEMetadata": {
-                "Filename": "bittorrent.exe",
-                "OriginalFileName": "BitTorrent.exe",
-                "Description": "Peer-to-peer file sharing client"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Bandwidth Management", "Remote Access", "Streaming"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\BitTorrent\\bittorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\BitTorrent\\bittorrent.exe"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Cyberduck",
+    "Description": "Cyberduck is a free, open-source FTP, SFTP, WebDAV, and cloud storage browser for file transfers and management. It supports various protocols and cloud services, including Amazon S3 and Google Drive.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
+    "LastModified": "2025-02-15",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://cyberduck.io",
+      "PEMetadata": {
+        "Filename": "cyberduck.exe",
+        "OriginalFileName": "Cyberduck.exe",
+        "Description": "FTP, SFTP, and cloud storage client"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\BitTorrent\\bittorrent.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for BitTorrent connections",
-                    "Domains": [
-                        "*.bittorrent.com",
-                        "www.bittorrent.com"
-                    ],
-                    "Ports": ["6881-6889", "6969"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "SFTP",
+        "WebDAV",
+        "Amazon S3",
+        "Google Drive",
+        "Dropbox"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Cyberduck\\cyberduck.exe",
+        "C:\\Users\\*\\AppData\\Roaming\\Cyberduck\\cyberduck.exe"
+      ]
     },
-    {
-        "Name": "µTorrent",
-        "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
-        "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
-        "Details": {
-            "Website": "https://www.utorrent.com",
-            "PEMetadata": {
-                "Filename": "utorrent.exe",
-                "OriginalFileName": "uTorrent.exe",
-                "Description": "BitTorrent client for file sharing"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Streaming", "Bandwidth Management", "Scheduling"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\µTorrent\\utorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\µTorrent\\utorrent.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for µTorrent connections",
-                    "Domains": [
-                        "*.utorrent.com",
-                        "www.utorrent.com"
-                    ],
-                    "Ports": ["6881-6889", "6969"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Cyberduck\\cyberduck.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "*.cyberduck.io"
+          ],
+          "Ports": [
+            "21",
+            "22"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "qBittorrent",
-        "Description": "qBittorrent is a free, open-source BitTorrent client that offers a clean interface and a wide range of features for file sharing. It supports the BitTorrent protocol and allows for file prioritization, RSS feeds, and integrated search capabilities.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
-        "Details": {
-            "Website": "https://www.qbittorrent.org",
-            "PEMetadata": {
-                "Filename": "qbittorrent.exe",
-                "OriginalFileName": "qBittorrent.exe",
-                "Description": "Open-source BitTorrent client"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Integrated Search", "RSS Feeds", "Remote Control"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
-                "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.exe"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Dukto R6",
+    "Description": "Dukto R6 is a free, open-source file transfer tool designed for quick and simple file sharing between devices. It supports multiple platforms, including Windows, Linux, and macOS, and allows for transferring files and folders without the need for configuration or server-side installation.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/dukto-icon-512x512-w8j1aghu.png",
+    "LastModified": "2016-03-06",
+    "categoryType": "Cross-Platform",
+    "Details": {
+      "Website": "https://www.mikrocontroller.com/dukto",
+      "PEMetadata": {
+        "Filename": "dukto",
+        "OriginalFileName": "dukto",
+        "Description": "Cross-platform file transfer tool"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\qBittorrent\\qbittorrent.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for qBittorrent connections",
-                    "Domains": [
-                        "*.qbittorrent.org",
-                        "www.qbittorrent.org"
-                    ],
-                    "Ports": ["6881-6889", "6969"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Folder Transfer",
+        "Drag and Drop"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/dukto",
+        "/usr/local/bin/dukto"
+      ]
     },
-    {
-        "Name": "FrostWire",
-        "Description": "FrostWire is a free, open-source BitTorrent client and cloud downloader. It allows users to share files, download torrents, and stream media directly from the app. It also integrates with the FrostWire Cloud for downloading files directly from the internet.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://static.frostwire.com/vink/images/logos/brand_identity/FW_logo_graphic_color.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "P2P Peer-to-Peer",
-        "Details": {
-            "Website": "https://www.frostwire.com",
-            "PEMetadata": {
-                "Filename": "frostwire.exe",
-                "OriginalFileName": "FrostWire.exe",
-                "Description": "BitTorrent client with cloud downloader"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["BitTorrent Protocol", "File Sharing", "Cloud Downloader", "Streaming", "Search"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\FrostWire\\frostwire.exe",
-                "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\FrostWire\\frostwire.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for FrostWire connections",
-                    "Domains": [
-                        "*.frostwire.com",
-                        "www.frostwire.com"
-                    ],
-                    "Ports": ["6881-6889", "6969"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/dukto",
+        "/usr/local/bin/dukto"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for Dukto R6 file transfers",
+          "Domains": [
+            "*.mikrocontroller.com"
+          ],
+          "Ports": [
+            "32000"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "eMule",
-        "Description": "eMule is a free, open-source P2P (peer-to-peer) file-sharing client that is primarily used for downloading and sharing files over the eDonkey network and Kad network. It features support for various file types, powerful search capabilities, and a large user base.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/EMule_mascot.svg",
-        "LastModified": "2010-04-07",
-        "categoryType": "P2P Peer-to-Peer",
-        "Details": {
-            "Website": "https://www.emule-project.net",
-            "PEMetadata": {
-                "Filename": "emule.exe",
-                "OriginalFileName": "eMule.exe",
-                "Description": "P2P file sharing client"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["P2P File Sharing", "eDonkey Network", "Kad Network", "File Search", "Direct Downloads"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\eMule\\emule.exe",
-                "C:\\Users\\*\\AppData\\Local\\eMule\\emule.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\eMule\\emule.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for eMule connections",
-                    "Domains": [
-                        "*.emule-project.net",
-                        "edonkey2000.com",
-                        "www.emule-project.net"
-                    ],
-                    "Ports": ["4662", "4672"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/dukto_network_sigma.yml",
+        "Description": "Detects potential network activity of Dukto R6"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "eMule",
+    "Description": "eMule is a free, open-source P2P (peer-to-peer) file-sharing client that is primarily used for downloading and sharing files over the eDonkey network and Kad network. It features support for various file types, powerful search capabilities, and a large user base.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/EMule_mascot.svg",
+    "LastModified": "2010-04-07",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://www.emule-project.net",
+      "PEMetadata": {
+        "Filename": "emule.exe",
+        "OriginalFileName": "eMule.exe",
+        "Description": "P2P file sharing client"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "P2P File Sharing",
+        "eDonkey Network",
+        "Kad Network",
+        "File Search",
+        "Direct Downloads"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\eMule\\emule.exe",
+        "C:\\Users\\*\\AppData\\Local\\eMule\\emule.exe"
+      ]
     },
-    {
-        "Name": "ShareIt",
-        "Description": "ShareIt is a free, cross-platform file-sharing application that allows users to transfer files, videos, music, and other types of media quickly between devices over a local network or using a Wi-Fi connection. It supports both Android and iOS devices, and it's known for its fast transfer speeds and user-friendly interface.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://cdn.iconscout.com/icon/free/png-512/free-shareit-logo-icon-download-in-svg-png-gif-file-formats--share-connection-sharing-productivity-apps-pack-logos-icons-8630408.png?f=webp&w=256",
-        "LastModified": "2024-12-01",
-        "categoryType": "Local and Wireless",
-        "Details": {
-            "Website": "https://www.shareit.com",
-            "PEMetadata": {
-                "Filename": "ShareIt.exe",
-                "OriginalFileName": "ShareIt.exe",
-                "Description": "File-sharing app for quick media transfer"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "iOS", "icon": "FaApple"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\ShareIt\\ShareIt.exe",
-                "C:\\Users\\*\\AppData\\Local\\ShareIt\\ShareIt.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\ShareIt\\ShareIt.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for ShareIt connections",
-                    "Domains": [
-                        "*.shareit.com",
-                        "shareitapp.com"
-                    ],
-                    "Ports": ["8888"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\eMule\\emule.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for eMule connections",
+          "Domains": [
+            "*.emule-project.net",
+            "edonkey2000.com",
+            "www.emule-project.net"
+          ],
+          "Ports": [
+            "4662",
+            "4672"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "Send Anywhere",
-        "Description": "Send Anywhere is a free, cross-platform file transfer application that allows users to send files and folders securely across different devices. It provides options for both free and paid Pro versions with additional features such as higher transfer speeds, larger file sizes, and priority support.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://images.sftcdn.net/images/t_app-icon-m/p/2b40c184-f782-413b-823c-4fabd0aa8474/3393269836/send-anywhere-file-transfer-windows%20StoreLogo@300w.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Local and Wireless",
-        "Details": {
-            "Website": "https://send-anywhere.com",
-            "PEMetadata": {
-                "Filename": "sendanywhere.exe",
-                "OriginalFileName": "SendAnywhere.exe",
-                "Description": "Cross-platform file transfer application"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "iOS", "icon": "FaApple"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Cross-Platform", "P2P", "Large File Support", "Cloud Storage"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
-                "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\SendAnywhere\\sendanywhere.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for Send Anywhere connections",
-                    "Domains": [
-                        "*.send-anywhere.com",
-                        "send-anywhere.com"
-                    ],
-                    "Ports": ["443", "80"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "FastCopy",
+    "Description": "FastCopy is a free file copying and backup software for Windows, known for its high performance in transferring large files or directories. It supports copying, moving, and synchronizing files with customizable options for speed optimization.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.dwncdn.net/images/t_app-icon-l/p/c03e2850-01a6-4282-9eaa-43f2dcde9be1/4145358788/2248_4-10905019-imgingest-6201296948009397872.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+      "Website": "https://fastcopy.jp/en/",
+      "PEMetadata": {
+        "Filename": "FastCopy.exe",
+        "OriginalFileName": "FastCopy.exe",
+        "Description": "High-performance file copying and backup tool"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Copying",
+        "File Moving",
+        "File syncing",
+        "Backup"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\FastCopy\\FastCopy.exe",
+        "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.exe"
+      ]
     },
-    {
-        "Name": "Zapya",
-        "Description": "Zapya is a free, cross-platform file transfer application that enables fast and wireless file sharing between devices. It supports Android, iOS, Windows, and MacOS, and can transfer files without the need for an internet connection by using Wi-Fi Direct. Zapya is known for its ability to share large files and multiple files simultaneously across different platforms.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://play-lh.googleusercontent.com/QJUhAltUn9oswVFd36-kJi7c0GGN_wLM89EubY1o6w7vh_l_G0EOQQScRa_Te9_8KX9v",
-        "LastModified": "2024-12-01",
-        "categoryType": "Local and Wireless",
-        "Details": {
-            "Website": "https://www.izapya.com",
-            "PEMetadata": {
-                "Filename": "Zapya.exe",
-                "OriginalFileName": "Zapya.exe",
-                "Description": "File-sharing app for cross-platform transfers"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "iOS", "icon": "FaApple"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Zapya\\Zapya.exe",
-                "C:\\Users\\*\\AppData\\Local\\Zapya\\Zapya.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Zapya\\Zapya.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for Zapya connections",
-                    "Domains": [
-                        "*.izapya.com",
-                        "zapya.com"
-                    ],
-                    "Ports": ["8800"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\FastCopy\\FastCopy.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": []
     },
-    {
-        "Name": "Feem",
-        "Description": "Feem is a free and paid file transfer application that allows fast wireless file sharing between devices over a local network. It supports Android, iOS, Windows, and MacOS. Feem offers both a free version and a paid Pro version with additional features such as faster transfer speeds, larger file sizes, and ad-free experience.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://feem.io/feem.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Local and Wireless",
-        "Details": {
-            "Website": "https://feem.io",
-            "PEMetadata": {
-                "Filename": "Feem.exe",
-                "OriginalFileName": "Feem.exe",
-                "Description": "Cross-platform file transfer application"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "iOS", "icon": "FaApple"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing", "Ad-Free (Pro Version)"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Feem\\Feem.exe",
-                "C:\\Users\\*\\AppData\\Local\\Feem\\Feem.exe"
-            ]
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/fastcopy_network_sigma.yml",
+        "Description": "Detects potential network activity of FastCopy tool"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Feem",
+    "Description": "Feem is a free and paid file transfer application that allows fast wireless file sharing between devices over a local network. It supports Android, iOS, Windows, and MacOS. Feem offers both a free version and a paid Pro version with additional features such as faster transfer speeds, larger file sizes, and ad-free experience.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://feem.io/feem.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+      "Website": "https://feem.io",
+      "PEMetadata": {
+        "Filename": "Feem.exe",
+        "OriginalFileName": "Feem.exe",
+        "Description": "Cross-platform file transfer application"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Feem\\Feem.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for Feem connections",
-                    "Domains": [
-                        "*.feem.io",
-                        "feem.io"
-                    ],
-                    "Ports": ["5000"]
-                }
-            ]
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
         },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "iOS",
+          "icon": "FaApple"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Cross-Platform",
+        "Wi-Fi Direct",
+        "Media Sharing",
+        "Ad-Free (Pro Version)"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Feem\\Feem.exe",
+        "C:\\Users\\*\\AppData\\Local\\Feem\\Feem.exe"
+      ]
     },
-    {
-        "Name": "Nearby Share",
-        "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Nearby_Share_icon.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Local and Wireless",
-        "Details": {
-            "Website": "https://support.google.com/android/answer/9470594",
-            "PEMetadata": {
-                "Filename": "NearbyShare",
-                "OriginalFileName": "NearbyShare",
-                "Description": "File-sharing feature for Android and Windows devices"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Cross-Platform", "Bluetooth", "Wi-Fi Direct", "Peer-to-Peer"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
-                "/System/Applications/NearbyShare.app"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
-                "/System/Applications/NearbyShare.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known domains for Nearby Share connections",
-                    "Domains": [
-                        "nearbyshare.google.com"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
-        },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Feem\\Feem.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for Feem connections",
+          "Domains": [
+            "*.feem.io",
+            "feem.io"
+          ],
+          "Ports": [
+            "5000"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "Resilio Sync",
-        "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://static.macupdate.com/products/60788/s/resilio-sync-logo.png?v=1595338928",
-        "LastModified": "2024-12-01",
-        "categoryType": "Large File",
-        "Details": {
-            "Website": "https://www.resilio.com",
-            "PEMetadata": {
-                "Filename": "ResilioSync",
-                "OriginalFileName": "ResilioSync",
-                "Description": "File synchronization tool"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "iOS", "icon": "FaApple"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Sync", "File Transfer", "Peer-to-Peer", "Backup", "Selective Sync"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
-                "/Applications/Resilio Sync.app"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Filemail",
+    "Description": "Filemail is a file transfer service designed for sending large files without the hassle of using cloud storage. The free version allows file transfers up to 50GB with size limits and has a 7-day expiration for files. The paid version offers unlimited file size, increased file retention, and additional features such as password protection, email tracking, and branded transfer pages.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://play-lh.googleusercontent.com/MeVGaYCfKKEsXsU8ItihlK8q25fiu8xAaVbj3BsTGg_y5ZAozX0aTpWxvx3vxy4BRPw",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+      "Website": "https://www.filemail.com",
+      "PEMetadata": {
+        "Filename": "Filemail",
+        "OriginalFileName": "Filemail",
+        "Description": "File transfer service"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
-                "/Applications/Resilio Sync.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known domains for Resilio Sync connections",
-                    "Domains": [
-                        "*.resilio.com",
-                        "sync.resilio.com"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "Large File Transfer",
+        "Cloud-based",
+        "File Sharing",
+        "Password Protection"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Filemail\\filemail.exe",
+        "/Applications/Filemail.app"
+      ]
     },
-    {
-        "Name": "MASV",
-        "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://massive.io/wp-content/uploads/2021/03/MASV-logo-stacked-allblack.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Large File",
-        "Details": {
-            "Website": "https://www.masv.io",
-            "PEMetadata": {
-                "Filename": "MASV",
-                "OriginalFileName": "MASV",
-                "Description": "Large file transfer platform"
-            },
-            "Privileges": "User",
-            "Free": "No",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["Large File Transfer", "Cloud-based", "Accelerated Transfer", "Secure Transfer"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\MASV\\masv.exe",
-                "/Applications/MASV.app"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\MASV\\masv.exe",
-                "/Applications/MASV.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known domains for MASV file transfer",
-                    "Domains": [
-                        "*.masv.io",
-                        "api.masv.io"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/masv_network_sigma.yml",
-                "Description": "Detects potential network activity of MASV"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Filemail\\filemail.exe",
+        "/Applications/Filemail.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known domains for Filemail transfers",
+          "Domains": [
+            "*.filemail.com"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "Smash",
-        "Description": "Smash is a file transfer service that allows users to send large files quickly and easily. The free version has a size limit and a 14-day expiration for uploaded files, while the paid version provides additional features like unlimited file size, file retention, and priority support. Smash offers a simple, user-friendly interface and supports multiple file transfers simultaneously.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://images.squarespace-cdn.com/content/v1/66057c2c9ffb8c71de9b0f0c/1711635780009-YFO7QCPHPSN2TFOXPHTD/Icologo_pastille_rouge_blanc_carre.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Large File",
-        "Details": {
-            "Website": "https://www.smash.io",
-            "PEMetadata": {
-                "Filename": "Smash",
-                "OriginalFileName": "Smash",
-                "Description": "Large file transfer platform"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["Large File Transfer", "Cloud-based", "Multiple File Transfers", "File Sharing"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Smash\\smash.exe",
-                "/Applications/Smash.app"
-            ]
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filemail_network_sigma.yml",
+        "Description": "Detects potential network activity of Filemail"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "FileZilla",
+    "Description": "FileZilla is a free, open-source FTP (File Transfer Protocol) client that supports FTP, FTPS, and SFTP. It is used for transferring files between a local computer and a remote server.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "LastModified": "2025-05-05",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://filezilla-project.org",
+      "PEMetadata": {
+        "Filename": "filezilla.exe",
+        "OriginalFileName": "FileZilla.exe",
+        "Description": "FTP client for file transfer"
+      },
+      "Privileges": "Admin",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Smash\\smash.exe",
-                "/Applications/Smash.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known domains for Smash file transfer",
-                    "Domains": [
-                        "*.smash.io"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/smash_network_sigma.yml",
-                "Description": "Detects potential network activity of Smash"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "FTPS",
+        "SFTP"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\FileZilla\\filezilla.exe",
+        "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.exe"
+      ]
     },
-    {
-        "Name": "Filemail",
-        "Description": "Filemail is a file transfer service designed for sending large files without the hassle of using cloud storage. The free version allows file transfers up to 50GB with size limits and has a 7-day expiration for files. The paid version offers unlimited file size, increased file retention, and additional features such as password protection, email tracking, and branded transfer pages.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://play-lh.googleusercontent.com/MeVGaYCfKKEsXsU8ItihlK8q25fiu8xAaVbj3BsTGg_y5ZAozX0aTpWxvx3vxy4BRPw",
-        "LastModified": "2024-12-01",
-        "categoryType": "Large File",
-        "Details": {
-            "Website": "https://www.filemail.com",
-            "PEMetadata": {
-                "Filename": "Filemail",
-                "OriginalFileName": "Filemail",
-                "Description": "File transfer service"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["Large File Transfer", "Cloud-based", "File Sharing", "Password Protection"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\Filemail\\filemail.exe",
-                "/Applications/Filemail.app"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\Filemail\\filemail.exe",
-                "/Applications/Filemail.app"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known domains for Filemail transfers",
-                    "Domains": [
-                        "*.filemail.com"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filemail_network_sigma.yml",
-                "Description": "Detects potential network activity of Filemail"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\FileZilla\\filezilla.exe",
+        "C:\\Users\\*\\AppData\\Local\\FileZilla\\filezilla.xml",
+        "C:\\Users\\*\\AppData\\Local\\FileZilla\\recentservers.xml"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "*.filezilla-project.org",
+            "update.filezilla-project.org",
+            "filezilla-project.org"
+          ],
+          "Ports": [
+            "21",
+            "22",
+            "990"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "rsync",
-        "Description": "rsync is a free, open-source file transfer and synchronization tool used to efficiently transfer and synchronize files between local and remote systems. It is commonly used for backups and mirroring and supports copying over SSH, minimizing data transfer by only copying changed parts of files.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://static-00.iconduck.com/assets.00/rsync-icon-512x250-48munkj7.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Command-Line",
-        "Details": {
-            "Website": "https://rsync.samba.org",
-            "PEMetadata": {
-                "Filename": "rsync",
-                "OriginalFileName": "rsync",
-                "Description": "File synchronization tool"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows (via Cygwin)", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "syncing", "Backup", "Compression", "Delta Transfer"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/rsync",
-                "/usr/local/bin/rsync"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/rsync",
-                "/usr/local/bin/rsync"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for rsync synchronization",
-                    "Domains": [
-                        "*.rsync.net"
-                    ],
-                    "Ports": ["22"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rsync_network_sigma.yml",
-                "Description": "Detects potential network activity of rsync"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/filezilla_processes_sigma.yml",
+        "Description": "Detects potential processes activity of FileZilla FTP tool"
+      }
+    ],
+    "References": [
+      "https://docs.velociraptor.app/exchange/artifacts/pages/filezilla/"
+    ],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Free FTP by CoffeeCup",
+    "Description": "Free FTP by CoffeeCup is a free FTP client for transferring files between a local computer and remote servers. It supports FTP and FTPS, and offers a paid Pro version with additional features like enhanced security and more advanced transfer options.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://www.coffeecup.com/free-ftp/",
+      "PEMetadata": {
+        "Filename": "freeftp.exe",
+        "OriginalFileName": "FreeFTP.exe",
+        "Description": "FTP client for file transfer"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "FTPS",
+        "File Transfer",
+        "Directory syncing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
+        "C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.exe"
+      ]
     },
-    {
-        "Name": "scp (Secure Copy)",
-        "Description": "scp is a free, command-line utility used for securely transferring files between hosts over a network. It uses SSH (Secure Shell) to provide encrypted transfer of files, ensuring confidentiality and integrity during the transfer process.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://cdn0.iconfinder.com/data/icons/files-49/32/tn12_file_broken_warning_error_mistake_document_interface_-512.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Command-Line",
-        "Details": {
-            "Website": "https://www.openssh.com/scp/",
-            "PEMetadata": {
-                "Filename": "scp",
-                "OriginalFileName": "scp",
-                "Description": "Secure file copy tool using SSH"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows (via openSSH)", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Secure Copy", "Encryption", "SSH-based"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/scp",
-                "/usr/local/bin/scp"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/scp",
-                "/usr/local/bin/scp"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for scp file transfers",
-                    "Domains": [
-                        "*.openssh.com"
-                    ],
-                    "Ports": ["22"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/scp_network_sigma.yml",
-                "Description": "Detects potential network activity of scp"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP connections",
+          "Domains": [
+            "*.coffeecup.com",
+            "ftp.coffeecup.com"
+          ],
+          "Ports": [
+            "21"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "sftp (Secure File Transfer Protocol)",
-        "Description": "sftp is a free file transfer protocol that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://www.motivosity.com/static/6e4ef422b4a8d4a1d594936bbc19232b/7a8b1/sftp.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Command-Line",
-        "Details": {
-            "Website": "https://www.openssh.com/sftp/",
-            "PEMetadata": {
-                "Filename": "sftp",
-                "OriginalFileName": "sftp",
-                "Description": "Secure file transfer protocol using SSH"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": ""},
-                {"OS": "macOS", "icon": ""},
-                {"OS": "Windows (via openSSH)", "icon": ""}
-            ],
-            "Capabilities": ["File Transfer", "Secure Copy", "Encryption", "SSH-based"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/sftp",
-                "/usr/local/bin/sftp"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "FrostWire",
+    "Description": "FrostWire is a free, open-source BitTorrent client and cloud downloader. It allows users to share files, download torrents, and stream media directly from the app. It also integrates with the FrostWire Cloud for downloading files directly from the internet.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static.frostwire.com/vink/images/logos/brand_identity/FW_logo_graphic_color.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://www.frostwire.com",
+      "PEMetadata": {
+        "Filename": "frostwire.exe",
+        "OriginalFileName": "FrostWire.exe",
+        "Description": "BitTorrent client with cloud downloader"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/sftp",
-                "/usr/local/bin/sftp"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for sftp file transfers",
-                    "Domains": [
-                        "*.openssh.com"
-                    ],
-                    "Ports": ["22"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/sftp_network_sigma.yml",
-                "Description": "Detects potential network activity of sftp"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "BitTorrent Protocol",
+        "File Sharing",
+        "Cloud Downloader",
+        "Streaming",
+        "Search"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\FrostWire\\frostwire.exe",
+        "C:\\Users\\*\\AppData\\Local\\FrostWire\\frostwire.exe"
+      ]
     },
-    {
-        "Name": "curl",
-        "Description": "curl is a free, open-source command-line tool for transferring data with URLs. It supports multiple protocols such as HTTP, HTTPS, FTP, FTPS, and SFTP, and is used for downloading or uploading data from or to a server.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://www.logo.wine/a/logo/CURL/CURL-Logo.wine.svg",
-        "LastModified": "2024-12-01",
-        "categoryType": "Command-Line",
-        "Details": {
-            "Website": "https://curl.se/",
-            "PEMetadata": {
-                "Filename": "curl",
-                "OriginalFileName": "curl",
-                "Description": "Data transfer tool with URL support"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["Data Transfer", "File Download", "File Upload", "HTTP(S) Requests", "FTP", "SFTP", "Proxy Support"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/curl",
-                "/usr/local/bin/curl"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/curl",
-                "/usr/local/bin/curl"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for curl transfers",
-                    "Domains": [
-                        "*.curl.se"
-                    ],
-                    "Ports": ["80", "443", "21", "22"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/curl_network_sigma.yml",
-                "Description": "Detects potential network activity of curl"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\FrostWire\\frostwire.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FrostWire connections",
+          "Domains": [
+            "*.frostwire.com",
+            "www.frostwire.com"
+          ],
+          "Ports": [
+            "6881-6889",
+            "6969"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "wget",
-        "Description": "wget is a free, open-source command-line tool for downloading files from the web. It supports HTTP, HTTPS, and FTP protocols, and can download files in the background or from FTP and HTTP servers.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://codefling.com/uploads/monthly_2023_11/wget-cover.webp.25b57862196b8031d051a126313a71a3.webp",
-        "LastModified": "2024-12-01",
-        "categoryType": "Command-Line",
-        "Details": {
-            "Website": "https://www.gnu.org/software/wget/",
-            "PEMetadata": {
-                "Filename": "wget",
-                "OriginalFileName": "wget",
-                "Description": "Command-line tool for downloading files from the web"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Download", "Recursive Download", "HTTP(S) Requests", "FTP"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/wget",
-                "/usr/local/bin/wget"
-            ]
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "GoodSync",
+    "Description": "GoodSync is a file synchronization and backup software that offers both free and paid versions. It allows users to synchronize files between local and remote storage, backup data, and perform scheduled tasks for file management. It is known for its high reliability and advanced synchronization features.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.goodsync.com/images/download/gs-download.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+      "Website": "https://www.goodsync.com",
+      "PEMetadata": {
+        "Filename": "GoodSync.exe",
+        "OriginalFileName": "GoodSync.exe",
+        "Description": "File synchronization and backup tool"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/wget",
-                "/usr/local/bin/wget"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for wget downloads",
-                    "Domains": [
-                        "*.gnu.org",
-                        "*.wget.org"
-                    ],
-                    "Ports": ["80", "443"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/wget_network_sigma.yml",
-                "Description": "Detects potential network activity of wget"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File syncing",
+        "File Backup",
+        "Cloud Sync",
+        "Scheduling",
+        "Data Recovery"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\GoodSync\\GoodSync.exe",
+        "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.exe"
+      ]
     },
-    {
-        "Name": "Rclone",
-        "Description": "Rclone is a free, open-source command-line program to manage files on cloud storage. It supports over 40 different cloud storage providers and can sync, copy, and move files between cloud storage services or locally.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://forum.rclone.org/uploads/default/original/2X/3/328f860878d4acb13d550a2b12505d181f181713.png",
-        "LastModified": "2025-01-12",
-        "categoryType": "Cross-Platform",
-        "Details": {
-            "Website": "https://rclone.org/",
-            "PEMetadata": {
-                "Filename": "rclone",
-                "OriginalFileName": "rclone",
-                "Description": "Cloud storage manager for file synchronization and transfer"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["Cloud Sync", "File Transfer", "Cloud Storage Management", "Encryption"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/rclone",
-                "/usr/local/bin/rclone"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/rclone",
-                "/usr/local/bin/rclone"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for Rclone cloud storage services",
-                    "Domains": [
-                        "*.rclone.org",
-                        "*.googleusercontent.com",
-                        "*.dropbox.com"
-                    ],
-                    "Ports": ["443"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rclone_network_sigma.yml",
-                "Description": "Detects potential network activity of rclone"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\GoodSync\\GoodSync.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": []
     },
-    {
-        "Name": "KDE Connect",
-        "Description": "KDE Connect is a free and open-source tool that allows communication between your smartphone and computer. It enables file transfers, notification syncing, and other features like controlling your desktop from your phone and vice versa.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://kde.org/stuff/clipart/logo/kde-logo-blue-transparent-3000x3000.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "Cross-Platform",
-        "Details": {
-            "Website": "https://kdeconnect.kde.org/",
-            "PEMetadata": {
-                "Filename": "kdeconnect",
-                "OriginalFileName": "kdeconnect",
-                "Description": "Cross-platform communication tool for smartphone and desktop"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Android", "icon": "DiAndroid"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Notification Syncing", "Remote Control", "SMS Sync"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/kdeconnect",
-                "/usr/local/bin/kdeconnect"
-            ]
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/goodsync_network_sigma.yml",
+        "Description": "Detects potential network activity of GoodSync tool"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "KDE Connect",
+    "Description": "KDE Connect is a free and open-source tool that allows communication between your smartphone and computer. It enables file transfers, notification syncing, and other features like controlling your desktop from your phone and vice versa.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://kde.org/stuff/clipart/logo/kde-logo-blue-transparent-3000x3000.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Cross-Platform",
+    "Details": {
+      "Website": "https://kdeconnect.kde.org/",
+      "PEMetadata": {
+        "Filename": "kdeconnect",
+        "OriginalFileName": "kdeconnect",
+        "Description": "Cross-platform communication tool for smartphone and desktop"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/kdeconnect",
-                "/usr/local/bin/kdeconnect"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for KDE Connect",
-                    "Domains": [
-                        "*.kde.org",
-                        "*.kdeconnect.org"
-                    ],
-                    "Ports": ["1716"]
-                }
-            ]
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/kdeconnect_network_sigma.yml",
-                "Description": "Detects potential network activity of KDE Connect"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Notification Syncing",
+        "Remote Control",
+        "SMS Sync"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/kdeconnect",
+        "/usr/local/bin/kdeconnect"
+      ]
     },
-    {
-        "Name": "Dukto R6",
-        "Description": "Dukto R6 is a free, open-source file transfer tool designed for quick and simple file sharing between devices. It supports multiple platforms, including Windows, Linux, and macOS, and allows for transferring files and folders without the need for configuration or server-side installation.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://static-00.iconduck.com/assets.00/dukto-icon-512x512-w8j1aghu.png",
-        "LastModified": "2016-03-06",
-        "categoryType": "Cross-Platform",
-        "Details": {
-            "Website": "https://www.mikrocontroller.com/dukto",
-            "PEMetadata": {
-                "Filename": "dukto",
-                "OriginalFileName": "dukto",
-                "Description": "Cross-platform file transfer tool"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Transfer", "Folder Transfer", "Drag and Drop"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "/usr/bin/dukto",
-                "/usr/local/bin/dukto"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "/usr/bin/dukto",
-                "/usr/local/bin/dukto"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": [
-                {
-                    "Description": "Known remote domains for Dukto R6 file transfers",
-                    "Domains": [
-                        "*.mikrocontroller.com"
-                    ],
-                    "Ports": ["32000"]
-                }
-            ]
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/dukto_network_sigma.yml",
-                "Description": "Detects potential network activity of Dukto R6"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/kdeconnect",
+        "/usr/local/bin/kdeconnect"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for KDE Connect",
+          "Domains": [
+            "*.kde.org",
+            "*.kdeconnect.org"
+          ],
+          "Ports": [
+            "1716"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "FastCopy",
-        "Description": "FastCopy is a free file copying and backup software for Windows, known for its high performance in transferring large files or directories. It supports copying, moving, and synchronizing files with customizable options for speed optimization.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://images.dwncdn.net/images/t_app-icon-l/p/c03e2850-01a6-4282-9eaa-43f2dcde9be1/4145358788/2248_4-10905019-imgingest-6201296948009397872.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "other",
-        "Details": {
-            "Website": "https://fastcopy.jp/en/",
-            "PEMetadata": {
-                "Filename": "FastCopy.exe",
-                "OriginalFileName": "FastCopy.exe",
-                "Description": "High-performance file copying and backup tool"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Copying", "File Moving", "File syncing", "Backup"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\FastCopy\\FastCopy.exe",
-                "C:\\Users\\*\\AppData\\Local\\FastCopy\\FastCopy.exe"
-            ]
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/kdeconnect_network_sigma.yml",
+        "Description": "Detects potential network activity of KDE Connect"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "MASV",
+    "Description": "MASV is a paid service designed for fast and secure large file transfers. It allows users to send massive video files and other data efficiently, using a cloud-based platform that leverages accelerated file transfer protocols. With no file size limits and the ability to send files up to several terabytes, MASV is ideal for professional media creators and other industries requiring quick, reliable file sharing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://massive.io/wp-content/uploads/2021/03/MASV-logo-stacked-allblack.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+      "Website": "https://www.masv.io",
+      "PEMetadata": {
+        "Filename": "MASV",
+        "OriginalFileName": "MASV",
+        "Description": "Large file transfer platform"
+      },
+      "Privileges": "User",
+      "Free": "No",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\FastCopy\\FastCopy.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": []
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/fastcopy_network_sigma.yml",
-                "Description": "Detects potential network activity of FastCopy tool"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "Large File Transfer",
+        "Cloud-based",
+        "Accelerated Transfer",
+        "Secure Transfer"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\MASV\\masv.exe",
+        "/Applications/MASV.app"
+      ]
     },
-    {
-        "Name": "TeraCopy",
-        "Description": "TeraCopy is a file transfer utility for Windows that speeds up copying and moving files by using dynamic buffer sizes. It offers both free and paid versions, with advanced features such as error recovery, file verification, and a more efficient user interface.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBeYnpjc8Fv8jGP3a87EPS6boqPUD3u_TtBbK4kJ6UsidJw7cepoUyMna0oxYgT..UrOmms610Fzyg0l4aQEo1RQ-&format=source",
-        "LastModified": "2024-12-01",
-        "categoryType": "other",
-        "Details": {
-            "Website": "https://www.codesector.com/teracopy",
-            "PEMetadata": {
-                "Filename": "TeraCopy.exe",
-                "OriginalFileName": "TeraCopy.exe",
-                "Description": "Efficient file copying and moving utility"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File Copying", "File Moving", "File Verification", "Error Recovery"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
-                "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.exe"
-            ]
-        },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\TeraCopy\\TeraCopy.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": []
-        },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/teracopy_network_sigma.yml",
-                "Description": "Detects potential network activity of TeraCopy tool"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\MASV\\masv.exe",
+        "/Applications/MASV.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known domains for MASV file transfer",
+          "Domains": [
+            "*.masv.io",
+            "api.masv.io"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
     },
-    {
-        "Name": "GoodSync",
-        "Description": "GoodSync is a file synchronization and backup software that offers both free and paid versions. It allows users to synchronize files between local and remote storage, backup data, and perform scheduled tasks for file management. It is known for its high reliability and advanced synchronization features.",
-        "Author": "TomJHKR",
-        "Created": "",
-        "Logo": "https://www.goodsync.com/images/download/gs-download.png",
-        "LastModified": "2024-12-01",
-        "categoryType": "other",
-        "Details": {
-            "Website": "https://www.goodsync.com",
-            "PEMetadata": {
-                "Filename": "GoodSync.exe",
-                "OriginalFileName": "GoodSync.exe",
-                "Description": "File synchronization and backup tool"
-            },
-            "Privileges": "User",
-            "Free": "Yes",
-            "Verification": "Verified",
-            "SupportedOS": [
-                {"OS": "Linux", "icon": "FaLinux"},
-                {"OS": "macOS", "icon": "SiMacos"},
-                {"OS": "Windows", "icon": "FaWindows"}
-            ],
-            "Capabilities": ["File syncing", "File Backup", "Cloud Sync", "Scheduling", "Data Recovery"],
-            "Vulnerabilites": [],
-            "InstallationPaths": [
-                "C:\\Program Files\\GoodSync\\GoodSync.exe",
-                "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.exe"
-            ]
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/masv_network_sigma.yml",
+        "Description": "Detects potential network activity of MASV"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Nearby Share",
+    "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Nearby_Share_icon.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+      "Website": "https://support.google.com/android/answer/9470594",
+      "PEMetadata": {
+        "Filename": "NearbyShare",
+        "OriginalFileName": "NearbyShare",
+        "Description": "File-sharing feature for Android and Windows devices"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
         },
-        "Artifacts": {
-            "Disk": [
-                "C:\\Program Files\\GoodSync\\GoodSync.exe"
-            ],
-            "EventLog": [],
-            "Registry": [],
-            "Network": []
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Cross-Platform",
+        "Bluetooth",
+        "Wi-Fi Direct",
+        "Peer-to-Peer"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
+        "/System/Applications/NearbyShare.app"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
+        "/System/Applications/NearbyShare.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known domains for Nearby Share connections",
+          "Domains": [
+            "nearbyshare.google.com"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "qBittorrent",
+    "Description": "qBittorrent is a free, open-source BitTorrent client that offers a clean interface and a wide range of features for file sharing. It supports the BitTorrent protocol and allows for file prioritization, RSS feeds, and integrated search capabilities.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_qBittorrent_Logo.svg/2048px-New_qBittorrent_Logo.svg.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://www.qbittorrent.org",
+      "PEMetadata": {
+        "Filename": "qbittorrent.exe",
+        "OriginalFileName": "qBittorrent.exe",
+        "Description": "Open-source BitTorrent client"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
         },
-        "Detections": [
-            {
-                "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/goodsync_network_sigma.yml",
-                "Description": "Detects potential network activity of GoodSync tool"
-            }
-        ],
-        "References": [],
-        "Acknowlegment": []
-    }            
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "BitTorrent Protocol",
+        "File Sharing",
+        "Integrated Search",
+        "RSS Feeds",
+        "Remote Control"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
+        "C:\\Users\\*\\AppData\\Local\\qBittorrent\\qbittorrent.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\qBittorrent\\qbittorrent.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for qBittorrent connections",
+          "Domains": [
+            "*.qbittorrent.org",
+            "www.qbittorrent.org"
+          ],
+          "Ports": [
+            "6881-6889",
+            "6969"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Rclone",
+    "Description": "Rclone is a free, open-source command-line program to manage files on cloud storage. It supports over 40 different cloud storage providers and can sync, copy, and move files between cloud storage services or locally.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://forum.rclone.org/uploads/default/original/2X/3/328f860878d4acb13d550a2b12505d181f181713.png",
+    "LastModified": "2025-01-12",
+    "categoryType": "Cross-Platform",
+    "Details": {
+      "Website": "https://rclone.org/",
+      "PEMetadata": {
+        "Filename": "rclone",
+        "OriginalFileName": "rclone",
+        "Description": "Cloud storage manager for file synchronization and transfer"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "Cloud Sync",
+        "File Transfer",
+        "Cloud Storage Management",
+        "Encryption"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/rclone",
+        "/usr/local/bin/rclone"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/rclone",
+        "/usr/local/bin/rclone"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for Rclone cloud storage services",
+          "Domains": [
+            "*.rclone.org",
+            "*.googleusercontent.com",
+            "*.dropbox.com"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rclone_network_sigma.yml",
+        "Description": "Detects potential network activity of rclone"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Resilio Sync",
+    "Description": "Resilio Sync is a file synchronization and sharing tool that uses peer-to-peer technology to sync files directly between devices. It allows for large file transfers without relying on cloud servers, making it ideal for secure, fast file sharing. The free version offers basic functionality, while the paid versions provide advanced features like selective sync, backup, and larger file size support.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static.macupdate.com/products/60788/s/resilio-sync-logo.png?v=1595338928",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+      "Website": "https://www.resilio.com",
+      "PEMetadata": {
+        "Filename": "ResilioSync",
+        "OriginalFileName": "ResilioSync",
+        "Description": "File synchronization tool"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
+        },
+        {
+          "OS": "iOS",
+          "icon": "FaApple"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Sync",
+        "File Transfer",
+        "Peer-to-Peer",
+        "Backup",
+        "Selective Sync"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
+        "/Applications/Resilio Sync.app"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Resilio Sync\\resilio-sync.exe",
+        "/Applications/Resilio Sync.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known domains for Resilio Sync connections",
+          "Domains": [
+            "*.resilio.com",
+            "sync.resilio.com"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "rsync",
+    "Description": "rsync is a free, open-source file transfer and synchronization tool used to efficiently transfer and synchronize files between local and remote systems. It is commonly used for backups and mirroring and supports copying over SSH, minimizing data transfer by only copying changed parts of files.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://static-00.iconduck.com/assets.00/rsync-icon-512x250-48munkj7.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+      "Website": "https://rsync.samba.org",
+      "PEMetadata": {
+        "Filename": "rsync",
+        "OriginalFileName": "rsync",
+        "Description": "File synchronization tool"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows (via Cygwin)",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "syncing",
+        "Backup",
+        "Compression",
+        "Delta Transfer"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/rsync",
+        "/usr/local/bin/rsync"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/rsync",
+        "/usr/local/bin/rsync"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for rsync synchronization",
+          "Domains": [
+            "*.rsync.net"
+          ],
+          "Ports": [
+            "22"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/rsync_network_sigma.yml",
+        "Description": "Detects potential network activity of rsync"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "scp (Secure Copy)",
+    "Description": "scp is a free, command-line utility used for securely transferring files between hosts over a network. It uses SSH (Secure Shell) to provide encrypted transfer of files, ensuring confidentiality and integrity during the transfer process.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn0.iconfinder.com/data/icons/files-49/32/tn12_file_broken_warning_error_mistake_document_interface_-512.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+      "Website": "https://www.openssh.com/scp/",
+      "PEMetadata": {
+        "Filename": "scp",
+        "OriginalFileName": "scp",
+        "Description": "Secure file copy tool using SSH"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows (via openSSH)",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Secure Copy",
+        "Encryption",
+        "SSH-based"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/scp",
+        "/usr/local/bin/scp"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/scp",
+        "/usr/local/bin/scp"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for scp file transfers",
+          "Domains": [
+            "*.openssh.com"
+          ],
+          "Ports": [
+            "22"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/scp_network_sigma.yml",
+        "Description": "Detects potential network activity of scp"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Send Anywhere",
+    "Description": "Send Anywhere is a free, cross-platform file transfer application that allows users to send files and folders securely across different devices. It provides options for both free and paid Pro versions with additional features such as higher transfer speeds, larger file sizes, and priority support.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.sftcdn.net/images/t_app-icon-m/p/2b40c184-f782-413b-823c-4fabd0aa8474/3393269836/send-anywhere-file-transfer-windows%20StoreLogo@300w.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+      "Website": "https://send-anywhere.com",
+      "PEMetadata": {
+        "Filename": "sendanywhere.exe",
+        "OriginalFileName": "SendAnywhere.exe",
+        "Description": "Cross-platform file transfer application"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
+        },
+        {
+          "OS": "iOS",
+          "icon": "FaApple"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Cross-Platform",
+        "P2P",
+        "Large File Support",
+        "Cloud Storage"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
+        "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\SendAnywhere\\sendanywhere.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for Send Anywhere connections",
+          "Domains": [
+            "*.send-anywhere.com",
+            "send-anywhere.com"
+          ],
+          "Ports": [
+            "443",
+            "80"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "sftp (Secure File Transfer Protocol)",
+    "Description": "sftp is a free file transfer protocol that uses SSH (Secure Shell) for secure data transmission. It is used to transfer files between hosts over a network securely, ensuring encryption during the transfer process.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.motivosity.com/static/6e4ef422b4a8d4a1d594936bbc19232b/7a8b1/sftp.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+      "Website": "https://www.openssh.com/sftp/",
+      "PEMetadata": {
+        "Filename": "sftp",
+        "OriginalFileName": "sftp",
+        "Description": "Secure file transfer protocol using SSH"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": ""
+        },
+        {
+          "OS": "macOS",
+          "icon": ""
+        },
+        {
+          "OS": "Windows (via openSSH)",
+          "icon": ""
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Secure Copy",
+        "Encryption",
+        "SSH-based"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/sftp",
+        "/usr/local/bin/sftp"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/sftp",
+        "/usr/local/bin/sftp"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for sftp file transfers",
+          "Domains": [
+            "*.openssh.com"
+          ],
+          "Ports": [
+            "22"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/sftp_network_sigma.yml",
+        "Description": "Detects potential network activity of sftp"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "ShareIt",
+    "Description": "ShareIt is a free, cross-platform file-sharing application that allows users to transfer files, videos, music, and other types of media quickly between devices over a local network or using a Wi-Fi connection. It supports both Android and iOS devices, and it's known for its fast transfer speeds and user-friendly interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn.iconscout.com/icon/free/png-512/free-shareit-logo-icon-download-in-svg-png-gif-file-formats--share-connection-sharing-productivity-apps-pack-logos-icons-8630408.png?f=webp&w=256",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+      "Website": "https://www.shareit.com",
+      "PEMetadata": {
+        "Filename": "ShareIt.exe",
+        "OriginalFileName": "ShareIt.exe",
+        "Description": "File-sharing app for quick media transfer"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
+        },
+        {
+          "OS": "iOS",
+          "icon": "FaApple"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Cross-Platform",
+        "Wi-Fi Direct",
+        "Media Sharing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\ShareIt\\ShareIt.exe",
+        "C:\\Users\\*\\AppData\\Local\\ShareIt\\ShareIt.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\ShareIt\\ShareIt.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for ShareIt connections",
+          "Domains": [
+            "*.shareit.com",
+            "shareitapp.com"
+          ],
+          "Ports": [
+            "8888"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "SmartFTP",
+    "Description": "SmartFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, SFTP, and includes advanced features like file synchronization, scheduling, and remote file editing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.smartftp.com/static/img/icon/smartftp256.png",
+    "LastModified": "2024-11-06",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://www.smartftp.com",
+      "PEMetadata": {
+        "Filename": "smartftp.exe",
+        "OriginalFileName": "SmartFTP.exe",
+        "Description": "FTP client for file transfer"
+      },
+      "Privileges": "User",
+      "Free": "No",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "FTPS",
+        "SFTP",
+        "File Transfer",
+        "Directory syncing",
+        "File syncing",
+        "Remote File Editing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\SmartFTP\\smartftp.exe",
+        "C:\\Users\\*\\AppData\\Local\\SmartFTP\\smartftp.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\SmartFTP\\smartftp.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "*.smartftp.com",
+            "ftp.smartftp.com",
+            "FileZilla Client Started",
+            "sftp.smartftp.com"
+          ],
+          "Ports": [
+            "21",
+            "22",
+            "990"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Smash",
+    "Description": "Smash is a file transfer service that allows users to send large files quickly and easily. The free version has a size limit and a 14-day expiration for uploaded files, while the paid version provides additional features like unlimited file size, file retention, and priority support. Smash offers a simple, user-friendly interface and supports multiple file transfers simultaneously.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.squarespace-cdn.com/content/v1/66057c2c9ffb8c71de9b0f0c/1711635780009-YFO7QCPHPSN2TFOXPHTD/Icologo_pastille_rouge_blanc_carre.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+      "Website": "https://www.smash.io",
+      "PEMetadata": {
+        "Filename": "Smash",
+        "OriginalFileName": "Smash",
+        "Description": "Large file transfer platform"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "Large File Transfer",
+        "Cloud-based",
+        "Multiple File Transfers",
+        "File Sharing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Smash\\smash.exe",
+        "/Applications/Smash.app"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Smash\\smash.exe",
+        "/Applications/Smash.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known domains for Smash file transfer",
+          "Domains": [
+            "*.smash.io"
+          ],
+          "Ports": [
+            "443"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/smash_network_sigma.yml",
+        "Description": "Detects potential network activity of Smash"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "TeraCopy",
+    "Description": "TeraCopy is a file transfer utility for Windows that speeds up copying and moving files by using dynamic buffer sizes. It offers both free and paid versions, with advanced features such as error recovery, file verification, and a more efficient user interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBeYnpjc8Fv8jGP3a87EPS6boqPUD3u_TtBbK4kJ6UsidJw7cepoUyMna0oxYgT..UrOmms610Fzyg0l4aQEo1RQ-&format=source",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+      "Website": "https://www.codesector.com/teracopy",
+      "PEMetadata": {
+        "Filename": "TeraCopy.exe",
+        "OriginalFileName": "TeraCopy.exe",
+        "Description": "Efficient file copying and moving utility"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Copying",
+        "File Moving",
+        "File Verification",
+        "Error Recovery"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\TeraCopy\\TeraCopy.exe",
+        "C:\\Users\\*\\AppData\\Local\\TeraCopy\\TeraCopy.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\TeraCopy\\TeraCopy.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": []
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/teracopy_network_sigma.yml",
+        "Description": "Detects potential network activity of TeraCopy tool"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Transmit",
+    "Description": "Transmit is a premium macOS-only file transfer client that supports FTP, SFTP, WebDAV, and cloud storage services. It provides a user-friendly interface and advanced file management tools.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/en/5/55/Transmit_FTP_Client_Logo.png",
+    "LastModified": "2025-02-15",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://panic.com/transmit/",
+      "PEMetadata": {
+        "Filename": "transmit.app",
+        "OriginalFileName": "Transmit.app",
+        "Description": "Advanced file transfer client for macOS"
+      },
+      "Privileges": "User",
+      "Free": "No",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "SFTP",
+        "WebDAV",
+        "Amazon S3",
+        "Google Drive",
+        "Dropbox",
+        "File Transfer"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/Applications/Transmit.app",
+        "~/Library/Application Support/Transmit"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/Applications/Transmit.app"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for FTP/SFTP connections",
+          "Domains": [
+            "*.panic.com",
+            "updates.panic.com",
+            "panic-cdn.com"
+          ],
+          "Ports": [
+            "21",
+            "22",
+            "443",
+            "80"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "µTorrent",
+    "Description": "µTorrent (also known as uTorrent) is a free and paid BitTorrent client for peer-to-peer file sharing. It offers features like streaming, bandwidth management, and scheduling in the paid version, with the free version available for basic file sharing.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/UTorrent_current_logo.svg",
+    "LastModified": "2024-12-01",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://www.utorrent.com",
+      "PEMetadata": {
+        "Filename": "utorrent.exe",
+        "OriginalFileName": "uTorrent.exe",
+        "Description": "BitTorrent client for file sharing"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "BitTorrent Protocol",
+        "File Sharing",
+        "Streaming",
+        "Bandwidth Management",
+        "Scheduling"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\µTorrent\\utorrent.exe",
+        "C:\\Users\\*\\AppData\\Local\\µTorrent\\utorrent.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\µTorrent\\utorrent.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for µTorrent connections",
+          "Domains": [
+            "*.utorrent.com",
+            "www.utorrent.com"
+          ],
+          "Ports": [
+            "6881-6889",
+            "6969"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "wget",
+    "Description": "wget is a free, open-source command-line tool for downloading files from the web. It supports HTTP, HTTPS, and FTP protocols, and can download files in the background or from FTP and HTTP servers.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://codefling.com/uploads/monthly_2023_11/wget-cover.webp.25b57862196b8031d051a126313a71a3.webp",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+      "Website": "https://www.gnu.org/software/wget/",
+      "PEMetadata": {
+        "Filename": "wget",
+        "OriginalFileName": "wget",
+        "Description": "Command-line tool for downloading files from the web"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Download",
+        "Recursive Download",
+        "HTTP(S) Requests",
+        "FTP"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "/usr/bin/wget",
+        "/usr/local/bin/wget"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "/usr/bin/wget",
+        "/usr/local/bin/wget"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for wget downloads",
+          "Domains": [
+            "*.gnu.org",
+            "*.wget.org"
+          ],
+          "Ports": [
+            "80",
+            "443"
+          ]
+        }
+      ]
+    },
+    "Detections": [
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/wget_network_sigma.yml",
+        "Description": "Detects potential network activity of wget"
+      }
+    ],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "WinSCP",
+    "Description": "WinSCP is a free and open-source FTP, SFTP, and SCP client for Windows that allows secure file transfers between a local and a remote computer.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "LastModified": "2025-02-15",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+      "Website": "https://winscp.net/",
+      "PEMetadata": {
+        "Filename": "winscp.exe",
+        "OriginalFileName": "WinSCP.exe",
+        "Description": "Secure file transfer client"
+      },
+      "Privileges": "Admin",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "FTP",
+        "SFTP",
+        "SCP",
+        "File Transfer",
+        "Secure syncing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\WinSCP\\winscp.exe",
+        "C:\\Users\\*\\AppData\\Local\\WinSCP\\winscp.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\WinSCP\\winscp.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for secure connections",
+          "Domains": [
+            "*.winscp.net"
+          ],
+          "Ports": [
+            "21",
+            "22"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
+    "Name": "Zapya",
+    "Description": "Zapya is a free, cross-platform file transfer application that enables fast and wireless file sharing between devices. It supports Android, iOS, Windows, and MacOS, and can transfer files without the need for an internet connection by using Wi-Fi Direct. Zapya is known for its ability to share large files and multiple files simultaneously across different platforms.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://play-lh.googleusercontent.com/QJUhAltUn9oswVFd36-kJi7c0GGN_wLM89EubY1o6w7vh_l_G0EOQQScRa_Te9_8KX9v",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+      "Website": "https://www.izapya.com",
+      "PEMetadata": {
+        "Filename": "Zapya.exe",
+        "OriginalFileName": "Zapya.exe",
+        "Description": "File-sharing app for cross-platform transfers"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Android",
+          "icon": "DiAndroid"
+        },
+        {
+          "OS": "iOS",
+          "icon": "FaApple"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "File Transfer",
+        "Cross-Platform",
+        "Wi-Fi Direct",
+        "Media Sharing"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Zapya\\Zapya.exe",
+        "C:\\Users\\*\\AppData\\Local\\Zapya\\Zapya.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Zapya\\Zapya.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for Zapya connections",
+          "Domains": [
+            "*.izapya.com",
+            "zapya.com"
+          ],
+          "Ports": [
+            "8800"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  }
 ]
