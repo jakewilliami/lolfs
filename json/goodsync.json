@@ -1,0 +1,47 @@
+{
+    "Name": "GoodSync",
+    "Description": "GoodSync is a file synchronization and backup software that offers both free and paid versions. It allows users to synchronize files between local and remote storage, backup data, and perform scheduled tasks for file management. It is known for its high reliability and advanced synchronization features.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://www.goodsync.com/images/download/gs-download.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "other",
+    "Details": {
+        "Website": "https://www.goodsync.com",
+        "PEMetadata": {
+            "Filename": "GoodSync.exe",
+            "OriginalFileName": "GoodSync.exe",
+            "Description": "File synchronization and backup tool"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File syncing", "File Backup", "Cloud Sync", "Scheduling", "Data Recovery"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\GoodSync\\GoodSync.exe",
+            "C:\\Users\\*\\AppData\\Local\\GoodSync\\GoodSync.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\GoodSync\\GoodSync.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": []
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/goodsync_network_sigma.yml",
+            "Description": "Detects potential network activity of GoodSync tool"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

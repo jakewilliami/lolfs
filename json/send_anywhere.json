@@ -1,0 +1,52 @@
+{
+    "Name": "Send Anywhere",
+    "Description": "Send Anywhere is a free, cross-platform file transfer application that allows users to send files and folders securely across different devices. It provides options for both free and paid Pro versions with additional features such as higher transfer speeds, larger file sizes, and priority support.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.sftcdn.net/images/t_app-icon-m/p/2b40c184-f782-413b-823c-4fabd0aa8474/3393269836/send-anywhere-file-transfer-windows%20StoreLogo@300w.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+        "Website": "https://send-anywhere.com",
+        "PEMetadata": {
+            "Filename": "sendanywhere.exe",
+            "OriginalFileName": "SendAnywhere.exe",
+            "Description": "Cross-platform file transfer application"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "iOS", "icon": "FaApple"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Cross-Platform", "P2P", "Large File Support", "Cloud Storage"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\SendAnywhere\\sendanywhere.exe",
+            "C:\\Users\\*\\AppData\\Local\\SendAnywhere\\sendanywhere.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\SendAnywhere\\sendanywhere.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for Send Anywhere connections",
+                "Domains": [
+                    "*.send-anywhere.com",
+                    "send-anywhere.com"
+                ],
+                "Ports": ["443", "80"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

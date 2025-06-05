@@ -1,0 +1,49 @@
+{
+    "Name": "Cyberduck",
+    "Description": "Cyberduck is a free, open-source FTP, SFTP, WebDAV, and cloud storage browser for file transfers and management. It supports various protocols and cloud services, including Amazon S3 and Google Drive.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyberduck_icon.png/1200px-Cyberduck_icon.png",
+    "LastModified": "2025-02-15",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://cyberduck.io",
+        "PEMetadata": {
+            "Filename": "cyberduck.exe",
+            "OriginalFileName": "Cyberduck.exe",
+            "Description": "FTP, SFTP, and cloud storage client"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "SFTP", "WebDAV", "Amazon S3", "Google Drive", "Dropbox"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Cyberduck\\cyberduck.exe",
+            "C:\\Users\\*\\AppData\\Roaming\\Cyberduck\\cyberduck.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Cyberduck\\cyberduck.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FTP/SFTP connections",
+                "Domains": [
+                    "*.cyberduck.io"
+                ],
+                "Ports": ["21", "22"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

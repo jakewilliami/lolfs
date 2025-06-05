@@ -1,0 +1,49 @@
+{
+    "Name": "Core FTP",
+    "Description": "Core FTP is a free and paid FTP client for transferring files between local computers and remote servers. It supports FTP, FTPS, SFTP, and includes both a free version and a Pro version with additional features like site-to-site transfers and advanced encryption.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://icons.veryicon.com/png/Application/Sleek%20XP%20Software/Core%20FTP.png",
+    "LastModified": "2020-09-28",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://www.coreftp.com",
+        "PEMetadata": {
+            "Filename": "coreftp.exe",
+            "OriginalFileName": "CoreFTP.exe",
+            "Description": "FTP client for file transfer"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing", "Site-to-Site Transfer", "Advanced Encryption"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Core FTP\\coreftp.exe",
+            "C:\\Users\\*\\AppData\\Local\\Core FTP\\coreftp.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Core FTP\\coreftp.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FTP/SFTP connections",
+                "Domains": [
+                    "coreftp.com",
+                    "updates.coreftp.com"
+                ],
+                "Ports": ["21", "22", "990"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

@@ -1,0 +1,51 @@
+{
+    "Name": "ShareIt",
+    "Description": "ShareIt is a free, cross-platform file-sharing application that allows users to transfer files, videos, music, and other types of media quickly between devices over a local network or using a Wi-Fi connection. It supports both Android and iOS devices, and it's known for its fast transfer speeds and user-friendly interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn.iconscout.com/icon/free/png-512/free-shareit-logo-icon-download-in-svg-png-gif-file-formats--share-connection-sharing-productivity-apps-pack-logos-icons-8630408.png?f=webp&w=256",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+        "Website": "https://www.shareit.com",
+        "PEMetadata": {
+            "Filename": "ShareIt.exe",
+            "OriginalFileName": "ShareIt.exe",
+            "Description": "File-sharing app for quick media transfer"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "iOS", "icon": "FaApple"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Cross-Platform", "Wi-Fi Direct", "Media Sharing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\ShareIt\\ShareIt.exe",
+            "C:\\Users\\*\\AppData\\Local\\ShareIt\\ShareIt.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\ShareIt\\ShareIt.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for ShareIt connections",
+                "Domains": [
+                    "*.shareit.com",
+                    "shareitapp.com"
+                ],
+                "Ports": ["8888"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

@@ -1,0 +1,46 @@
+{
+    "Name": "WinSCP",
+    "Description": "WinSCP is a free and open-source FTP, SFTP, and SCP client for Windows that allows secure file transfers between a local and a remote computer.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "LastModified": "2025-02-15",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/WinSCP_Logo.png",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://winscp.net/",
+        "PEMetadata": {
+            "Filename": "winscp.exe",
+            "OriginalFileName": "WinSCP.exe",
+            "Description": "Secure file transfer client"
+        },
+        "Privileges": "Admin",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "SFTP", "SCP", "File Transfer", "Secure syncing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\WinSCP\\winscp.exe",
+            "C:\\Users\\*\\AppData\\Local\\WinSCP\\winscp.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\WinSCP\\winscp.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for secure connections",
+                "Domains": ["*.winscp.net"],
+                "Ports": ["21", "22"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

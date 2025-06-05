@@ -1,0 +1,50 @@
+{
+    "Name": "Nearby Share",
+    "Description": "Nearby Share is a built-in file-sharing feature for Android and Windows devices that allows users to quickly send and receive files, photos, and links wirelessly. It uses Bluetooth, Wi-Fi, and peer-to-peer technology to enable fast and secure transfers without an internet connection.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Nearby_Share_icon.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Local and Wireless",
+    "Details": {
+        "Website": "https://support.google.com/android/answer/9470594",
+        "PEMetadata": {
+            "Filename": "NearbyShare",
+            "OriginalFileName": "NearbyShare",
+            "Description": "File-sharing feature for Android and Windows devices"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Android", "icon": "DiAndroid"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Cross-Platform", "Bluetooth", "Wi-Fi Direct", "Peer-to-Peer"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
+            "/System/Applications/NearbyShare.app"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\NearbyShare\\NearbyShare.exe",
+            "/System/Applications/NearbyShare.app"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known domains for Nearby Share connections",
+                "Domains": [
+                    "nearbyshare.google.com"
+                ],
+                "Ports": ["443"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

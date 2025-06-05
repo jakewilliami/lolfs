@@ -1,0 +1,56 @@
+{
+    "Name": "scp (Secure Copy)",
+    "Description": "scp is a free, command-line utility used for securely transferring files between hosts over a network. It uses SSH (Secure Shell) to provide encrypted transfer of files, ensuring confidentiality and integrity during the transfer process.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn0.iconfinder.com/data/icons/files-49/32/tn12_file_broken_warning_error_mistake_document_interface_-512.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Command-Line",
+    "Details": {
+        "Website": "https://www.openssh.com/scp/",
+        "PEMetadata": {
+            "Filename": "scp",
+            "OriginalFileName": "scp",
+            "Description": "Secure file copy tool using SSH"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows (via openSSH)", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["File Transfer", "Secure Copy", "Encryption", "SSH-based"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "/usr/bin/scp",
+            "/usr/local/bin/scp"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "/usr/bin/scp",
+            "/usr/local/bin/scp"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for scp file transfers",
+                "Domains": [
+                    "*.openssh.com"
+                ],
+                "Ports": ["22"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/scp_network_sigma.yml",
+            "Description": "Detects potential network activity of scp"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

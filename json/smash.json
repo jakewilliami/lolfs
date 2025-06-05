@@ -1,0 +1,56 @@
+{
+    "Name": "Smash",
+    "Description": "Smash is a file transfer service that allows users to send large files quickly and easily. The free version has a size limit and a 14-day expiration for uploaded files, while the paid version provides additional features like unlimited file size, file retention, and priority support. Smash offers a simple, user-friendly interface and supports multiple file transfers simultaneously.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://images.squarespace-cdn.com/content/v1/66057c2c9ffb8c71de9b0f0c/1711635780009-YFO7QCPHPSN2TFOXPHTD/Icologo_pastille_rouge_blanc_carre.png",
+    "LastModified": "2024-12-01",
+    "categoryType": "Large File",
+    "Details": {
+        "Website": "https://www.smash.io",
+        "PEMetadata": {
+            "Filename": "Smash",
+            "OriginalFileName": "Smash",
+            "Description": "Large file transfer platform"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Linux", "icon": "FaLinux"},
+            {"OS": "macOS", "icon": "SiMacos"},
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["Large File Transfer", "Cloud-based", "Multiple File Transfers", "File Sharing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\Smash\\smash.exe",
+            "/Applications/Smash.app"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\Smash\\smash.exe",
+            "/Applications/Smash.app"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known domains for Smash file transfer",
+                "Domains": [
+                    "*.smash.io"
+                ],
+                "Ports": ["443"]
+            }
+        ]
+    },
+    "Detections": [
+        {
+            "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/smash_network_sigma.yml",
+            "Description": "Detects potential network activity of Smash"
+        }
+    ],
+    "References": [],
+    "Acknowlegment": []
+}

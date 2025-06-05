@@ -1,0 +1,50 @@
+{
+    "Name": "eMule",
+    "Description": "eMule is a free, open-source P2P (peer-to-peer) file-sharing client that is primarily used for downloading and sharing files over the eDonkey network and Kad network. It features support for various file types, powerful search capabilities, and a large user base.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/EMule_mascot.svg",
+    "LastModified": "2010-04-07",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+        "Website": "https://www.emule-project.net",
+        "PEMetadata": {
+            "Filename": "emule.exe",
+            "OriginalFileName": "eMule.exe",
+            "Description": "P2P file sharing client"
+        },
+        "Privileges": "User",
+        "Free": "Yes",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["P2P File Sharing", "eDonkey Network", "Kad Network", "File Search", "Direct Downloads"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\eMule\\emule.exe",
+            "C:\\Users\\*\\AppData\\Local\\eMule\\emule.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\eMule\\emule.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for eMule connections",
+                "Domains": [
+                    "*.emule-project.net",
+                    "edonkey2000.com",
+                    "www.emule-project.net"
+                ],
+                "Ports": ["4662", "4672"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}

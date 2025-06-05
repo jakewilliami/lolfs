@@ -1,0 +1,49 @@
+{
+	"Name": "Free FTP by CoffeeCup",
+	"Description": "Free FTP by CoffeeCup is a free FTP client for transferring files between a local computer and remote servers. It supports FTP and FTPS, and offers a paid Pro version with additional features like enhanced security and more advanced transfer options.",
+	"Author": "TomJHKR",
+	"Created": "",
+	"Logo": "https://www.coffeecup.com/images/icons/applications/direct-ftp_128x128.png",
+	"LastModified": "2024-12-01",
+	"categoryType": "FTP (File Transfer)",
+	"Details": {
+	    "Website": "https://www.coffeecup.com/free-ftp/",
+	    "PEMetadata": {
+		"Filename": "freeftp.exe",
+		"OriginalFileName": "FreeFTP.exe",
+		"Description": "FTP client for file transfer"
+	    },
+	    "Privileges": "User",
+	    "Free": "Yes",
+	    "Verification": "Verified",
+	    "SupportedOS": [
+		{"OS": "Windows", "icon": "FaWindows"}
+	    ],
+	    "Capabilities": ["FTP", "FTPS", "File Transfer", "Directory syncing"],
+	    "Vulnerabilites": [],
+	    "InstallationPaths": [
+		"C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe",
+		"C:\\Users\\*\\AppData\\Local\\CoffeeCup\\freeftp.exe"
+	    ]
+	},
+	"Artifacts": {
+	    "Disk": [
+		"C:\\Program Files\\CoffeeCup\\Free FTP\\freeftp.exe"
+	    ],
+	    "EventLog": [],
+	    "Registry": [],
+	    "Network": [
+		{
+		    "Description": "Known remote domains for FTP connections",
+		    "Domains": [
+			"*.coffeecup.com",
+			"ftp.coffeecup.com"
+		    ],
+		    "Ports": ["21"]
+		}
+	    ]
+	},
+	"Detections": [],
+	"References": [],
+	"Acknowlegment": []
+}

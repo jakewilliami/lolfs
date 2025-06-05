@@ -1,0 +1,52 @@
+{
+    "Name": "CuteFTP",
+    "Description": "CuteFTP is a paid FTP client for transferring files between a local computer and remote servers. It supports FTP, FTPS, and SFTP, and includes advanced file management features and a user-friendly interface.",
+    "Author": "TomJHKR",
+    "Created": "",
+    "Logo": "https://cdn.freebiesupply.com/logos/thumbs/2x/cuteftp-logo.png",
+    "LastModified": "2025-02-15",
+    "categoryType": "FTP (File Transfer)",
+    "Details": {
+        "Website": "https://www.cuteftp.com",
+        "PEMetadata": {
+            "Filename": "cuteftp.exe",
+            "OriginalFileName": "CuteFTP.exe",
+            "Description": "FTP client for file transfer"
+        },
+        "Privileges": "User",
+        "Free": "No",
+        "Verification": "Verified",
+        "SupportedOS": [
+            {"OS": "Windows", "icon": "FaWindows"}
+        ],
+        "Capabilities": ["FTP", "FTPS", "SFTP", "File Transfer", "Directory syncing"],
+        "Vulnerabilites": [],
+        "InstallationPaths": [
+            "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+            "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe",
+            "C:\\Users\\*\\AppData\\Local\\CuteFTP\\cuteftp.exe"
+        ]
+    },
+    "Artifacts": {
+        "Disk": [
+            "C:\\Program Files\\CuteFTP\\cuteftp.exe",
+            "C:\\Program Files (x86)\\CuteFTP\\cuteftp.exe"
+        ],
+        "EventLog": [],
+        "Registry": [],
+        "Network": [
+            {
+                "Description": "Known remote domains for FTP/SFTP connections",
+                "Domains": [
+                    "globalscape.com",
+                    "register.globalscape.com",
+                    "updates.globalscape.com"
+                ],
+                "Ports": ["21", "22", "990"]
+            }
+        ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+}
