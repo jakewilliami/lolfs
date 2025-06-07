@@ -1917,6 +1917,76 @@
     "Acknowlegment": []
   },
   {
+    "Name": "Transmission",
+    "Description": "Transmission is a free, open-source BitTorrent client for peer-to-peer file sharing.",
+    "Author": "rodentesque",
+    "Created": "",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/4/46/Transmission_Icon.svg",
+    "LastModified": "2025-06-06",
+    "categoryType": "P2P Peer-to-Peer",
+    "Details": {
+      "Website": "https://transmissionbt.com/",
+      "PEMetadata": {
+        "Filename": "transmission-qt.exe",
+        "OriginalFileName": "transmission-qt.exe",
+        "Description": "Transmission Qt Client"
+      },
+      "Privileges": "User",
+      "Free": "Yes",
+      "Verification": "Verified",
+      "SupportedOS": [
+        {
+          "OS": "Linux",
+          "icon": "FaLinux"
+        },
+        {
+          "OS": "macOS",
+          "icon": "SiMacos"
+        },
+        {
+          "OS": "Windows",
+          "icon": "FaWindows"
+        }
+      ],
+      "Capabilities": [
+        "BitTorrent Protocol",
+        "File Sharing",
+        "Bandwidth Management",
+        "Scheduling",
+        "Remote Control"
+      ],
+      "Vulnerabilites": [],
+      "InstallationPaths": [
+        "C:\\Program Files\\Transmission\\transmission-qt.exe"
+      ]
+    },
+    "Artifacts": {
+      "Disk": [
+        "C:\\Program Files\\Transmission\\transmission-qt.exe"
+      ],
+      "EventLog": [],
+      "Registry": [],
+      "Network": [
+        {
+          "Description": "Known remote domains for transmission connections",
+          "Domains": [
+            "dht.transmissionbt.com",
+            "*.transmissionbt.com",
+            "transmissionbt.com"
+          ],
+          "Ports": [
+            "6881-6889",
+            "6969",
+            "9091"
+          ]
+        }
+      ]
+    },
+    "Detections": [],
+    "References": [],
+    "Acknowlegment": []
+  },
+  {
     "Name": "Transmit",
     "Description": "Transmit is a premium macOS-only file transfer client that supports FTP, SFTP, WebDAV, and cloud storage services. It provides a user-friendly interface and advanced file management tools.",
     "Author": "TomJHKR",
