@@ -25,7 +25,11 @@
         "Vulnerabilites": [],
         "InstallationPaths": [
             "C:\\Program Files\\Transmission\\transmission-qt.exe",
-            "/Applications/Transmission.app/Contents/MacOS/Transmission"
+            "/Applications/Transmission.app/Contents/MacOS/Transmission",
+            "/usr/bin/transmission-cli",
+            "/usr/bin/transmission-daemon",
+            "/usr/bin/transmission-gtk",
+            "/usr/bin/transmission-qt"
         ]
     },
     "Artifacts": {
