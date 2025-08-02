@@ -24,7 +24,8 @@
         "Capabilities": ["BitTorrent Protocol", "File Sharing", "Bandwidth Management", "Scheduling","Remote Control"],
         "Vulnerabilites": [],
         "InstallationPaths": [
-            "C:\\Program Files\\Transmission\\transmission-qt.exe"
+            "C:\\Program Files\\Transmission\\transmission-qt.exe",
+            "/Applications/Transmission.app/Contents/MacOS/Transmission"
         ]
     },
     "Artifacts": {
